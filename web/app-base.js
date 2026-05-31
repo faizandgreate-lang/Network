@@ -10,7 +10,7 @@
       }
     }
     if (host === 'network.linux-aios.com') {
-      return 'https://faizandgreate-lang.github.io/Network/';
+      return '/';
     }
     return '/';
   }

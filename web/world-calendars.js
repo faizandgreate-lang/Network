@@ -293,8 +293,15 @@
     };
     if (!global.WorldCalendarMonth?.buildHtml) {
       const s = document.createElement('script');
-      s.src = '/static/calendar-month.js';
+      s.src = 'static/calendar-month.js?v=4';
       s.onload = start;
+      s.onerror = function () {
+        const el = document.getElementById('calendar-sections');
+        if (el) {
+          el.innerHTML =
+            '<p class="sub">Calendar widgets failed to load. Hard-refresh the page (Cmd+Shift+R).</p>';
+        }
+      };
       document.head.appendChild(s);
       return;
     }

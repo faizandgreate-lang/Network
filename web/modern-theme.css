@@ -319,11 +319,34 @@ html[data-app-theme='modern'] .glass-panel.accent {
 html[data-app-theme='modern'] .page-home,
 html[data-app-theme='modern'] .page-devices,
 html[data-app-theme='modern'] .page-map,
+html[data-app-theme='modern'] .page-calendar,
+html[data-app-theme='modern'] .page-clock,
 html[data-app-theme='modern'] .map-page,
 html[data-app-theme='modern'] .home-main,
 html[data-app-theme='modern'] .devices-main,
 html[data-app-theme='modern'] .world-main {
   background: transparent;
+}
+
+html[data-app-theme='modern'] .page-calendar .page-head h1,
+html[data-app-theme='modern'] .page-clock .page-head h1 {
+  color: var(--bright);
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+html[data-app-theme='modern'] .world-card-title {
+  color: var(--bright);
+  text-shadow: none;
+}
+
+html[data-app-theme='modern'] .clock-utc-line {
+  color: var(--hi);
+  text-shadow: none;
+}
+
+html[data-app-theme='modern'] .clock-view-toggle .clock-view-btn {
+  font-family: var(--font);
 }
 
 html[data-app-theme='modern'] .hero-panel {

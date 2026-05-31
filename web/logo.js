@@ -1,11 +1,10 @@
 /** Logo + creator — original colors on transparent PNG (no filters). */
 (function (global) {
-  const u = (p) => (typeof global.appUrl === 'function' ? global.appUrl(p) : p);
-  const LOGO = u('/assets/logo.png');
-  const CREATOR = u('/assets/creator.png');
-  const LOGO_FB = u('/assets/logo-display.png');
-  const CREATOR_FB = u('/assets/creator-display.png');
-  const CACHE = 'logo-17';
+  const LOGO = 'assets/logo.png';
+  const CREATOR = 'assets/creator.png';
+  const LOGO_FB = 'assets/logo-display.png';
+  const CREATOR_FB = 'assets/creator-display.png';
+  const CACHE = 'logo-19';
 
   const PLACEHOLDER_LOGO =
     'data:image/svg+xml,' +
