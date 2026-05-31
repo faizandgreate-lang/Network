@@ -1,0 +1,160 @@
+Nyumbani — Kifuatilia Mtandao
+Orodha ya vifaa — Kifuatilia Mtandao
+Ramani ya mtandao — Kifuatilia Mtandao
+Kifuatilia Mtandao
+Nyumbani
+Vifaa
+Ramani
+MANDHARI
+Lugha
+Nembo na picha ya muundaji
+Picha ya muundaji na nembo
+MANDHARI: KIJANI
+MANDHARI: Nyeusi na Nyeupe
+Badilisha mandhari nyeusi na nyeupe
+Badilisha mandhari kijani na nyeusi
+> INAANZISHA KIFUATILIA MTANDAO...
+> KIOLESURA KIMEPakiwa OK
+> TAYARI
+Tazama kila kifaa kwenye Wi‑Fi na LAN ya ofisi au nyumba. Data halisi ya skani — hakuna makisio.
+Fungua orodha ya vifaa
+Ramani ya mtandao
+Orodha ya vifaa
+Skani Wi‑Fi + LAN, angalia IP, MAC, hali, weka lebo kila kifaa.
+Fungua →
+Mchoro wa mtiririko kushoto hadi kulia baada ya kila skani. Kuza na songesha.
+Pakua
+Vianzishaji Mac/PC, mwongozo wa mtumiaji, na usafirishaji CSV wa vifaa.
+Vianzishaji na ripoti →
+Mafunzo ya haraka
+Hatua sita — usanidi wa mara ya kwanza
+Anza programu
+Hifadhi kianzishaji kwenye folda office-net-monitor, kisha bonyeza mara mbili. Weka Terminal au dirisha la amri wazi.
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+Tayari kwenye folda ya mradi? Tumia START.command (Mac) au START.bat (PC) — hakuna upakuaji.
+Fungua tovuti hii
+Tumia http://127.0.0.1:5080/ — si faili kutoka Finder.
+Skani mtandao
+Kwenye orodha ya vifaa, bonyeza Scan Wi‑Fi + LAN. Subiri dakika 1–2.
+Angalia ramani
+Fungua Network map kuona Internet → gateway → devices.
+Taja vifaa
+Andika kwenye safu ya IT name (printer, PC, chumba, n.k.).
+Pakua ripoti
+Mwongozo (.txt)
+Vifaa (.csv)
+Vianzishaji Mac / PC
+Kuhusu muundaji
+Mohammad Faizan Khan
+Muundaji wa tovuti hii
+Nilianza kwa kazi ya kiufundi na kompyuta, kutatua matatizo na kuendesha mifumo. Baadaye nikaongoza shughuli za wafanyakazi na miradi Saudi Arabia — ukarimu, afya na maeneo ya kampuni katika maeneo mengi.
+Njia hiyo ilinifundisha uendeshaji wa mwisho hadi mwisho: watu, muda, mawasiliano wazi. Leo ninaangazia uendeshaji na uratibu wa miradi — kubadilisha kazi ngumu kuwa mifumo rahisi inayoweza kurudiwa.
+Network Monitor — seli tupu zinamaanisha “not detected”, si makisio.
+© Mohammad Faizan Khan
+Data halisi ya skani tu — bonyeza Scan kusasisha. Tupu = not detected.
+Shughuli
+Mwongozo wa router
+Programu haijaendeshwa.
+Bonyeza mara mbili START.command, kisha fungua
+● SERVER ONLINE
+Mitandao:
+Vifaa vilivyoskaniwa
+Chuja kwa aina ya kiungo au safirisha CSV baada ya skani.
+Scan Wi‑Fi + LAN
+Zote
+Wi‑Fi tu
+LAN tu
+Onyesha upya
+Pakua CSV
+Onyesha upya tovuti za DNS
+Pi-hole au AdGuard DNS log
+Online:
+Offline:
+Kumbukumbu ya shughuli
+Admin wa router dhidi ya programu hii
+Router zinaona nini dhidi ya skana hii
+Hakuna data bandia — sogeza kwa urahisi sehemu hapa chini.
+Hali
+Jina
+IP
+Tovuti za mara kwa mara (DNS)
+Aina
+MAC
+Hostname
+Ports
+Ping
+Ilionekana kwanza
+Ilionekana mwisho
+IT name
+Bonyeza Scan Wi‑Fi + LAN
+Hakuna vifaa — bonyeza Scan
+Label
+● ONLINE
+○ offline
+Inapakia…
+Inasasisha…
+Imesasishwa
+Anza START.command
+Inaskani…
+Imekamilika
+Skani imeshindwa
+Inapakia DNS logs…
+DNS: {n} device(s)
+Hakuna mechi ya DNS log
+Usasishaji wa DNS umeshindwa
+Rudi kwa vifaa
+Muundaji:
+Wi‑Fi ya Mac hii
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+Vidhibiti vya ramani
+Bonyeza IP yoyote kwa sehemu halisi za skani. Orodha ya vipengele (browsing/DNS/bandwidth limits).
+Mtiririko →
+Internet → Gateway → Wi‑Fi / LAN → devices
+Punguza ramani kwenye kielelezo
+Kuza ramani kwenye kielelezo
+Linganisha ramani nzima
+Panua ramani
+Toka panua
+Pakua PDF
+Scan & redraw
+Onyesha upya ramani
+Inapakia ramani…
+Inaskani mtandao (real data)…
+Bado hakuna data — inaskani mtandao (real data only)…
+Anza START.command kwanza
+Fungua http://127.0.0.1:5080/
+Network map panel
+Ramani ya topolojia ya mtandao shirikishi
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+Maelezo
+Funga
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+Imesasishwa
+auto every
+Inapakia data zote…
+Hakuna ramani ya kusafirisha — skani kwanza
+PDF library loading… try again
+Inaunda PDF…
+PDF imepakuliwa
+PDF imeshindwa — jaribu Print kwenye ukurasa huu
+Programu hii: yes
+Programu hii: partial
+Programu hii: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

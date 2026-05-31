@@ -1,0 +1,160 @@
+होम — नेटवर्क मॉनिटर
+डिवाइस सूची — नेटवर्क मॉनिटर
+नेटवर्क मानचित्र — नेटवर्क मॉनिटर
+नेटवर्क मॉनिटर
+होम
+डिवाइस
+मानचित्र
+थीम
+भाषा
+लोगो और निर्माता की फोटो
+निर्माता की फोटो और लोगो
+थीम: हरा
+थीम: श्याम-श्वेत
+श्याम-श्वेत थीम पर स्विच करें
+हरा-काला थीम पर स्विच करें
+> नेटवर्क मॉनिटर प्रारंभ हो रहा है...
+> इंटरफ़ेस लोड ठीक
+> तैयार
+अपने ऑफिस या घर के Wi‑Fi और LAN पर हर डिवाइस देखें। असली स्कैन डेटा — कोई अनुमान नहीं।
+डिवाइस सूची खोलें
+नेटवर्क मानचित्र
+डिवाइस सूची
+Wi‑Fi + LAN स्कैन करें, IP, MAC, स्थिति देखें, प्रत्येक डिवाइस का लेबल लगाएँ।
+खोलें →
+प्रत्येक स्कैन के बाद बाएँ से दाएँ फ्लोचार्ट। ज़ूम और पैन।
+डाउनलोड
+Mac/PC स्टार्टर, उपयोगकर्ता गाइड, और डिवाइस CSV निर्यात।
+लॉन्चर और रिपोर्ट →
+त्वरित ट्यूटोरियल
+छह चरण — पहली बार सेटअप
+ऐप शुरू करें
+लॉन्चर को office-net-monitor फ़ोल्डर में सहेजें, फिर डबल-क्लिक करें। Terminal या कमांड विंडो खुली रखें।
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+पहले से प्रोजेक्ट फ़ोल्डर में हैं? वहाँ START.command (Mac) या START.bat (PC) उपयोग करें — डाउनलोड की जरूरत नहीं।
+यह साइट खोलें
+http://127.0.0.1:5080/ उपयोग करें — Finder से फ़ाइल नहीं।
+नेटवर्क स्कैन करें
+डिवाइस सूची पर Scan Wi‑Fi + LAN क्लिक करें। 1–2 मिनट प्रतीक्षा करें।
+मानचित्र देखें
+Internet → gateway → devices देखने के लिए Network map खोलें।
+डिवाइसों का नाम दें
+IT name कॉलम में टाइप करें (printer, PC, room, आदि)।
+रिपोर्ट डाउनलोड करें
+गाइड (.txt)
+डिवाइस (.csv)
+Mac / PC स्टार्टर
+निर्माता के बारे में
+Mohammad Faizan Khan
+इस वेबसाइट के निर्माता
+मैंने तकनीकी और कंप्यूटर कार्य से शुरुआत की, समस्याएँ ठीक कीं और सिस्टम चलाए। बाद में सऊदी अरब में कार्यबल और परियोजना संचालन का नेतृत्व किया — आतिथ्य, स्वास्थ्य और कई स्थलों पर कॉर्पोरेट साइटें।
+उस मार्ग ने end-to-end संचालन सिखाया: लोग, समय, स्पष्ट संवाद। आज मैं संचालन और परियोजना समन्वय पर ध्यान देता हूँ — जटिल कार्य को सरल, दोहराने योग्य प्रणालियों में बदलना।
+Network Monitor — खाली तालिका कोशिकाएँ “not detected” का अर्थ हैं, अनुमान नहीं।
+© Mohammad Faizan Khan
+केवल असली स्कैन डेटा — अपडेट के लिए Scan क्लिक करें। खाली = not detected।
+गतिविधि
+राउटर गाइड
+ऐप नहीं चल रहा।
+START.command पर डबल-क्लिक करें, फिर खोलें
+● SERVER ONLINE
+नेटवर्क:
+स्कैन किए गए डिवाइस
+लिंक प्रकार से फ़िल्टर करें या स्कैन के बाद CSV निर्यात करें।
+Scan Wi‑Fi + LAN
+सभी
+केवल Wi‑Fi
+केवल LAN
+रीफ़्रेश
+CSV डाउनलोड
+DNS साइटें रीफ़्रेश
+Pi-hole या AdGuard DNS log
+Online:
+Offline:
+गतिविधि लॉग
+राउटर admin बनाम यह ऐप
+राउटर क्या देख सकते हैं बनाम यह स्कैनर
+नकली डेटा नहीं — नीचे खंडों में सुचारु स्क्रॉल करें।
+स्थिति
+नाम
+IP
+अक्सर देखी जाने वाली साइटें (DNS)
+प्रकार
+MAC
+Hostname
+Ports
+Ping
+पहली बार देखा
+अंतिम बार देखा
+IT name
+Scan Wi‑Fi + LAN क्लिक करें
+कोई डिवाइस नहीं — Scan क्लिक करें
+Label
+● ONLINE
+○ offline
+लोड हो रहा है…
+रीफ़्रेश हो रहा है…
+अपडेट किया
+START.command शुरू करें
+स्कैन हो रहा है…
+पूर्ण
+स्कैन विफल
+DNS logs लोड हो रहे हैं…
+DNS: {n} device(s)
+DNS log मेल नहीं
+DNS refresh विफल
+डिवाइसों पर वापस
+निर्माता:
+इस Mac Wi‑Fi
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+मानचित्र नियंत्रण
+किसी भी IP पर क्लिक करें — असली स्कैन फ़ील्ड। सुविधा सूची (browsing/DNS/bandwidth limits)।
+प्रवाह →
+Internet → Gateway → Wi‑Fi / LAN → devices
+सूचक पर मानचित्र ज़ूम आउट
+सूचक पर मानचित्र ज़ूम इन
+पूरा मानचित्र फ़िट करें
+मानचित्र विस्तार
+विस्तार से बाहर
+PDF डाउनलोड
+Scan & redraw
+मानचित्र रीफ़्रेश
+मानचित्र लोड हो रहा है…
+नेटवर्क स्कैन (real data)…
+अभी स्कैन डेटा नहीं — नेटवर्क स्कैन (real data only)…
+पहले START.command शुरू करें
+http://127.0.0.1:5080/ खोलें
+Network map panel
+इंटरैक्टिव नेटवर्क टोपोलॉजी मानचित्र
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+विवरण
+बंद करें
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+अद्यतन
+auto every
+सभी उपलब्ध data लोड…
+निर्यात के लिए मानचित्र नहीं — पहले स्कैन
+PDF library loading… try again
+PDF बन रहा है…
+PDF डाउनलोड
+PDF विफल — Print आज़माएँ
+यह ऐप: yes
+यह ऐप: partial
+यह ऐप: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

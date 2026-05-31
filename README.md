@@ -33,7 +33,7 @@ Full text: [DISCLAIMER.md](DISCLAIMER.md)
 
 First run installs Python packages automatically (needs internet once).
 
-**GitHub Pages setup (for the live preview):** repo → Settings → Pages → branch `main`, folder **`/web`**. See [GITHUB-PAGES.md](GITHUB-PAGES.md).
+**GitHub Pages setup:** repo → Settings → Pages → branch `main`, folder **`/docs`**. (Run `bash scripts/sync-docs-for-github-pages.sh` after changing `web/`.) See [GITHUB-PAGES.md](GITHUB-PAGES.md).
 
 ---
 

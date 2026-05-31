@@ -4,7 +4,7 @@ Network Monitor — upload to GitHub (Terminal only)
 GitHub website "Upload files" allows only ~100 files — use git push instead.
 
 PREVIEW (same layout): https://faizandgreate-lang.github.io/Network/
-  → Repo Settings → Pages → branch main, folder /web
+  → Repo Settings → Pages → branch main, folder /docs
 
 FULL APP (scan): download ZIP → START.command / START.bat → http://127.0.0.1:5080/
 

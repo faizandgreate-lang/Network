@@ -1,0 +1,160 @@
+בית — מonitor רשת
+רשימת מכשירים — מonitor רשת
+מפת רשת — מonitor רשת
+מonitor רשת
+בית
+מכשירים
+מפה
+ערכת נושא
+שפה
+לוגו ותמונת היוצר
+תמונת היוצר והלוגו
+ערכת נושא: ירוק
+ערכת נושא: שחור-לבן
+עבור לערכת שחור-לבן
+עבור לערכת ירוק-שחור
+> מאתחל מonitor רשת...
+> ממשק נטען OK
+> מוכן
+ראה כל מכשיר ב-Wi‑Fi וב-LAN של המשרד או הבית. נתוני סריקה אמיתיים — בלי ניחושים.
+פתח רשימת מכשירים
+מפת רשת
+רשימת מכשירים
+סרוק Wi‑Fi + LAN, צפה ב-IP, MAC, סטטוס, תייג כל מכשיר.
+פתח →
+תרשים זרימה משמאל לימין אחרי כל סריקה. זום וגרירה.
+הורד
+מפעילי Mac/PC, מדריך משתמש וייצוא CSV של מכשירים.
+מפעילים ודוחות →
+מדריך מהיר
+ששה שלבים — הגדרה ראשונה
+הפעל את האפליקציה
+שמור את המפעיל בתיקיית office-net-monitor ולחץ פעמיים. השאר Terminal או חלון פקודות פתוח.
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+כבר בתיקיית הפרויקט? השתמש ב-START.command (Mac) או START.bat (PC) — אין צורך בהורדה.
+פתח את האתר
+השתמש ב-http://127.0.0.1:5080/ — לא קובץ מ-Finder.
+סרוק רשת
+ברשימת המכשירים לחץ Scan Wi‑Fi + LAN. המתן 1–2 דק'.
+צפה במפה
+פתח Network map לראות Internet → gateway → devices.
+תן שמות למכשירים
+הקלד בעמודת IT name (מדפסת, PC, חדר וכו').
+הורד דוחות
+מדריך (.txt)
+מכשירים (.csv)
+מפעילי Mac / PC
+על היוצר
+Mohammad Faizan Khan
+יוצר אתר זה
+התחלתי בעבודה טכנית ומחשבים, תיקון בעיות והפעלת מערכות. אחר כך ניהלתי כוח אדם ופרויקטים בערב הסעודית — hospitality, healthcare ואתרי corporate במקומות רבים.
+הדרך הזו לימדה תפעול end-to-end: אנשים, תזמון ותקשורת ברורה. היום מתמקד בתפעול ותיאום פרויקטים — הפיכת עבודה מורכבת למערכות פשוטות וחוזרות.
+Network Monitor — תאים ריקים פירושם “not detected”, לא ניחוש.
+© Mohammad Faizan Khan
+רק נתוני סריקה אמיתיים — לחץ Scan לעדכון. ריק = not detected.
+פעילות
+מדריך router
+האפליקציה לא פועלת.
+לחץ פעמיים על START.command ואז פתח
+● SERVER ONLINE
+רשתות:
+מכשירים שנסרקו
+סנן לפי סוג קישור או ייצא CSV אחרי סריקה.
+Scan Wi‑Fi + LAN
+הכל
+Wi‑Fi בלבד
+LAN בלבד
+רענן
+הורד CSV
+רענן אתרי DNS
+Pi-hole או AdGuard DNS log
+Online:
+Offline:
+יומן פעילות
+admin router מול אפליקציה זו
+מה router רואים מול scanner זה
+אין נתונים מזויפים — גלול חלק בין הסעיפים למטה.
+סטטוס
+שם
+IP
+אתרים תכופים (DNS)
+סוג
+MAC
+Hostname
+Ports
+Ping
+נראה לראשונה
+נראה לאחרונה
+IT name
+לחץ Scan Wi‑Fi + LAN
+אין מכשירים — לחץ Scan
+Label
+● ONLINE
+○ offline
+טוען…
+מרענן…
+עודכן
+הפעל START.command
+סורק…
+הושלם
+סריקה נכשלה
+טוען DNS logs…
+DNS: {n} device(s)
+אין התאמת DNS log
+רענון DNS נכשל
+חזרה למכשירים
+יוצר:
+Wi‑Fi של Mac זה
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+בקרי מפה
+לחץ IP לשדות סריקה אמיתיים. רשימת תכונות (browsing/DNS/bandwidth limits).
+זרימה →
+Internet → Gateway → Wi‑Fi / LAN → devices
+הקטן מפה במצביע
+הגדל מפה במצביע
+התאם מפה שלמה
+הרחב מפה
+צא מהרחבה
+הורד PDF
+Scan & redraw
+רענן מפה
+טוען מפה…
+סורק רשת (real data)…
+אין נתוני סריקה — סורק רשת (real data only)…
+הפעל START.command קודם
+פתח http://127.0.0.1:5080/
+Network map panel
+מפת טופולוגיית רשת אינטראקטיבית
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+פרטים
+סגור
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+מעודכן
+auto every
+טוען את כל הנתונים…
+אין מפה לייצוא — סרוק קודם
+PDF library loading… try again
+יוצר PDF…
+PDF הורד
+PDF נכשל — נסה Print בדף זה
+אפליקציה זו: yes
+אפליקציה זו: partial
+אפליקציה זו: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

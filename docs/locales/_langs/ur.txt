@@ -1,0 +1,160 @@
+ہوم — نیٹ ورک مانیٹر
+آلات کی فہرست — نیٹ ورک مانیٹر
+نیٹ ورک نقشہ — نیٹ ورک مانیٹر
+نیٹ ورک مانیٹر
+ہوم
+آلات
+نقشہ
+تھیم
+زبان
+لوگو اور تخلیق کار کی تصویر
+تخلیق کار کی تصویر اور لوگو
+تھیم: سبز
+تھیم: سیاہ و سفید
+سیاہ و سفید تھیم پر جائیں
+سبز و سیاہ تھیم پر جائیں
+> نیٹ ورک مانیٹر شروع ہو رہا ہے...
+> انٹرفیس لوڈ OK
+> تیار
+دفتر یا گھر کے Wi‑Fi اور LAN پر ہر ڈivice دیکھیں۔ حقیقی اسکین ڈیٹا — اندازے نہیں۔
+آلات کی فہرست کھولیں
+نیٹ ورک نقشہ
+آلات کی فہرست
+Wi‑Fi + LAN اسکین، IP، MAC، حالت دیکھیں، ہر آلہ لیبل کریں۔
+کھولیں →
+ہر اسکین کے بعد بائیں سے دائیں فلوچارٹ۔ زوم اور پین۔
+ڈاؤن لوڈ
+Mac/PC اسٹارٹر، صارف گائیڈ، آلات CSV برآمد۔
+اسٹارٹر اور رپورٹس →
+فوری ٹیوٹوریل
+چھ مراحل — پہلی بار سیٹ اپ
+ایپ شروع کریں
+لانچر office-net-monitor فولڈر میں رکھیں، پھر ڈبل کلک۔ Terminal یا کمانڈ ونڈو کھلی رکھیں۔
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+پروجیکٹ فولڈر میں ہیں؟ START.command (Mac) یا START.bat (PC) — ڈاؤن لوڈ نہیں۔
+یہ سائٹ کھولیں
+http://127.0.0.1:5080/ استعمال کریں — Finder فائل نہیں۔
+نیٹ ورک اسکین
+آلات کی فہرست پر Scan Wi‑Fi + LAN کلک۔ 1–2 منٹ انتظار۔
+نقشہ دیکھیں
+Internet → gateway → devices کے لیے Network map کھولیں۔
+آلات کا نام
+IT name کالم میں لکھیں (printer, PC, room، وغیرہ)۔
+رپورٹس ڈاؤن لوڈ
+گائیڈ (.txt)
+آلات (.csv)
+Mac / PC اسٹارٹر
+تخلیق کار کے بارے میں
+Mohammad Faizan Khan
+اس ویب سائٹ کے تخلیق کار
+میں نے تکنیکی اور کمپیوٹر کام سے شروعات کی، مسائل حل کیے اور سسٹم چلائے۔ بعد میں سعودی عرب میں افرادی قوت اور منصوبوں کی آپریشنز کی قیادت — hospitality، healthcare اور کئی مقامات پر corporate sites۔
+اس راستے نے end-to-end آپریشنز سکھائے: لوگ، وقت، واضح مواصلت۔ آج آپریشنز اور منصوبہ ہم آہنگی پر توجہ — پیچیدہ کام کو سادہ، دہرانے کے قابل نظاموں میں۔
+Network Monitor — خالی سیل کا مطلب “not detected”، اندازہ نہیں۔
+© Mohammad Faizan Khan
+صرف حقیقی اسکین ڈیٹا — اپ ڈیٹ کے لیے Scan کلک۔ خالی = not detected۔
+سرگرمی
+راؤٹر گائیڈ
+ایپ نہیں چل رہی۔
+START.command پر ڈبل کلک، پھر کھولیں
+● SERVER ONLINE
+نیٹ ورکس:
+اسکین شدہ آلات
+لنک قسم فلٹر یا اسکین کے بعد CSV برآمد۔
+Scan Wi‑Fi + LAN
+سب
+صرف Wi‑Fi
+صرف LAN
+ریفریش
+CSV ڈاؤن لوڈ
+DNS سائٹس ریفریش
+Pi-hole یا AdGuard DNS log
+Online:
+Offline:
+سرگرمی لاگ
+راؤٹر admin بمقابلہ یہ ایپ
+راؤٹر کیا دیکھ سکتے ہیں بمقابلہ یہ اسکینر
+جعلی ڈیٹا نہیں — نیچے حصے ہموار اسکرول۔
+حالت
+نام
+IP
+بار بار سائٹس (DNS)
+قسم
+MAC
+Hostname
+Ports
+Ping
+پہلی بار دیکha
+آخری بار
+IT name
+Scan Wi‑Fi + LAN کلک
+کوئی آلہ نہیں — Scan کلک
+Label
+● ONLINE
+○ offline
+لوڈ ہو رہا ہے…
+ریفریش…
+اپ ڈیٹ
+START.command شروع
+اسکین…
+مکمل
+اسکین ناکام
+DNS logs لوڈ…
+DNS: {n} device(s)
+DNS log میل نہیں
+DNS refresh ناکام
+آلات پر واپس
+تخلیق کار:
+اس Mac Wi‑Fi
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+نقشہ کنٹرول
+کisi bhi IP کلک — حقیقی اسکین فیلڈز۔ فیچر فہرست (browsing/DNS/bandwidth limits)۔
+بہاؤ →
+Internet → Gateway → Wi‑Fi / LAN → devices
+پوائنٹر پر نقشہ چھوٹا
+پوائنٹر پر نقشہ بڑا
+پورا نقشہ فٹ
+نقشہ پھیلائیں
+پھیلاؤ بند
+PDF ڈاؤن لوڈ
+Scan & redraw
+نقشہ ریفریش
+نقشہ لوڈ…
+نیٹ ورک اسکین (real data)…
+ابھی اسکین ڈیٹا نہیں — نیٹ ورک اسکین (real data only)…
+پہلے START.command شروع
+http://127.0.0.1:5080/ کھولیں
+Network map panel
+انٹرایکٹiv نیٹ ورک ٹopology نقشہ
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+تفصیل
+بند
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+اپ ٹو ڈیٹ
+auto every
+تمام دستیاب data لوڈ…
+برآمد کے لیے نقشہ نہیں — پہلے اسکین
+PDF library loading… try again
+PDF بن رہا ہے…
+PDF ڈاؤن لوڈ
+PDF ناکام — Print آزمائیں
+یہ ایپ: yes
+یہ ایپ: partial
+یہ ایپ: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

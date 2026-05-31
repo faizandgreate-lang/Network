@@ -1,0 +1,160 @@
+Bahay — Network Monitor
+Listahan ng device — Network Monitor
+Mapa ng network — Network Monitor
+Network Monitor
+Bahay
+Mga device
+Mapa
+TEMA
+Wika
+Logo at larawan ng creator
+Larawan ng creator at logo
+TEMA: BERDE
+TEMA: Itim at Puti
+Lumipat sa temang itim at puti
+Lumipat sa temang berde at itim
+> SINISIMULAN ANG NETWORK MONITOR...
+> NA-LOAD ANG INTERFACE OK
+> Handa na
+Tingnan ang bawat device sa Wi‑Fi at LAN ng opisina o bahay. Tunay na scan data — walang hula.
+Buksan ang listahan ng device
+Mapa ng network
+Listahan ng device
+I-scan ang Wi‑Fi + LAN, tingnan ang IP, MAC, status, lagyan ng label ang bawat device.
+Buksan →
+Flowchart mula kaliwa pakanan pagkatapos ng bawat scan. Zoom at pan.
+I-download
+Mac/PC starters, gabay ng user, at CSV export ng device.
+Starters at ulat →
+Mabilis na tutorial
+Anim na hakbang — unang setup
+Simulan ang app
+I-save ang launcher sa folder na office-net-monitor, double-click. Panatilihing bukas ang Terminal o command window.
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+Nasa project folder na? Gamitin ang START.command (Mac) o START.bat (PC) — hindi kailangan mag-download.
+Buksan ang site na ito
+Gamitin ang http://127.0.0.1:5080/ — hindi file mula sa Finder.
+I-scan ang network
+Sa listahan ng device, i-click ang Scan Wi‑Fi + LAN. Maghintay 1–2 min.
+Tingnan ang mapa
+Buksan ang Network map para makita ang Internet → gateway → devices.
+Pangalanan ang mga device
+I-type sa column na IT name (printer, PC, room, atbp.).
+I-download ang mga ulat
+Gabay (.txt)
+Mga device (.csv)
+Mac / PC starters
+Tungkol sa creator
+Mohammad Faizan Khan
+Creator ng website na ito
+Nagsimula ako sa teknikal at computer work, nag-aayos ng problema at nagpapatakbo ng systems. Later pinamunuan ko ang workforce at project operations sa Saudi Arabia — hospitality, healthcare, at corporate sites sa maraming lugar.
+Natutunan ko ang end-to-end operations: tao, timing, malinaw na komunikasyon. Ngayon nakatutok sa operations at project coordination — gawing simple at repeatable ang komplikadong trabaho.
+Network Monitor — ang blank cells ay “not detected”, hindi hula.
+© Mohammad Faizan Khan
+Tunay na scan data lang — i-click ang Scan para mag-update. Blank = not detected.
+Aktibidad
+Gabay sa router
+Hindi tumatakbo ang app.
+Double-click ang START.command, pagkatapos buksan
+● SERVER ONLINE
+Mga network:
+Na-scan na device
+I-filter ayon sa link type o i-export ang CSV pagkatapos ng scan.
+Scan Wi‑Fi + LAN
+Lahat
+Wi‑Fi lang
+LAN lang
+I-refresh
+I-download ang CSV
+I-refresh ang DNS sites
+Pi-hole o AdGuard DNS log
+Online:
+Offline:
+Log ng aktibidad
+Router admin vs app na ito
+Ano ang nakikita ng router vs scanner na ito
+Walang pekeng data — mag-scroll nang maayos sa mga seksyon sa ibaba.
+Status
+Pangalan
+IP
+Madalas na sites (DNS)
+Uri
+MAC
+Hostname
+Ports
+Ping
+Unang nakita
+Huling nakita
+IT name
+I-click ang Scan Wi‑Fi + LAN
+Walang device — i-click ang Scan
+Label
+● ONLINE
+○ offline
+Naglo-load…
+Nagre-refresh…
+Na-update
+Simulan ang START.command
+Nagsa-scan…
+Tapos na
+Nabigo ang scan
+Naglo-load ng DNS logs…
+DNS: {n} device(s)
+Walang DNS log match
+Nabigo ang DNS refresh
+Bumalik sa mga device
+Creator:
+Wi‑Fi ng Mac na ito
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+Mga kontrol ng mapa
+I-click ang anumang IP para sa tunay na scan fields. Listahan ng feature (browsing/DNS/bandwidth limits).
+Daloy →
+Internet → Gateway → Wi‑Fi / LAN → devices
+I-zoom out ang mapa sa pointer
+I-zoom in ang mapa sa pointer
+I-fit ang buong mapa
+Palawakin ang mapa
+Lumabas sa expand
+I-download ang PDF
+Scan & redraw
+I-refresh ang mapa
+Naglo-load ng mapa…
+Nagsa-scan ng network (real data)…
+Wala pang scan data — nagsa-scan ng network (real data only)…
+Simulan muna ang START.command
+Buksan ang http://127.0.0.1:5080/
+Network map panel
+Interactive network topology map
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+Detalye
+Isara
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+Up to date
+auto every
+Naglo-load ng lahat ng available data…
+Walang mapa para i-export — mag-scan muna
+PDF library loading… try again
+Gumagawa ng PDF…
+Na-download ang PDF
+Nabigo ang PDF — subukan ang Print sa pahinang ito
+App na ito: yes
+App na ito: partial
+App na ito: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

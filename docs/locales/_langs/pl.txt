@@ -1,0 +1,160 @@
+Strona główna — Monitor sieci
+Lista urządzeń — Monitor sieci
+Mapa sieci — Monitor sieci
+Monitor sieci
+Strona główna
+Urządzenia
+Mapa
+MOTYW
+Język
+Logo i zdjęcie twórcy
+Zdjęcie twórcy i logo
+MOTYW: ZIELONY
+MOTYW: CZ-B
+Przełącz na motyw czarno-biały
+Przełącz na motyw zielono-czarny
+> INICJALIZACJA MONITORA SIECI...
+> INTERFEJS ZAŁADOWANY OK
+> GOTOWE
+Zobacz każde urządzenie w biurze lub domu na Wi‑Fi i LAN. Prawdziwe dane skanowania — bez zgadywania.
+Otwórz listę urządzeń
+Mapa sieci
+Lista urządzeń
+Skanuj Wi‑Fi + LAN, zobacz IP, MAC, status, oznacz każde urządzenie.
+Otwórz →
+Schemat od lewej do prawej po każdym skanie. Powiększ i przesuń.
+Pobierz
+Startery Mac/PC, przewodnik użytkownika i eksport CSV urządzeń.
+Startery i raporty →
+Szybki samouczek
+Sześć kroków — pierwsza konfiguracja
+Uruchom aplikację
+Zapisz starter w folderze office-net-monitor, potem kliknij dwukrotnie. Zostaw Terminal lub okno poleceń otwarte.
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+Już w folderze projektu? Użyj START.command (Mac) lub START.bat (PC) — bez pobierania.
+Otwórz tę stronę
+Użyj http://127.0.0.1:5080/ — nie pliku z Findera.
+Skanuj sieć
+Na liście urządzeń kliknij Scan Wi‑Fi + LAN. Poczekaj 1–2 min.
+Zobacz mapę
+Otwórz Network map, aby zobaczyć Internet → gateway → devices.
+Nazwij urządzenia
+Wpisz w kolumnie IT name (drukarka, PC, pokój itd.).
+Pobierz raporty
+Przewodnik (.txt)
+Urządzenia (.csv)
+Startery Mac / PC
+O twórcy
+Mohammad Faizan Khan
+Twórca tej strony
+Zacząłem od pracy technicznej i komputerowej, naprawiając problemy i prowadząc systemy. Później kierowałem operacjami kadrowymi i projektowymi w Arabii Saudyjskiej — hotelarstwo, opieka zdrowotna i lokale korporacyjne w wielu miejscach.
+Ta ścieżka nauczyła mnie operacji end-to-end: ludzie, czas i jasna komunikacja. Dziś skupiam się na operacjach i koordynacji projektów — zamiana złożonej pracy w proste, powtarzalne systemy.
+Network Monitor — puste komórki tabeli oznaczają „not detected”, nie zgadywanie.
+© Mohammad Faizan Khan
+Tylko prawdziwe dane skanowania — kliknij Scan, aby zaktualizować. Puste = not detected.
+Aktywność
+Przewodnik routera
+Aplikacja nie działa.
+Kliknij dwukrotnie START.command, potem otwórz
+● SERVER ONLINE
+Sieci:
+Zeskanowane urządzenia
+Filtruj według typu łącza lub eksportuj CSV po skanie.
+Scan Wi‑Fi + LAN
+Wszystkie
+Tylko Wi‑Fi
+Tylko LAN
+Odśwież
+Pobierz CSV
+Odśwież witryny DNS
+Pi-hole lub AdGuard DNS log
+Online:
+Offline:
+Dziennik aktywności
+Admin routera vs ta aplikacja
+Co widzą routery vs ten skaner
+Bez fałszywych danych — przewijaj płynnie sekcje poniżej.
+Status
+Nazwa
+IP
+Częste witryny (DNS)
+Typ
+MAC
+Hostname
+Ports
+Ping
+Pierwszy raz widziany
+Ostatnio widziany
+IT name
+Kliknij Scan Wi‑Fi + LAN
+Brak urządzeń — kliknij Scan
+Label
+● ONLINE
+○ offline
+Ładowanie…
+Odświeżanie…
+Zaktualizowano
+Uruchom START.command
+Skanowanie…
+Gotowe
+Skan nie powiódł się
+Ładowanie DNS logs…
+DNS: {n} device(s)
+Brak dopasowania DNS log
+Odświeżenie DNS nie powiodło się
+Powrót do urządzeń
+Twórca:
+Wi‑Fi tego Maca
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+Sterowanie mapą
+Kliknij dowolne IP dla pól prawdziwego skanu. Lista funkcji (browsing/DNS/bandwidth limits).
+Przepływ →
+Internet → Gateway → Wi‑Fi / LAN → devices
+Pomniejsz mapę przy wskaźniku
+Powiększ mapę przy wskaźniku
+Dopasuj całą mapę
+Rozwiń mapę
+Wyjdź z rozwinięcia
+Pobierz PDF
+Scan & redraw
+Odśwież mapę
+Ładowanie mapy…
+Skanowanie sieci (real data)…
+Brak danych — skanowanie sieci (real data only)…
+Najpierw uruchom START.command
+Otwórz http://127.0.0.1:5080/
+Network map panel
+Interaktywna mapa topologii sieci
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+Szczegóły
+Zamknij
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+Aktualne
+auto every
+Ładowanie wszystkich danych…
+Brak mapy do eksportu — najpierw skanuj
+PDF library loading… try again
+Tworzenie PDF…
+PDF pobrany
+PDF nie powiódł się — spróbuj Print na tej stronie
+Ta aplikacja: yes
+Ta aplikacja: partial
+Ta aplikacja: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

@@ -1,0 +1,160 @@
+Ikhaya — Umloli wenethiwekhi
+Uhlu lwedivayisi — Umloli wenethiwekhi
+Imephu yenethiwekhi — Umloli wenethiwekhi
+Umloli wenethiwekhi
+Ikhaya
+Amadivayisi
+Imephu
+ITHEME
+Ulimi
+Ilogo nesithombe somdali
+Isithombe somdali ne-logo
+ITHEME: LUHLAZA
+ITHEME: MNYAMA&MPHLOPHE
+Shintshela kutheme emnyama nemhlophe
+Shintshela kutheme oluhlaza nomnyama
+> UQALISA UMLOLI WENETHIWEKHI...
+> ILOADE i-INTERFACE OK
+> SILUNGILE
+Bona wonke amadivayisi ku-Wi‑Fi ne-LAN yehhovisi noma ekhaya. Idatha yokuskena yangempela — akukho ukubikezela.
+Vula uhlu lwedivayisi
+Imephu yenethiwekhi
+Uhlu lwedivayisi
+Skena i-Wi‑Fi + LAN, bona i-IP, i-MAC, isimo, faka ilebula kudivayisi ngayinye.
+Vula →
+Ishadi lokugeleza kwesokunxele kwesokudla ngemva kweskena ngasinye. Zoom nokuhambisa.
+Landa
+Ama-starter e-Mac/PC, umhlahlandlela womsebenzisi, nokukhipha i-CSV yedivayisi.
+Ama-starter namabhayikhodi →
+Isifundo esisheshayo
+Izinyathelo eziyisithupha — ukusetha okokuqala
+Qala uhlelo lokusebenza
+Londoloza i-starter kufolda ye-office-net-monitor, bese uchofoza kabili. Gcina i-Terminal noma iwindi lomyalo livuliwe.
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+Usuvele kufolda yephrojekthi? Sebenzisa i-START.command (Mac) noma i-START.bat (PC) — akudingeki ukulanda.
+Vula lesi siza
+Sebenzisa http://127.0.0.1:5080/ — hhayi ifayela elivela ku-Finder.
+Skena inethiwekhi
+Kulolu lwedivayisi, chofoza i-Scan Wi‑Fi + LAN. Linda imizuzu engu-1–2.
+Bona imephu
+Vula i-Network map ukuze ubone i-Internet → gateway → devices.
+Qamba amadivayisi
+Thayipha ekholomini ye-IT name (iphrinta, i-PC, igumbi, njll.).
+Landa amabhayikhodi
+Umhlahlandlela (.txt)
+Amadivayisi (.csv)
+Ama-starter e-Mac / PC
+Mayelana nomdali
+Mohammad Faizan Khan
+Umdali wale webhusayithi
+Ngqala ngomsebenzi wezobuchwepheshe nekhompyutha, ngilungisa izinkinga futhi ngiphatha izinhlelo. Kamuva ngahola imisebenzi yabasebenzi neyephrojekthi e-Saudi Arabia — ukuphathwa kwezihlala, ezempilo, nezindawo zezinkampani eziningi.
+Loyo mzila wangifundisa ukuphatha okuqala kuya kokugcina: abantu, isikhathi, nokuxhumana okucacile. Namuhla ngigxile ekuphatheni nasekuhlanganiseni amaphrojekthi — ukuguqula umsebenzi onzima ube izinhlelo ezilula, eziphindaphindwayo.
+Network Monitor — amaseli ethebula angenalutho asho “not detected”, hhayi ukubikezela.
+© Mohammad Faizan Khan
+Idatha yokuskena yangempela kuphela — chofoza i-Scan ukuze ubuyekeze. Akunalutho = not detected.
+Umsebenzi
+Umhlahlandlela werouter
+Uhlelo alusebenzi.
+Chofoza kabili i-START.command, bese uvula
+● SERVER ONLINE
+Amanethiwekhi:
+Amadivayisi askeniwe
+Hlunga ngohlobo lokuxhumana noma ukhiphe i-CSV ngemva kokuskena.
+Scan Wi‑Fi + LAN
+Konke
+I-Wi‑Fi kuphela
+I-LAN kuphela
+Vuselela
+Landa i-CSV
+Vuselela amasayithi e-DNS
+Pi-hole noma i-AdGuard DNS log
+Online:
+Offline:
+Ilog yomsebenzi
+Ukuphathwa kwerouter uma lolu hlelo
+Okubonwa ngamarouter uma lo sikena
+Akukho idatha mbumbulu — skrolela kahle izigaba ezingezansi.
+Isimo
+Igama
+IP
+Amasayithi avakashelwa njalo (DNS)
+Uhlobo
+MAC
+Hostname
+Ports
+Ping
+Okubonwe okokuqala
+Okubonwe kokugcina
+IT name
+Chofoza i-Scan Wi‑Fi + LAN
+Awekho amadivayisi — chofoza i-Scan
+Label
+● ONLINE
+○ offline
+Iyalayisha…
+Iyavuselela…
+Kubuyekeziwe
+Qala i-START.command
+Iyaskena…
+Kwenziwe
+Ukuskena kuhlulekile
+Ilayisha ama-DNS logs…
+DNS: {n} device(s)
+Akukho okufanayo ku-DNS log
+Ukuvuselela kwe-DNS kuhlulekile
+Buyela emadivayisini
+Umdali:
+I-Wi‑Fi yale Mac
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+Izilawuli zemephu
+Chofoza noma iyiphi i-IP ukuze uthole izinkambu zokuskena zangempela. Uhlu lwezici (browsing/DNS/bandwidth limits).
+Ukugeleza →
+Internet → Gateway → Wi‑Fi / LAN → devices
+Nciphisa imephu endaweni yomphethi
+Khulisa imephu endaweni yomphethi
+Linganisa imephu ephelele
+Nweba imephu
+Phuma ekunwebeni
+Landa i-PDF
+Scan & redraw
+Vuselela imephu
+Ilayisha imephu…
+Iskena inethiwekhi (real data)…
+Ayikho idatha yokuskena — iskena inethiwekhi (real data only)…
+Qala i-START.command kuqala
+Vula http://127.0.0.1:5080/
+Network map panel
+Imephu ye-topology yenethiwekhi ebonisanayo
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+Imininingwane
+Vala
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+Kusesikhathini
+auto every
+Ilayisha yonke idatha etholakalayo…
+Ayikho imephu yokukhipha — skena kuqala
+PDF library loading… try again
+Idala i-PDF…
+I-PDF ilandiwe
+I-PDF yehlulekile — zama i-Print kuleli khasi
+Lolu hlelo: yes
+Lolu hlelo: partial
+Lolu hlelo: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

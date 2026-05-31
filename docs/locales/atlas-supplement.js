@@ -1,0 +1,180 @@
+/** Extra atlas entries (Calendar, Clock, theme labels) — load after phrases-all.js */
+(function (g) {
+  if (typeof g.registerStringAtlas !== 'function') return;
+
+  const T = {
+    Calendar: {
+      ar: 'التقويم',
+      hi: 'कैलेंडर',
+      ne: 'पात्रो',
+      ur: 'کیلنڈر',
+      bn: 'ক্যালেন্ডার',
+      tl: 'Kalendaryo',
+      fr: 'Calendrier',
+      es: 'Calendario',
+      zh: '日历',
+      ja: 'カレンダー',
+      sa: 'पञ्चाङ्गम्',
+      ml: 'കലണ്ടർ',
+      gu: 'કેલેન્ડર',
+      mr: 'दिनदर्शिका',
+      sw: 'Kalenda',
+      zu: 'Ikhalenda',
+      am: 'ቀን መቁጠሪያ',
+      ha: 'Kalanda',
+      pt: 'Calendário',
+      de: 'Kalender',
+      ru: 'Календарь',
+      ko: '달력',
+      th: 'ปฏิทิน',
+    },
+    Clock: {
+      ar: 'الساعة',
+      hi: 'घड़ी',
+      ne: 'घडी',
+      ur: 'گھڑی',
+      bn: 'ঘড়ি',
+      tl: 'Orasan',
+      fr: 'Horloge',
+      es: 'Reloj',
+      zh: '时钟',
+      ja: '時計',
+      sa: 'घटिका',
+      ml: 'ക്ലോക്ക്',
+      gu: 'ઘડિયાળ',
+      mr: 'घड्याळ',
+      sw: 'Saa',
+      zu: 'Iwashi',
+      am: 'ሰዓት',
+      ha: 'Agogo',
+      pt: 'Relógio',
+      de: 'Uhr',
+      ru: 'Часы',
+      ko: '시계',
+      th: 'นาฬิกา',
+    },
+    'World calendars': {
+      ar: 'تقاويم العالم',
+      hi: 'विश्व कैलेंडर',
+      fr: 'Calendriers du monde',
+      es: 'Calendarios del mundo',
+      zh: '世界日历',
+      ja: '世界のカレンダー',
+      de: 'Weltkalender',
+      pt: 'Calendários mundiais',
+      ru: 'Календари мира',
+      ko: '세계 달력',
+      th: 'ปฏิทินโลก',
+    },
+    'World clock': {
+      ar: 'ساعة العالم',
+      hi: 'विश्व घड़ी',
+      fr: 'Horloge mondiale',
+      es: 'Reloj mundial',
+      zh: '世界时钟',
+      ja: '世界時計',
+      de: 'Weltuhr',
+      pt: 'Relógio mundial',
+      ru: 'Мировые часы',
+      ko: '세계 시계',
+      th: 'นาฬิกาโลก',
+    },
+    Modern: {
+      ar: 'حديث',
+      hi: 'आधुनिक',
+      fr: 'Moderne',
+      es: 'Moderno',
+      zh: '现代',
+      ja: 'モダン',
+      de: 'Modern',
+      pt: 'Moderno',
+      ru: 'Современная',
+      ko: '모던',
+      th: 'โมเดิร์น',
+    },
+    Retro: {
+      ar: 'كلاسيكي',
+      hi: 'रेट्रो',
+      fr: 'Rétro',
+      es: 'Retro',
+      zh: '复古',
+      ja: 'レトロ',
+      de: 'Retro',
+      pt: 'Retrô',
+      ru: 'Ретро',
+      ko: '레트로',
+      th: 'เรโทร',
+    },
+    'Switch to modern theme': {
+      ar: 'التبديل إلى السمة الحديثة',
+      hi: 'आधुनिक थीम पर जाएँ',
+      fr: 'Passer au thème moderne',
+      es: 'Cambiar al tema moderno',
+      zh: '切换到现代主题',
+      ja: 'モダンテーマに切り替え',
+      de: 'Zum modernen Theme wechseln',
+    },
+    'Switch to retro terminal theme': {
+      ar: 'التبديل إلى سمة الطرفية الكلاسيكية',
+      hi: 'रेट्रो टर्मिनल थीम पर जाएँ',
+      fr: 'Passer au thème terminal rétro',
+      es: 'Cambiar al tema terminal retro',
+      zh: '切换到复古终端主题',
+      ja: 'レトロターミナルテーマに切り替え',
+      de: 'Zum Retro-Terminal-Theme wechseln',
+    },
+    'Digital + analog': {
+      ar: 'رقمي + تناظري',
+      hi: 'डिजिटल + एनालॉग',
+      fr: 'Numérique + analogique',
+      es: 'Digital + analógico',
+      zh: '数字 + 模拟',
+      ja: 'デジタル + アナログ',
+      de: 'Digital + analog',
+    },
+    'Digital only': {
+      ar: 'رقمي فقط',
+      hi: 'केवल डिजिटल',
+      fr: 'Numérique seulement',
+      es: 'Solo digital',
+      zh: '仅数字',
+      ja: 'デジタルのみ',
+      de: 'Nur digital',
+    },
+    'Analog only': {
+      ar: 'تناظري فقط',
+      hi: 'केवल एनालॉग',
+      fr: 'Analogique seulement',
+      es: 'Solo analógico',
+      zh: '仅模拟',
+      ja: 'アナログのみ',
+      de: 'Nur analog',
+    },
+    Language: {
+      ar: 'اللغة',
+      hi: 'भाषा',
+      fr: 'Langue',
+      es: 'Idioma',
+      zh: '语言',
+      ja: '言語',
+      de: 'Sprache',
+    },
+  };
+
+  function isEncodingLang(code) {
+    return /^(morse|nato|rot13|atbash|classified|b64|rune|hiero|piglatin|leet|goog|bin|pir|hex|upside|zalgo)$/.test(
+      code,
+    );
+  }
+
+  const langs = Object.keys(g.I18N_PHRASES || {});
+  langs.forEach((lang) => {
+    if (lang === 'en' || isEncodingLang(lang)) return;
+    const pairs = {};
+    Object.keys(T).forEach((enPhrase) => {
+      const tr = T[enPhrase][lang];
+      if (tr) pairs[enPhrase] = tr;
+    });
+    if (Object.keys(pairs).length) g.registerStringAtlas(lang, pairs);
+  });
+})(window);

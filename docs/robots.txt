@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /about
+
+Sitemap: https://network.linux-aios.com/sitemap.xml

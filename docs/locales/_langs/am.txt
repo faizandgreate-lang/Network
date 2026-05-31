@@ -1,0 +1,160 @@
+መነሻ — የአውታረ መረብ ተቆጣጣሪ
+የመሣሪያ ዝርዝር — የአውታረ መረብ ተቆጣጣሪ
+የአውታረ መረብ ካርታ — የአውታረ መረብ ተቆጣጣሪ
+የአውታረ መረብ ተቆጣጣሪ
+መነሻ
+መሣሪያዎች
+ካርታ
+ገጽታ
+ቋንቋ
+ሎጎ እና የፈጣሪ ፎቶ
+የፈጣሪ ፎቶ እና ሎጎ
+ገጽታ፡ አረንጓዴ
+ገጽታ፡ ጥቁር-ነጭ
+ወደ ጥቁር ነጭ ገጽታ ቀይር
+ወደ አረንጓዴ ጥቁር ገጽታ ቀይር
+> የአውታረ መረብ ተቆጣጣሪ እየተጀመረ...
+> በይነገጽ ተጭኗል OK
+> ዝግጁ
+በቢሮ ወይም ቤት Wi‑Fi እና LAN ላይ ሁሉንም መሣሪያዎች ይመልከቱ። እውነተኛ የስካን ውሂብ — ግምት የለም።
+የመሣሪያ ዝርዝር ክፈት
+የአውታረ መረብ ካርታ
+የመሣሪያ ዝርዝር
+Wi‑Fi + LAN ይቃኙ፣ IP፣ MAC፣ ሁኔታ ይመልከቱ፣ ለእያንዳንዱ መሣሪያ መለያ ይስጡ።
+ክፈት →
+ከእያንዳንዱ ስካን በኋላ ከግራ ወደ ቀኝ የፍሰት ቻርት። ማጉላት እና ማንቀሳቀስ።
+አውርድ
+Mac/PC መነሻዎች፣ የተጠቃሚ መመሪያ እና የመሣሪያ CSV ላክ።
+መነሻዎች እና ሪፖርቶች →
+ፈጣን ትምህርት
+ስድስት ደረጃዎች — የመጀመሪያ ማዋቀር
+መተግበሪያውን ጀምር
+መነሻውን በ office-net-monitor አቃፊ ውስጥ አስቀምጥ፣ ከዚያ ሁለቴ ጠቅ አድርግ። Terminal ወይም ትዕዛዝ መስኮት ክፍት አስቀር።
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+በፕሮጀክት አቃፊ ውስጥ ነህ? START.command (Mac) ወይም START.bat (PC) ተጠቀም — ማውረድ አያስፈልግም።
+ይህን ጣቢያ ክፈት
+http://127.0.0.1:5080/ ተጠቀም — ከ Finder ፋይል አይደለም።
+አውታረ መረቡን ቃኝ
+በመሣሪያ ዝርዝር ላይ Scan Wi‑Fi + LAN ጠቅ አድርግ። 1–2 ደቂቃ ይጠብቁ።
+ካርታውን ተመልከት
+Internet → gateway → devices ለማየት Network map ክፈት።
+መሣሪያዎችን ሰይም
+በ IT name አምድ ውስጥ ጻፍ (ፕሪንተር፣ PC፣ ክፍል፣ ወዘተ)።
+ሪፖርቶችን አውርድ
+መመሪያ (.txt)
+መሣሪያዎች (.csv)
+Mac / PC መነሻዎች
+ስለ ፈጣሪው
+Mohammad Faizan Khan
+የዚህ ድር ጣቢያ ፈጣሪ
+በቴክኒክ እና ኮምፒዩተር ሥራ ጀመሁ፣ ችግሮችን በማስተካከል እና ስርዓቶችን በማስኬድ። በኋላ በሳዑዲ አረቢያ የሰው ኃይል እና የፕሮጀክት ክወናዎችን አመራሁ — አጋዥ፣ ጤና እና በብዙ ቦታዎች የኩርና ድርጅት ጣቢያዎች።
+ይህ መንገድ end-to-end ክወናን መሳርሰኝ፡ ሰዎች፣ ጊዜ እና ግልጽ ግንኙነት። ዛሬ በክወና እና በፕሮጀክት ቅንጅብ ላይ እተኩራለሁ — ውስብስብ ሥራን ወደ ቀላል፣ ተደጋጋሚ ስርዓቶች መለወጥ።
+Network Monitor — ባዶ የሠንጠረዥ ሴሎች “not detected” ማለት ናቸው፣ ግምት አይደለም።
+© Mohammad Faizan Khan
+እውነተኛ የስካን ውሂብ ብቻ — ለማዘመን Scan ጠቅ አድርግ። ባዶ = not detected።
+እንቅስቃሴ
+የራውተር መመሪያ
+መተግበሪያው አይሰራም።
+START.command ሁለቴ ጠቅ አድርግ፣ ከዚያ ክፈት
+● SERVER ONLINE
+አውታረ መረቦች፡
+የተቃኙ መሣሪያዎች
+በአገናኝ አይነት አጣራ ወይም ከስካን በኋላ CSV ላክ።
+Scan Wi‑Fi + LAN
+ሁሉ
+Wi‑Fi ብቻ
+LAN ብቻ
+አድስ
+CSV አውርድ
+DNS ጣቢያዎችን አድስ
+Pi-hole ወይም AdGuard DNS log
+Online:
+Offline:
+የእንቅስቃሴ መዝገብ
+የራውተር አስተዳደር ከዚህ መተግበሪያ ጋር
+ራውተሮች ምን እንደሚያዩ ከዚህ ስካነር ጋር
+የውሸት ውሂብ የለም — ከታች ያሉ ክፍሎችን በለስሉ ይሸብልሉ።
+ሁኔታ
+ስም
+IP
+ተደጋጋሚ ጣቢያዎች (DNS)
+አይነት
+MAC
+Hostname
+Ports
+Ping
+መጀመሪያ የታየ
+መጨረሻ የታየ
+IT name
+Scan Wi‑Fi + LAN ጠቅ አድርግ
+መሣሪያ የለም — Scan ጠቅ አድርግ
+Label
+● ONLINE
+○ offline
+በመጫን ላይ…
+በማደስ ላይ…
+ተዘምኗል
+START.command ጀምር
+በመቃኝ ላይ…
+ተጠናቀቀ
+ስካን አልተሳካም
+DNS logs በመጫን ላይ…
+DNS: {n} device(s)
+የ DNS log ማዛመድ የለም
+የ DNS ማደስ አልተሳካም
+ወደ መሣሪያዎች ተመለስ
+ፈጣሪ፡
+የዚህ Mac Wi‑Fi
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+የካርታ ቁጥጥሮች
+ለእውነተኛ የስካን መስኮች ማንኛውንም IP ጠቅ አድርግ። የባህሪ ዝርዝር (browsing/DNS/bandwidth limits)።
+ፍሰት →
+Internet → Gateway → Wi‑Fi / LAN → devices
+ካርታ በመጠቆሚያ አሳንስ
+ካርታ በመጠቆሚያ አጉል
+ሙሉ ካርታ አጣጣ
+ካርታ አስፋ
+ከማስፋት ውጣ
+PDF አውርድ
+Scan & redraw
+ካርታ አድስ
+ካርታ በመጫን ላይ…
+አውታረ መረብ በመቃኝ (real data)…
+እስካሁን የስካን ውሂብ የለም — አውታረ መረብ በመቃኝ (real data only)…
+መጀመሪያ START.command ጀምር
+http://127.0.0.1:5080/ ክፈት
+Network map panel
+ኢንተራክቲቭ የአውታረ መረብ ቶፖሎጂ ካርታ
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+ዝርዝሮች
+ዝጋ
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+ወቅታዊ
+auto every
+ሁሉንም የሚገኝ ውሂብ በመጫን ላይ…
+ለላክ ካርታ የለም — መጀመሪያ ቃኝ
+PDF library loading… try again
+PDF በመፍጠር ላይ…
+PDF ተወርዷል
+PDF አልተሳካም — በዚህ ገጽ Print ሞክር
+ይህ መተግበሪያ፡ yes
+ይህ መተግበሪያ፡ partial
+ይህ መተግበሪያ፡ no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

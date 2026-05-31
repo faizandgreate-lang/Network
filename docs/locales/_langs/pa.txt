@@ -1,0 +1,160 @@
+ਘਰ — ਨੈੱਟਵਰਕ ਮਾਨੀਟਰ
+ਡivice ਸੂਚੀ — ਨੈੱਟਵਰਕ ਮਾਨੀਟਰ
+ਨੈੱਟਵਰਕ ਨਕਸ਼ਾ — ਨੈੱਟਵਰਕ ਮਾਨੀਟਰ
+ਨੈੱਟਵਰਕ ਮਾਨੀਟਰ
+ਘਰ
+ਡivices
+ਨਕਸ਼ਾ
+ਥੀਮ
+ਭਾਸ਼ਾ
+ਲogo ਅਤੇ creator ਫoto
+Creator ਫoto ਅਤੇ logo
+ਥੀਮ: ਹਰਾ
+ਥੀਮ: ਕala-ਚਿੱਟਾ
+ਕala-ਚਿੱਟਾ ਥੀਮ
+ਹਰਾ-ਕala ਥੀਮ
+> ਨੈੱਟਵਰਕ ਮਾਨੀਟਰ ਸ਼ੁਰੂ...
+> ਇੰਟਰਫੇਸ ਲੋਡ OK
+> ਤਿਆਰ
+Office ਜਾਂ ਘਰ Wi‑Fi, LAN ਤੇ ਹਰ device ਦੇਖੋ।
+Device ਸੂਚੀ ਖੋਲ੍ਹੋ
+ਨੈੱਟਵਰਕ ਨਕਸ਼ਾ
+ਡivice ਸੂਚੀ
+Wi‑Fi + LAN scan, IP, MAC, status, label।
+ਖੋਲ੍ਹੋ →
+Scan ਤੋਂ ਬਾਅਦ flowchart। Zoom, pan।
+ਡਾਊਨਲੋਡ
+Mac/PC starters, guide, CSV।
+Starters & reports →
+ਛੋਟਾ tutorial
+ਛੇ ਕਦਮ — ਪਹਿਲੀ setup
+App ਸ਼ੁਰੂ
+Launcher office-net-monitor folder ਵਿੱਚ save, double-click।
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+Project folder? START.command (Mac) ਜਾਂ START.bat (PC)।
+ਇਹ site ਖੋਲ੍ਹੋ
+http://127.0.0.1:5080/ ਵਰਤੋ।
+Network scan
+Scan Wi‑Fi + LAN click। 1–2 min।
+Map ਦੇਖੋ
+Network map open।
+Devices ਦਾ ਨਾਮ
+IT name column।
+Reports download
+Guide (.txt)
+Devices (.csv)
+Mac / PC starters
+Creator ਬਾਰੇ
+Mohammad Faizan Khan
+Website creator
+Technical work ਤੋਂ। Saudi Arabia operations।
+ਉਸ ਰਸਤੇ ਨੇ end-to-end operations ਸਿਖਾਏ: ਲੋਕ, ਸਮਾਂ, ਸਪੱਸ਼ਟ ਸੰਚਾਰ। ਅੱਜ operations ਅਤੇ project coordination 'ਤੇ ਧਿਆਨ — ਮੁਸ਼ਕਲ ਕੰਮ ਨੂੰ ਸਧਾਰਨ, ਦੁਹਰਾਏ ਜਾਣ ਯੋਗ ਸਿਸਟਮਾਂ ਵਿੱਚ ਬਦਲਣਾ।
+Network Monitor — empty cells “not detected”।
+© Mohammad Faizan Khan
+Real scan only — Scan click। Empty = not detected।
+Activity
+Router guide
+App ਨਹੀਂ ਚੱਲ ਰਿਹਾ।
+START.command double-click
+● SERVER ONLINE
+Networks:
+Scanned devices
+Filter or CSV।
+Scan Wi‑Fi + LAN
+All
+Wi‑Fi only
+LAN only
+Refresh
+Download CSV
+Refresh DNS sites
+Pi-hole or AdGuard DNS log
+Online:
+Offline:
+Activity log
+Router admin vs app
+Routers vs scanner
+No fake data।
+Status
+Name
+IP
+Frequent sites (DNS)
+Type
+MAC
+Hostname
+Ports
+Ping
+First seen
+Last seen
+IT name
+Click Scan Wi‑Fi + LAN
+No devices — click Scan
+Label
+● ONLINE
+○ offline
+Loading…
+Refreshing…
+Updated
+Start START.command
+Scanning…
+Done
+Scan failed
+Loading DNS logs…
+DNS: {n} device(s)
+No DNS log match
+DNS refresh failed
+Back to devices
+Creator:
+This Mac Wi‑Fi
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+Map controls
+Click IP।
+Flow →
+Internet → Gateway → Wi‑Fi / LAN → devices
+Zoom out
+Zoom in
+Fit map
+Expand map
+Exit expand
+Download PDF
+Scan & redraw
+Refresh map
+Loading map…
+Scanning network (real data)…
+No scan data — scanning (real data only)…
+Start START.command first
+Open http://127.0.0.1:5080/
+Network map panel
+Interactive network topology map
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+Details
+Close
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+Up to date
+auto every
+Loading all data…
+No map — scan first
+PDF library loading… try again
+Creating PDF…
+PDF downloaded
+PDF failed — Print
+This app: yes
+This app: partial
+This app: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

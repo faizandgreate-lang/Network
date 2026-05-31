@@ -1,0 +1,160 @@
+गृह — नेटवर्क मनिटर
+यन्त्र सूची — नेटवर्क मनिटर
+नेटवर्क नक्सा — नेटवर्क मनिटर
+नेटवर्क मनिटर
+गृह
+यन्त्रहरू
+नक्सा
+थिम
+भाषा
+लोगो र सिर्जकको फोटो
+सिर्जकको फोटो र लोगो
+थिम: हरियो
+थिम: कालो सेतो
+कालो सेतो थिममा स्विच
+हरियो कालो थिममा स्विच
+> नेटवर्क मनिटर सुरु हुँदै...
+> इन्टरफेस लोड OK
+> तयार
+कार्यालय वा घरको Wi‑Fi र LAN मा सबै यन्त्रहरू हेर्नुहोस्। वास्तविक स्क्यान डाटा — अनुमान होइन।
+यन्त्र सूची खोल्नुहोस्
+नेटवर्क नक्सा
+यन्त्र सूची
+Wi‑Fi + LAN स्क्यान, IP, MAC, स्थिति हेर्नुहोस्, प्रत्येक यन्त्र लेबल गर्नुहोस्।
+खोल्नुहोस् →
+प्रत्येक स्क्यान पछि बायाँबाट दायाँ फ्लोचार्ट। जुम र प्यान।
+डाउनलोड
+Mac/PC स्टार्टर, प्रयोगकर्ता गाइड, यन्त्र CSV निर्यात।
+स्टार्टर र प्रतिवेदन →
+छोटो ट्युटोरियल
+छ चरण — पहिलो पटक सेटअप
+एप सुरु गर्नुहोस्
+लन्चर office-net-monitor फोल्डरमा राख्नुहोस्, डबल-क्लिक। Terminal वा कमाण्ड विन्डो खुला राख्नुहोस्।
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+परियोजना फोल्डरमा हुनुहुन्छ? START.command (Mac) वा START.bat (PC) — डाउनलोड चाहिँदैन।
+यो साइट खोल्नुहोस्
+http://127.0.0.1:5080/ प्रयोग — Finder फाइल होइन।
+नेटवर्क स्क्यान
+यन्त्र सूचीमा Scan Wi‑Fi + LAN क्लिक। १–२ मिनेट पर्खनुहोस्।
+नक्सा हेर्नुहोस्
+Internet → gateway → devices का लागि Network map खोल्नुहोस्।
+यन्त्रको नाम
+IT name स्तम्भमा लेख्नुहोस् (printer, PC, room, आदि)।
+प्रतिवेदन डाउनलोड
+गाइड (.txt)
+यन्त्र (.csv)
+Mac / PC स्टार्टर
+सिर्जक बारे
+Mohammad Faizan Khan
+यो वेबसाइटका सिर्जक
+मैले प्राविधिक र कम्प्युटर कामबाट सुरु गरे, समस्या समाधान र प्रणाली सञ्चालन। पछि साउदी अरेबियामा कार्यबल र परियोजना सञ्चालन — hospitality, healthcare र धेरै स्थानमा corporate sites।
+त्यो बाटोले end-to-end सञ्चालन सिकायो: मानिस, समय, स्पष्ट संवाद। आज सञ्चालन र परियोजना समन्वय — जटिल काम सरल, दोहोरिन सक्ने प्रणालीमा।
+Network Monitor — खाली कोठीहरू “not detected” हो, अनुमान होइन।
+© Mohammad Faizan Khan
+वास्तविक स्क्यान मात्र — Scan क्लिक अपडेट। खाली = not detected।
+गतिविधि
+राउटर गाइड
+एप चलिरहेको छैन।
+START.command डबल-क्लिक, त्यसपछि खोल्नुहोस्
+● SERVER ONLINE
+नेटवर्कहरू:
+स्क्यान गरिएका यन्त्र
+लिङ्क प्रकार फिल्टर वा स्क्यान पछि CSV निर्यात।
+Scan Wi‑Fi + LAN
+सबै
+Wi‑Fi मात्र
+LAN मात्र
+रिफ्रेश
+CSV डाउनलोड
+DNS साइट रिफ्रेश
+Pi-hole वा AdGuard DNS log
+Online:
+Offline:
+गतिविधि लग
+राउटर admin बनाम यो एप
+राउटर के देख्छन् बनाम यो स्क्यानर
+नक्कली डाटा होइन — तल खण्ड सजिलै स्क्रोल।
+स्थिति
+नाम
+IP
+बारम्बार साइट (DNS)
+प्रकार
+MAC
+Hostname
+Ports
+Ping
+पहिलो पटक
+अन्तimo पटक
+IT name
+Scan Wi‑Fi + LAN क्लिक
+यन्त्र छैन — Scan क्लिक
+Label
+● ONLINE
+○ offline
+लोड हुँदै…
+रिफ्रेश…
+अपडेट
+START.command सुरु
+स्क्यान…
+सम्पन्न
+स्क्यान असफल
+DNS logs लोड…
+DNS: {n} device(s)
+DNS log मिलेन
+DNS refresh असफल
+यन्त्रमा फर्कनुहोस्
+सिर्जक:
+यो Mac Wi‑Fi
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+नक्सा नियन्त्रण
+कुनै IP क्लिक — वास्तविक स्क्यान फिल्ड। सुविधा सूची (browsing/DNS/bandwidth limits)।
+प्रवाह →
+Internet → Gateway → Wi‑Fi / LAN → devices
+सूचकमा नक्सा सानो
+सूचकमा नक्सा ठूलो
+पूरा नक्सा फिट
+नक्सा विस्तार
+विस्तार बन्द
+PDF डाउनलोड
+Scan & redraw
+नक्सा रिफ्रेश
+नक्सा लोड…
+नेटवर्क स्क्यान (real data)…
+स्क्यान डाटा छैन — नेटवर्क स्क्यान (real data only)…
+पहिले START.command
+http://127.0.0.1:5080/ खोल्नुहोस्
+Network map panel
+अन्तरक्रियात्मक नेटवर्क टोपोलोजी नक्सा
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+विवरण
+बन्द
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+अद्यावधिक
+auto every
+सबै उपलब्ध data लोड…
+निर्यातका लागि नक्सा छैन — पहिले स्क्यान
+PDF library loading… try again
+PDF बनाउँदै…
+PDF डाउनलोड
+PDF असफल — Print प्रयास
+यो एप: yes
+यो एप: partial
+यो एप: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

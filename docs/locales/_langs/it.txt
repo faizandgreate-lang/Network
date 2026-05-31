@@ -1,0 +1,160 @@
+Home — Monitor di rete
+Elenco dispositivi — Monitor di rete
+Mappa di rete — Monitor di rete
+Monitor di rete
+Home
+Dispositivi
+Mappa
+TEMA
+Lingua
+Logo e foto del creatore
+Foto del creatore e logo
+TEMA: VERDE
+TEMA: B/N
+Passa al tema bianco e nero
+Passa al tema verde e nero
+> INIZIALIZZAZIONE MONITOR DI RETE...
+> INTERFACCIA CARICATA OK
+> PRONTO
+Vedi ogni dispositivo su Wi‑Fi e LAN di ufficio o casa. Dati di scansione reali — nessuna supposizione.
+Apri elenco dispositivi
+Mappa di rete
+Elenco dispositivi
+Scansiona Wi‑Fi + LAN, vedi IP, MAC, stato, etichetta ogni dispositivo.
+Apri →
+Diagramma di flusso da sinistra a destra dopo ogni scansione. Zoom e pan.
+Scarica
+Avvii Mac/PC, guida utente ed export CSV dispositivi.
+Avvii e report →
+Tutorial rapido
+Sei passi — prima configurazione
+Avvia l'app
+Salva l'avvio nella cartella office-net-monitor, doppio clic. Tieni Terminal o finestra comandi aperta.
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+Già nella cartella progetto? Usa START.command (Mac) o START.bat (PC) — nessun download.
+Apri questo sito
+Usa http://127.0.0.1:5080/ — non un file dal Finder.
+Scansiona la rete
+Nell'elenco dispositivi clicca Scan Wi‑Fi + LAN. Attendi 1–2 min.
+Visualizza mappa
+Apri Network map per Internet → gateway → devices.
+Nomina dispositivi
+Digita nella colonna IT name (stampante, PC, stanza, ecc.).
+Scarica report
+Guida (.txt)
+Dispositivi (.csv)
+Avvii Mac / PC
+Informazioni sul creatore
+Mohammad Faizan Khan
+Creatore di questo sito
+Ho iniziato con lavoro tecnico e informatico, risolvendo problemi e gestendo sistemi. Poi ho guidato operazioni workforce e progetti in Arabia Saudita — hospitality, healthcare e corporate sites.
+Quel percorso ha insegnato operazioni end-to-end: persone, tempi, comunicazione chiara. Oggi mi concentro su operazioni e coordinamento progetti.
+Network Monitor — celle vuote significano “not detected”, non indovinato.
+© Mohammad Faizan Khan
+Solo dati di scansione reali — clicca Scan per aggiornare. Vuoto = not detected.
+Attività
+Guida router
+App non in esecuzione.
+Doppio clic su START.command, poi apri
+● SERVER ONLINE
+Reti:
+Dispositivi scansionati
+Filtra per tipo di link o esporta CSV dopo scansione.
+Scan Wi‑Fi + LAN
+Tutti
+Solo Wi‑Fi
+Solo LAN
+Aggiorna
+Scarica CSV
+Aggiorna siti DNS
+Pi-hole o AdGuard DNS log
+Online:
+Offline:
+Registro attività
+Admin router vs questa app
+Cosa vedono i router vs questo scanner
+Nessun dato falso — scorri le sezioni sotto.
+Stato
+Nome
+IP
+Siti frequenti (DNS)
+Tipo
+MAC
+Hostname
+Ports
+Ping
+Prima vista
+Ultima vista
+IT name
+Clicca Scan Wi‑Fi + LAN
+Nessun dispositivo — clicca Scan
+Label
+● ONLINE
+○ offline
+Caricamento…
+Aggiornamento…
+Aggiornato
+Avvia START.command
+Scansione…
+Fatto
+Scansione fallita
+Caricamento DNS logs…
+DNS: {n} device(s)
+Nessuna corrispondenza DNS log
+Aggiornamento DNS fallito
+Torna ai dispositivi
+Creatore:
+Wi‑Fi di questo Mac
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+Controlli mappa
+Clicca IP per campi scansione reali. Elenco funzioni (browsing/DNS/bandwidth limits).
+Flusso →
+Internet → Gateway → Wi‑Fi / LAN → devices
+Riduci mappa al puntatore
+Ingrandisci mappa al puntatore
+Adatta mappa intera
+Espandi mappa
+Esci da espansione
+Scarica PDF
+Scan & redraw
+Aggiorna mappa
+Caricamento mappa…
+Scansione rete (real data)…
+Nessun dato — scansione (real data only)…
+Avvia START.command prima
+Apri http://127.0.0.1:5080/
+Network map panel
+Mappa topologica di rete interattiva
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+Dettagli
+Chiudi
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+Aggiornato
+auto every
+Caricamento di tutti i dati…
+Nessuna mappa da esportare — scansiona prima
+PDF library loading… try again
+Creazione PDF…
+PDF scaricato
+PDF fallito — prova Print
+Questa app: yes
+Questa app: partial
+Questa app: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

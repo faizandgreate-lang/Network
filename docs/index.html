@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-title="doc.titleHome" data-seo-page="home">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network Monitor — Mohammad Faizan Khan (Creator)</title>
+  <meta name="description" content="I am the creator Mohammad Faizan Khan. Free Wi‑Fi and LAN network monitor, device list, and network map." />
+  <meta name="author" content="Mohammad Faizan Khan" />
+  <meta name="google-site-verification" content="googlec845b45a3dd5dd12" />
+  <link rel="canonical" href="https://network.linux-aios.com/" />
+  <link rel="stylesheet" href="static/site.css" />
+  <link rel="stylesheet" href="static/modern-theme.css" />
+  <script src="static/app-base.js"></script>
+  <script src="static/theme-boot.js"></script>
+  <script src="static/seo-config.js"></script>
+  <script src="static/seo.js"></script>
+  <script src="static/locales/en.js"></script>
+  <script src="static/locales/register.js"></script>
+  <script src="static/locales/translations.js"></script>
+  <script src="static/locales/phrases-all.js"></script>
+  <script src="static/locales/atlas-supplement.js"></script>
+  <script src="static/locales/en-gap-atlas.js"></script>
+  <script src="static/i18n.js"></script>
+</head>
+<body class="page-home">
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-brand">
+        <button type="button" class="coin-flip nav-coin" id="nav-coin" data-i18n-aria="nav.coinAria">
+          <div class="coin-flip-inner">
+            <div class="coin-flip-face coin-flip-front">
+              <img
+                class="coin-flip-logo logo-img nav-size"
+                src="assets/logo.png"
+                alt=""
+                role="presentation"
+              />
+            </div>
+            <div class="coin-flip-face coin-flip-back">
+              <img
+                class="coin-flip-photo"
+                src="assets/creator.png"
+                alt=""
+                role="presentation"
+              />
+            </div>
+          </div>
+        </button>
+        <a href="index.html" class="top-brand-title retro-title-wrap"><span class="top-title" data-retro-type="Network Monitor" data-i18n="app.brand">Network Monitor</span></a>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+        <a href="devices.html" data-i18n="nav.devices">Devices</a>
+        <a href="map.html" data-i18n="nav.map">Map</a>
+        <a href="calendar.html" data-i18n="nav.calendar">Calendar</a>
+        <a href="clock.html" data-i18n="nav.clock">Clock</a>
+        <div class="lang-picker" id="lang-picker">
+          <button type="button" class="btn lang-toggle-btn" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-menu">
+            <span class="lang-toggle-label" id="lang-toggle-label" data-i18n="nav.lang">LANG</span>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="listbox" hidden></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="home-main">
+    <div id="retro-boot" class="retro-boot" aria-hidden="true"></div>
+    <section class="hero-panel glass-panel accent">
+      <div class="hero-logo-slot">
+        <button type="button" class="coin-flip hero-coin" id="hero-coin" data-i18n-aria="nav.coinAria">
+          <div class="coin-flip-inner">
+            <div class="coin-flip-face coin-flip-front">
+              <img
+                class="coin-flip-logo logo-img logo-ready"
+                src="assets/logo.png"
+                alt=""
+                role="presentation"
+              />
+            </div>
+            <div class="coin-flip-face coin-flip-back">
+              <img
+                class="coin-flip-photo"
+                src="assets/creator.png"
+                alt=""
+                role="presentation"
+              />
+            </div>
+          </div>
+        </button>
+      </div>
+      <div class="hero-text">
+        <a href="https://khan.linux-aios.com" target="_blank" rel="noopener noreferrer" class="creator-hit" data-i18n-aria="home.creatorLinkAria" aria-label="Creator portfolio"> </a>
+        <div class="retro-title-wrap"><h1 data-retro-type="Network Monitor" data-i18n="app.brand">Network Monitor</h1></div>
+        <p class="hero-lead sub" data-i18n="hero.lead">See every device on your office or home Wi‑Fi and LAN. Real scan data.</p>
+        <div class="hero-actions">
+          <a class="btn btn-lg" href="devices.html" data-i18n="hero.openDevices">Open device list</a>
+          <a class="btn btn-lg sec" href="map.html" data-i18n="hero.openMap">Network map</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="action-grid">
+      <a class="action-card glass-panel" href="devices.html">
+        <span class="action-num">01</span>
+        <h3 data-i18n="home.a01.title">Device list</h3>
+        <p data-i18n="home.a01.desc">Scan Wi‑Fi + LAN, view IP, MAC, status, label each device.</p>
+        <span class="action-go" data-i18n="home.a01.go">Open →</span>
+      </a>
+      <a class="action-card glass-panel" href="map.html">
+        <span class="action-num">02</span>
+        <h3 data-i18n="home.a02.title">Network map</h3>
+        <p data-i18n="home.a02.desc">Left-to-right flowchart after each scan. Zoom and pan.</p>
+        <span class="action-go" data-i18n="home.a02.go">Open →</span>
+      </a>
+      <a class="action-card glass-panel" href="#start-downloads">
+        <span class="action-num">↓</span>
+        <h3 data-i18n="home.a03.title">Download</h3>
+        <p data-i18n="home.a03.desc">Mac/PC starters, user guide, and device CSV export.</p>
+        <span class="action-go" data-i18n="home.a03.go">Launchers &amp; reports →</span>
+      </a>
+    </section>
+
+    <section class="panel glass-panel tutorial-panel">
+      <div class="panel-head">
+        <h2 data-i18n="home.tutorial.title">Quick tutorial</h2>
+        <p class="panel-sub" data-i18n="home.tutorial.sub">Six steps — first time setup</p>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card step-card-wide" id="start-downloads">
+          <span class="step-n">01</span>
+          <h4 data-i18n="home.s01.title">Download &amp; start</h4>
+          <p data-i18n="home.s01.p">Download the full package, unzip it, then double-click START.command (Mac) or START.bat (Windows). Keep Terminal or the command window open.</p>
+          <div class="download-group">
+            <p class="download-group-label" data-i18n="home.s01.fullTitle">Full app (recommended)</p>
+            <div class="launcher-downloads">
+              <a class="pill pill-primary" href="/api/download/full-mac.zip" download data-i18n="home.s01.fullMac">Mac — full download (.zip)</a>
+              <a class="pill pill-primary" href="/api/download/full-windows.zip" download data-i18n="home.s01.fullWin">Windows / PC — full download (.zip)</a>
+            </div>
+          </div>
+          <div class="download-group">
+            <p class="download-group-label" data-i18n="home.s01.starterTitle">Starter only</p>
+            <div class="launcher-downloads">
+              <a class="pill" href="/api/download/start-command" download data-i18n="home.s01.macCmd">Mac — START.command only</a>
+              <a class="pill" href="/api/download/start-bat" download data-i18n="home.s01.win">Windows — START.bat only</a>
+            </div>
+          </div>
+          <div class="download-group">
+            <p class="download-group-label" data-i18n="home.s01.appTitle">Mac app</p>
+            <div class="launcher-downloads">
+              <a class="pill" href="/api/download/mac-app.zip" download data-i18n="home.s01.macApp">Mac — Network Monitor.app (.zip)</a>
+            </div>
+          </div>
+          <p class="step-note" data-i18n="home.s01.note">Requires Python 3. First run installs dependencies automatically.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-n">02</span>
+          <h4 data-i18n="home.s02.title">Open this site</h4>
+          <p data-i18n="home.s02.p">Use http://127.0.0.1:5080/ — not a file from Finder.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-n">03</span>
+          <h4 data-i18n="home.s03.title">Scan the network</h4>
+          <p data-i18n="home.s03.p">On Device list, click Scan Wi‑Fi + LAN. Wait 1–2 min.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-n">04</span>
+          <h4 data-i18n="home.s04.title">View the map</h4>
+          <p data-i18n="home.s04.p">Open Network map to see Internet → gateway → devices.</p>
+        </div>
+        <div class="step-card">
+          <span class="step-n">05</span>
+          <h4 data-i18n="home.s05.title">Name devices</h4>
+          <p data-i18n="home.s05.p">Type in the IT name column (printer, PC, room, etc.).</p>
+        </div>
+        <div class="step-card">
+          <span class="step-n">06</span>
+          <h4 data-i18n="home.s06.title">Download reports</h4>
+          <p>
+            <a class="ext" href="/api/download/guide.txt" data-i18n="home.s06.guide">Guide (.txt)</a>
+            ·
+            <a class="ext" href="/api/export.csv" data-i18n="home.s06.csv">Devices (.csv)</a>
+            ·
+            <a class="ext" href="#start-downloads" data-i18n="home.s06.starters">Mac / PC starters</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel glass-panel creator-panel">
+      <div class="panel-head">
+        <h2 data-i18n="home.creator.title">About the creator</h2>
+      </div>
+      <div class="creator-layout">
+        <div class="creator-coin-slot">
+          <button type="button" class="coin-flip creator-coin" id="creator-coin" data-i18n-aria="nav.creatorCoinAria">
+            <div class="coin-flip-inner">
+              <div class="coin-flip-face coin-flip-front">
+                <img
+                  class="coin-flip-photo"
+                  src="assets/creator.png"
+                  alt=""
+                  role="presentation"
+                />
+              </div>
+              <div class="coin-flip-face coin-flip-back">
+                <img
+                  class="coin-flip-logo logo-img logo-ready"
+                  src="assets/logo.png"
+                  alt=""
+                  role="presentation"
+                />
+              </div>
+            </div>
+          </button>
+        </div>
+        <div class="creator-bio">
+          <h3 data-i18n="home.creator.name">Mohammad Faizan Khan</h3>
+          <p class="creator-role" data-i18n="home.creator.role">I am the creator Mohammad Faizan Khan</p>
+          <p data-i18n="home.creator.p1">I started in technical and computer work, fixing problems and running systems. Later I led workforce and project operations in Saudi Arabia — hospitality, healthcare, and corporate sites across many locations.</p>
+          <p data-i18n="home.creator.p2">That path taught me end-to-end operations: people, timing, and clear communication. Today I focus on operations and project coordination — turning complex work into simple, repeatable systems.</p>
+          <div class="creator-links">
+            <a class="pill" href="https://khan.linux-aios.com" target="_blank" rel="noopener" data-i18n="home.portfolio">Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p data-i18n="footer.note">Network Monitor — empty table cells mean “not detected”, not guessed.</p>
+    <p class="footer-disclaimer" data-i18n="footer.disclaimer">
+      For learning and information only. Do not misuse. The creator (Mohammad Faizan Khan) is not responsible for misuse. Code is free to use however you want.
+    </p>
+    <p data-i18n="footer.copy">© Mohammad Faizan Khan</p>
+    <noscript>
+      <p class="seo-summary">
+        I am the creator Mohammad Faizan Khan. Network Monitor — free Wi‑Fi and LAN scanner, network map,
+        device list, CSV export, world clock and calendars. Portfolio: khan.linux-aios.com — Linux AIOS.
+      </p>
+    </noscript>
+  </footer>
+  <script src="static/app-theme.js"></script>
+  <script src="static/logo.js?v=17"></script>
+  <script src="static/coin-flip.js"></script>
+  <script src="static/retro-terminal.js"></script>
+</body>
+</html>

@@ -8,7 +8,7 @@
 |---------|--------|
 | Source | Deploy from a branch |
 | Branch | `main` |
-| Folder | **`/web`** |
+| Folder | **`/docs`** (GitHub only shows **root** or **docs** — we mirror `web/` into `docs/`) |
 
 Wait 2–5 minutes after saving, then hard-refresh (Cmd+Shift+R).
 

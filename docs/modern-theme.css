@@ -1,0 +1,759 @@
+/* Modern theme — white glass + brand teal (#2596be, #509591) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+html[data-app-theme='modern'] {
+  --brand-primary: #2596be;
+  --brand-secondary: #509591;
+  --bg: #ffffff;
+  --bg-elevated: rgba(255, 255, 255, 0.65);
+  --bg-panel: rgba(255, 255, 255, 0.75);
+  --card: rgba(255, 255, 255, 0.78);
+  --card-hover: rgba(255, 255, 255, 0.92);
+  --glass-border: rgba(37, 150, 190, 0.12);
+  --line: rgba(37, 150, 190, 0.1);
+  --line-bright: rgba(37, 150, 190, 0.18);
+  --text: #334155;
+  --muted: #64748b;
+  --ok: #2596be;
+  --hi: #2596be;
+  --hi-strong: #1e7a9c;
+  --hi-alt: #509591;
+  --ok-dim: #94a3b8;
+  --ok-glow: rgba(37, 150, 190, 0.22);
+  --hi-glow: rgba(80, 149, 145, 0.2);
+  --bad: #e11d48;
+  --bright: #0f172a;
+  --copy: #475569;
+  --accent-soft: rgba(37, 150, 190, 0.14);
+  --accent-soft-mid: rgba(37, 150, 190, 0.1);
+  --accent-soft-low: rgba(80, 149, 145, 0.1);
+  --accent-halo: rgba(37, 150, 190, 0.12);
+  --warn-copy: #be123c;
+  --row-hover: rgba(37, 150, 190, 0.06);
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --shadow-sm: 0 1px 2px rgba(37, 150, 190, 0.06);
+  --shadow-md: 0 8px 32px rgba(37, 150, 190, 0.08), 0 2px 8px rgba(15, 23, 42, 0.04);
+  --shadow-glow: 0 0 0 1px rgba(37, 150, 190, 0.14), 0 12px 40px rgba(80, 149, 145, 0.12);
+  --glass-blur: blur(20px) saturate(1.65);
+  --green-img-filter: none;
+  scroll-behavior: smooth;
+}
+
+html[data-app-theme='modern'] {
+  background: #ffffff;
+}
+
+html[data-app-theme='modern'],
+html[data-app-theme='modern'] body {
+  color: var(--text);
+}
+
+/* Prevent retro CRT styling before app-theme.js runs */
+html[data-app-theme='modern'] body {
+  background: transparent !important;
+  text-shadow: none !important;
+  animation: none !important;
+}
+
+html[data-app-theme='modern'] body::before,
+html[data-app-theme='modern'] body::after {
+  display: none !important;
+}
+
+html[data-app-theme='modern'] body {
+  font-family: var(--font);
+  letter-spacing: 0.01em;
+  text-shadow: none;
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse 110% 70% at 0% -10%, rgba(37, 150, 190, 0.09), transparent 55%),
+    radial-gradient(ellipse 90% 60% at 100% 0%, rgba(80, 149, 145, 0.08), transparent 50%),
+    radial-gradient(ellipse 80% 50% at 50% 100%, rgba(37, 150, 190, 0.05), transparent 55%),
+    #ffffff;
+  background-attachment: fixed;
+}
+
+html[data-app-theme='modern'] body::before,
+html[data-app-theme='modern'] body::after {
+  display: none !important;
+}
+
+html[data-app-theme='modern'] body.theme-modern {
+  animation: none;
+}
+
+/* Typography */
+html[data-app-theme='modern'] h1,
+html[data-app-theme='modern'] h2,
+html[data-app-theme='modern'] h3,
+html[data-app-theme='modern'] h4,
+html[data-app-theme='modern'] .top-title {
+  font-family: var(--font-display);
+  text-transform: none;
+  letter-spacing: -0.02em;
+  text-shadow: none;
+  color: var(--bright);
+  font-weight: 700;
+}
+
+html[data-app-theme='modern'] h1 {
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  background: linear-gradient(135deg, #0f172a 0%, #2596be 50%, #509591 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html[data-app-theme='modern'] h2 {
+  color: var(--bright);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+html[data-app-theme='modern'] .sub,
+html[data-app-theme='modern'] .hero-lead,
+html[data-app-theme='modern'] .panel-sub {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+html[data-app-theme='modern'] a.ext {
+  color: var(--ok);
+  font-weight: 500;
+}
+
+html[data-app-theme='modern'] a.ext:hover {
+  text-shadow: none;
+  color: var(--hi-strong);
+}
+
+/* Header */
+html[data-app-theme='modern'] .top-bar {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+}
+
+html[data-app-theme='modern'] .top-bar-inner {
+  padding: 0.75rem 1.5rem;
+  max-width: 1280px;
+}
+
+html[data-app-theme='modern'] .top-title {
+  color: var(--bright);
+  text-transform: none;
+  letter-spacing: -0.03em;
+  font-size: 1.05rem;
+  text-shadow: none;
+}
+
+html[data-app-theme='modern'] .site-nav {
+  gap: 0.5rem;
+}
+
+html[data-app-theme='modern'] .site-nav a {
+  color: var(--muted);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+  transition: color 0.2s, background 0.2s, border-color 0.2s;
+}
+
+html[data-app-theme='modern'] .site-nav a:hover {
+  color: var(--bright);
+  background: var(--accent-soft-low);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+html[data-app-theme='modern'] .site-nav a.active {
+  color: var(--bright);
+  background: linear-gradient(135deg, rgba(37, 150, 190, 0.28), rgba(80, 149, 145, 0.14));
+  border-color: rgba(37, 150, 190, 0.35);
+  box-shadow: var(--shadow-glow);
+}
+
+html[data-app-theme='modern'] .theme-toggle-btn {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--line-bright);
+  color: var(--bright);
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 1rem;
+}
+
+html[data-app-theme='modern'] .theme-toggle-btn:hover,
+html[data-app-theme='modern'] .theme-toggle-btn.theme-is-modern {
+  border-color: var(--hi-strong);
+  background: linear-gradient(135deg, rgba(37, 150, 190, 0.16), rgba(80, 149, 145, 0.08));
+  color: var(--hi);
+  box-shadow: var(--shadow-glow);
+}
+
+html[data-app-theme='modern'] .lang-toggle-btn {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--line);
+}
+
+html[data-app-theme='modern'] .lang-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  min-width: 14rem;
+  max-width: min(20rem, 92vw);
+  max-height: min(70vh, 420px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  z-index: 10050;
+}
+
+html[data-app-theme='modern'] .lang-menu[hidden] {
+  display: none !important;
+}
+
+html[data-app-theme='modern'] .lang-picker.open .lang-menu {
+  display: block;
+}
+
+html[data-app-theme='modern'] .lang-menu-item {
+  background: transparent;
+  border-radius: var(--radius-sm);
+  margin: 2px 4px;
+  width: calc(100% - 8px);
+  font-size: 0.85rem;
+}
+
+html[data-app-theme='modern'] .lang-menu-item:hover,
+html[data-app-theme='modern'] .lang-menu-item.active {
+  background: var(--accent-soft-low);
+  color: var(--hi);
+  box-shadow: none;
+}
+
+html[data-app-theme='modern'] .lang-picker.open .lang-toggle-btn {
+  border-color: var(--hi-strong);
+  color: var(--hi);
+}
+
+/* Buttons */
+html[data-app-theme='modern'] .btn,
+html[data-app-theme='modern'] .btn-link {
+  font-family: var(--font);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: none;
+  background: linear-gradient(135deg, #2596be 0%, #509591 100%);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(37, 150, 190, 0.35);
+  letter-spacing: 0.02em;
+  transition: transform 0.15s, box-shadow 0.2s, filter 0.2s;
+}
+
+html[data-app-theme='modern'] .btn:hover,
+html[data-app-theme='modern'] .btn-link:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(37, 150, 190, 0.4);
+  filter: brightness(1.06);
+  background: linear-gradient(135deg, #2596be 0%, #509591 100%);
+}
+
+html[data-app-theme='modern'] .btn.sec,
+html[data-app-theme='modern'] .btn-link.sec {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: var(--copy);
+  border: 1px solid var(--line-bright);
+  box-shadow: var(--shadow-sm);
+}
+
+html[data-app-theme='modern'] .btn.sec:hover {
+  background: var(--card-hover);
+  border-color: rgba(37, 150, 190, 0.35);
+  color: var(--bright);
+}
+
+/* Panels & cards — frosted glass */
+html[data-app-theme='modern'] .glass-panel {
+  background: var(--card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+html[data-app-theme='modern'] .glass-panel.accent {
+  border-color: rgba(37, 150, 190, 0.22);
+  box-shadow: var(--shadow-glow);
+  background: rgba(255, 255, 255, 0.78);
+}
+
+html[data-app-theme='modern'] .page-home,
+html[data-app-theme='modern'] .page-devices,
+html[data-app-theme='modern'] .page-map,
+html[data-app-theme='modern'] .map-page,
+html[data-app-theme='modern'] .home-main,
+html[data-app-theme='modern'] .devices-main,
+html[data-app-theme='modern'] .world-main {
+  background: transparent;
+}
+
+html[data-app-theme='modern'] .hero-panel {
+  background: rgba(255, 255, 255, 0.78) !important;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  gap: 2rem;
+  box-shadow: var(--shadow-glow);
+  border: 1px solid var(--glass-border);
+}
+
+html[data-app-theme='modern'] .hero-panel h1 {
+  -webkit-text-fill-color: unset;
+  background: none;
+  color: var(--bright);
+}
+
+html[data-app-theme='modern'] .action-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+html[data-app-theme='modern'] .action-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(37, 150, 190, 0.35);
+  box-shadow: var(--shadow-glow);
+}
+
+html[data-app-theme='modern'] .action-num,
+html[data-app-theme='modern'] .step-n {
+  color: var(--ok);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+html[data-app-theme='modern'] .action-go {
+  color: var(--hi);
+}
+
+html[data-app-theme='modern'] .step-card {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: var(--radius-md);
+  border-color: var(--line);
+}
+
+html[data-app-theme='modern'] .step-card:hover {
+  border-color: rgba(80, 149, 145, 0.35);
+  background: var(--card-hover);
+}
+
+html[data-app-theme='modern'] .step-card code {
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.85);
+  border-color: var(--line);
+  color: var(--hi-strong);
+  border-radius: 6px;
+}
+
+html[data-app-theme='modern'] .download-group-label {
+  color: var(--hi);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+html[data-app-theme='modern'] .pill,
+html[data-app-theme='modern'] .pill-primary {
+  border-radius: 999px;
+  background: var(--accent-soft-low);
+  border: 1px solid rgba(37, 150, 190, 0.35);
+  color: var(--hi);
+}
+
+html[data-app-theme='modern'] .pill:hover {
+  background: rgba(37, 150, 190, 0.18);
+  color: var(--bright);
+}
+
+html[data-app-theme='modern'] .panel-head {
+  border-bottom-color: var(--line);
+}
+
+html[data-app-theme='modern'] .site-footer {
+  background: transparent;
+  border-top-color: var(--line);
+}
+
+html[data-app-theme='modern'] .creator-role {
+  color: var(--ok);
+}
+
+/* Logo + creator — original colors on transparent PNG */
+html[data-app-theme='modern'] .coin-flip-logo,
+html[data-app-theme='modern'] .coin-flip-photo,
+html[data-app-theme='modern'] .logo-img,
+html[data-app-theme='modern'] .hero-logo-slot,
+html[data-app-theme='modern'] .creator-coin-slot,
+html[data-app-theme='modern'] .nav-coin,
+html[data-app-theme='modern'] .coin-flip-face {
+  background: #ffffff !important;
+}
+
+html[data-app-theme='modern'] .hero-logo-slot,
+html[data-app-theme='modern'] .creator-coin-slot {
+  filter: none !important;
+  -webkit-filter: none !important;
+  opacity: 1 !important;
+  background: #ffffff !important;
+}
+
+/* Devices */
+html[data-app-theme='modern'] .devices-jump a {
+  border-radius: 999px;
+  background: var(--card);
+  font-weight: 500;
+}
+
+html[data-app-theme='modern'] .devices-jump a:hover {
+  background: var(--accent-soft-low);
+  color: var(--hi);
+}
+
+html[data-app-theme='modern'] .toolbar-sticky {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 70%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+html[data-app-theme='modern'] .chip {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--radius-sm);
+  border-color: var(--line);
+}
+
+html[data-app-theme='modern'] .chip strong.ok-n {
+  color: var(--ok);
+  text-shadow: none;
+}
+
+html[data-app-theme='modern'] .table-wrap {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+html[data-app-theme='modern'] table,
+html[data-app-theme='modern'] th,
+html[data-app-theme='modern'] td {
+  background: transparent;
+  font-family: var(--font);
+}
+
+html[data-app-theme='modern'] .devices-table th,
+html[data-app-theme='modern'] th {
+  background: rgba(241, 245, 249, 0.9);
+  color: var(--muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+}
+
+html[data-app-theme='modern'] .devices-table tbody tr:hover td {
+  background: var(--row-hover);
+}
+
+html[data-app-theme='modern'] .st-on {
+  color: var(--ok);
+  text-shadow: none;
+  font-weight: 600;
+}
+
+html[data-app-theme='modern'] .st-off {
+  color: var(--bad);
+}
+
+html[data-app-theme='modern'] code,
+html[data-app-theme='modern'] .ip-code {
+  font-family: var(--font-mono);
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 6px;
+  color: var(--hi-strong);
+  border-color: var(--line);
+}
+
+html[data-app-theme='modern'] .label-in {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-sm);
+  border-color: var(--line);
+}
+
+html[data-app-theme='modern'] .label-in:focus {
+  border-color: var(--hi-strong);
+  box-shadow: 0 0 0 3px var(--accent-soft-low);
+}
+
+html[data-app-theme='modern'] .live-dot {
+  color: var(--ok);
+}
+
+html[data-app-theme='modern'] .banner-urls a {
+  color: var(--hi);
+}
+
+/* Map */
+html[data-app-theme='modern'] .map-page {
+  background: transparent;
+}
+
+html[data-app-theme='modern'] .map-top {
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--line);
+}
+
+html[data-app-theme='modern'] .map-detail,
+html[data-app-theme='modern'] .map-side {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-md);
+}
+
+html[data-app-theme='modern'] #map-diagram {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+}
+
+html[data-app-theme='modern'] .cap-yes {
+  background: linear-gradient(135deg, #2596be, #509591);
+  color: #ffffff;
+  border-radius: var(--radius-sm);
+}
+
+html[data-app-theme='modern'] .cap-part {
+  color: var(--hi);
+}
+
+html[data-app-theme='modern'] .cap-no {
+  color: var(--bad);
+}
+
+/* World calendar / clock */
+html[data-app-theme='modern'] .world-section {
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-md);
+}
+
+html[data-app-theme='modern'] .world-card,
+html[data-app-theme='modern'] .cal-card-grid {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: var(--radius-md);
+  border-color: var(--line);
+  transition: transform 0.15s, box-shadow 0.2s, border-color 0.2s;
+}
+
+html[data-app-theme='modern'] .world-card:hover,
+html[data-app-theme='modern'] .cal-card-grid:hover {
+  border-color: rgba(80, 149, 145, 0.4);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+html[data-app-theme='modern'] .world-card-date {
+  color: var(--ok);
+}
+
+html[data-app-theme='modern'] .world-section-title {
+  color: var(--bright);
+  text-transform: none;
+  letter-spacing: -0.01em;
+}
+
+html[data-app-theme='modern'] .clock-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-sm);
+}
+
+html[data-app-theme='modern'] .clock-card.is-local {
+  border-color: var(--hi-strong);
+  box-shadow: var(--shadow-glow);
+}
+
+html[data-app-theme='modern'] .clock-local-hero {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-glow);
+}
+
+html[data-app-theme='modern'] .devices-side,
+html[data-app-theme='modern'] .side-panel {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+}
+
+html[data-app-theme='modern'] .clock-hero-analog,
+html[data-app-theme='modern'] .clock-analog-wrap {
+  color: var(--hi-strong);
+}
+
+html[data-app-theme='modern'] .clock-time {
+  color: var(--bright);
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+html[data-app-theme='modern'] .clock-offset {
+  color: var(--hi);
+}
+
+/* Calendar modal */
+html[data-app-theme='modern'] .cal-modal-backdrop {
+  background: rgba(241, 245, 249, 0.65);
+  backdrop-filter: blur(10px);
+}
+
+html[data-app-theme='modern'] .cal-modal-panel {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+}
+
+html[data-app-theme='modern'] .cal-modal-month-label {
+  color: var(--hi);
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 600;
+}
+
+html[data-app-theme='modern'] .cal-day {
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.7);
+  border-color: var(--line);
+}
+
+html[data-app-theme='modern'] .cal-day-today {
+  background: linear-gradient(135deg, #2596be, #509591);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 16px rgba(37, 150, 190, 0.4);
+}
+
+html[data-app-theme='modern'] .cal-modal-close {
+  border-radius: var(--radius-sm);
+  background: var(--card);
+  color: var(--bright);
+}
+
+html[data-app-theme='modern'] .cal-embed-month {
+  color: var(--muted);
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+
+html[data-app-theme='modern'] .cal-embed-grid .cal-day-today {
+  background: linear-gradient(135deg, #2596be, #509591);
+  color: #fff;
+}
+
+/* Inputs */
+html[data-app-theme='modern'] input,
+html[data-app-theme='modern'] select,
+html[data-app-theme='modern'] textarea {
+  font-family: var(--font);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--line-bright);
+  border-radius: var(--radius-sm);
+  color: var(--bright);
+  letter-spacing: 0;
+}
+
+html[data-app-theme='modern'] input:focus,
+html[data-app-theme='modern'] select:focus,
+html[data-app-theme='modern'] textarea:focus {
+  outline: none;
+  border-color: var(--hi-strong);
+  box-shadow: 0 0 0 3px var(--accent-soft-low);
+}
+
+/* Retro boot hidden on modern */
+html[data-app-theme='modern'] .retro-boot {
+  display: none !important;
+}
+
+html[data-app-theme='modern'] .retro-cursor {
+  display: none !important;
+}
+
+/* Responsive spacing */
+@media (min-width: 900px) {
+  html[data-app-theme='modern'] .home-main,
+  html[data-app-theme='modern'] .world-main {
+    padding: 2rem 2rem 3rem;
+  }
+}

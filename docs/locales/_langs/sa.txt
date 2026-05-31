@@ -1,0 +1,160 @@
+गृह — जालनिरीक्षक
+उपकरणसूची — जालनिरीक्षक
+जालनक्शा — जालनिरीक्षक
+जालनिरीक्षक
+गृह
+उपकरणानि
+नक्शा
+विषय
+भाषा
+चिह्न एवं निर्मातृचित्रम्
+निर्मातृचित्रं चिह्नं च
+विषयः हरित
+विषयः श्यामश्वेत
+श्यामश्वेतविषयं परिवर्तय
+हरितश्यामविषयं परिवर्तय
+> जालनिरीक्षकः आरभ्यते...
+> अन्तरफलकं लोड् सम्पन्नम्
+> सिद्धम्
+कार्यालये वा गृहे Wi‑Fi LAN च सर्वाणि उपकरणानि पश्य। वास्तविक स्कैन् डेटा — अनुमानं नास्ति।
+उपकरणसूचीम् उद्घाटय
+जालनक्शा
+उपकरणसूची
+Wi‑Fi + LAN स्कैन्, IP, MAC, स्थितिं, प्रत्येकस्य उपकरणस्य नाम लेख।
+उद्घाटय →
+प्रत्येक स्कैन् पश्चात् वामतः दक्षिणं प्रवाहचित्रम्। जूम पैन च।
+अवारोपण
+Mac/PC प्रारम्भक, उपयोक्तृमार्गदर्शिका, उपकरण CSV निर्यात।
+प्रारम्भकाः प्रतिवेदनानि च →
+शीघ्र शिक्षण
+षट् पदानि — प्रथमवार सेटअप
+अनुप्रयोगं आरभ
+office-net-monitor पुटके प्रारम्भकं रक्ष, पुनः द्विगुणक्लिक्। Terminal वा आदेशविण्डो उद्घाटितं रक्ष।
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+परियोजनापुटके एव? START.command (Mac) वा START.bat (PC) — अवारोपणं न
+इमं स्थानं उद्घाटय
+http://127.0.0.1:5080/ उपयोग — Finder सञ्चिका न
+जालं स्कैन्
+उपकरणसूच्यां Scan Wi‑Fi + LAN क्लिक्। १–२ निमेष प्रतीक्ष।
+नक्शां पश्य
+Internet → gateway → devices दृष्टये Network map उद्घाटय।
+उपकरणानां नामकरण
+IT name स्तम्भे लिख (printer, PC, room, इत्यादि)।
+प्रतिवेदनानि अवतार
+मार्गदर्शिका (.txt)
+उपकरणानि (.csv)
+Mac / PC प्रारम्भक
+निर्मातृविषये
+Mohammad Faizan Khan
+अस्य जालस्थानस्य निर्माता
+तान्त्रिककार्ये संगणककार्ये च आरब्धः, समस्याः समाधाय प्रणालीः चालितवान्। अनन्तरं सऔदी अरेबियायां कार्यबलपरियोजनसंचालनम् — आतिथ्य, स्वास्थ्य, कॉर्पोरेट स्थलानि।
+सा मार्गः end-to-end संचालनं शिक्षितवान् — जनाः, समयः, स्पष्ट संवादः। अद्य संचालनपरियोजनसमन्वये — जटिलं सरलं पुनरावृत्त्यनुकूलं च।
+Network Monitor — रिक्त कोशाः “not detected”, अनुमानं न।
+© Mohammad Faizan Khan
+केवलं वास्तविक स्कैन् — Scan क्लिक् अद्यतनाय। रिक्त = not detected।
+गतिविधि
+राउटर मार्गदर्शिका
+अनुप्रयोगः न चलति।
+START.command द्विगुणक्लिक्, ततः उद्घाटय
+● SERVER ONLINE
+जालानि:
+स्कैन् उपकरणानि
+लिङ्कप्रकारानुसारं filtrate वा CSV निर्यात स्कैन् पश्चात्।
+Scan Wi‑Fi + LAN
+सर्व
+केवलं Wi‑Fi
+केवलं LAN
+रीफ्रेश
+CSV अवतार
+DNS स्थलानि रीफ्रेश
+Pi-hole वा AdGuard DNS log
+Online:
+Offline:
+गतिविधिलॉग
+राउटर admin वि अनुप्रयोग
+राउटराः किं पश्यन्ति वि स्कैनर
+नकली न — अधः खण्डान् सुचारु स्क्रॉल।
+स्थिति
+नाम
+IP
+बहुगामी स्थलानि (DNS)
+प्रकार
+MAC
+Hostname
+Ports
+Ping
+प्रथमदर्शन
+अन्तिमदर्शन
+IT name
+Scan Wi‑Fi + LAN क्लिक्
+उपकरणानि न — Scan क्लिक्
+Label
+● ONLINE
+○ offline
+लोड्…
+रीफ्रेश…
+अद्यतन
+START.command आरभ
+स्कैन…
+सम्पन्न
+स्कैन् विफल
+DNS logs लोड्…
+DNS: {n} device(s)
+DNS log मेल न
+DNS refresh विफल
+उपकरणानि प्रति
+निर्माता:
+अस्य Mac Wi‑Fi
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+नक्शानियन्त्रण
+Click any IP for real scan fields. Feature list (browsing/DNS/bandwidth limits).
+प्रवाह →
+Internet → Gateway → Wi‑Fi / LAN → devices
+सूचकस्थाने नक्शा zoom out
+सूचकस्थाने नक्शा zoom in
+सम्पूर्ण नक्शा fit
+नक्शा विस्तार
+विस्तार निर्गम
+PDF अवतार
+Scan & redraw
+नक्शा रीफ्रेश
+नक्शा लोड्…
+जालं स्कैन (real data)…
+स्कैन् न — जालं स्कैन (real data only)…
+प्रथम START.command
+http://127.0.0.1:5080/ उद्घाटय
+Network map panel
+अन्तःक्रियात्मक जालटोपोलॉजी नक्शा
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+विवरण
+पिधान
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+अद्यतन
+auto every
+सर्व उपलब्ध data लोड्…
+निर्याताय नक्शा न — प्रथम स्कैन्
+PDF library loading… try again
+PDF निर्माण…
+PDF अवतरित
+PDF विफल — Print प्रयत
+अनुप्रयोगः यत्
+अनुप्रयोगः partial
+अनुप्रयोगः न
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

@@ -29,7 +29,8 @@ assets/logo_2.png
 assets/creator_logo.png
 assets/creator-portrait.png
 
-# Generated duplicates (rebuilt on start)
+# docs/ is a copy of web/ for GitHub Pages — keep in git
+# web/assets/logo-mono.png (generated duplicates, rebuilt on start)
 web/assets/logo-mono.png
 web/assets/logo-display.png
 web/assets/creator-mono.png

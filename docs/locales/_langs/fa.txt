@@ -1,0 +1,160 @@
+خانه — پایشگر شبکه
+فهرست دستگاه — پایشگر شبکه
+نقشه شبکه — پایشگر شبکه
+پایشگر شبکه
+خانه
+دستگاه‌ها
+نقشه
+تم
+زبان
+لوگو و عکس سازنده
+عکس سازنده و لوگو
+تم: سبز
+تم: سیاه و سفید
+تغییر به تم سیاه و سفید
+تغییر به تم سبز و سیاه
+> در حال راه‌اندازی پایشگر شبکه...
+> بارگذاری رابط OK
+> آماده
+هر دستگاه را در Wi‑Fi و LAN دفتر یا خانه ببینید. داده اسکن واقعی — بدون حدس.
+باز کردن فهرست دستگاه
+نقشه شبکه
+فهرست دستگاه
+Wi‑Fi + LAN را اسکن کنید، IP، MAC، وضعیت را ببینید، هر دستگاه را برچسب بزنید.
+باز کردن →
+نمودار جریان چپ به راست پس از هر اسکن. بزرگ‌نمایی و جابه‌جایی.
+دانلود
+راه‌انداز Mac/PC، راهنمای کاربر و خروجی CSV دستگاه.
+راه‌اندازها و گزارش‌ها →
+آموزش سریع
+شش گام — راه‌اندازی اول
+اجرای برنامه
+راه‌انداز را در پوشه office-net-monitor ذخیره و دوبار کلیک کنید. Terminal یا پنجره فرمان را باز نگه دارید.
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+در پوشه پروژه هستید؟ START.command (Mac) یا START.bat (PC) — نیازی به دانلود نیست.
+باز کردن این سایت
+از http://127.0.0.1:5080/ استفاده کنید — نه فایل از Finder.
+اسکن شبکه
+در فهرست دستگاه Scan Wi‑Fi + LAN را بزنید. 1–2 دقیقه صبر کنید.
+مشاهده نقشه
+Network map را برای Internet → gateway → devices باز کنید.
+نام‌گذاری دستگاه‌ها
+در ستون IT name بنویسید (printer، PC، room و غیره).
+دانلود گزارش‌ها
+راهنما (.txt)
+دستگاه‌ها (.csv)
+راه‌انداز Mac / PC
+درباره سازنده
+Mohammad Faizan Khan
+سازنده این وب‌سایت
+با کار فنی و رایانه شروع کردم، مشکلات را حل و سیستم‌ها را اداره کردم. بعد operations نیروی کار و پروژه در عربستان — hospitality، healthcare و corporate sites.
+آن مسیر operations end-to-end آموخت: مردم، زمان، ارتباط روشن. امروز روی operations و هماهنگی پروژه — تبدیل کار پیچیده به سیستم‌های ساده.
+Network Monitor — سلول‌های خالی یعنی «not detected»، نه حدس.
+© Mohammad Faizan Khan
+فقط داده اسکن واقعی — Scan برای به‌روزرسانی. خالی = not detected.
+فعالیت
+راهنمای router
+برنامه اجرا نمی‌شود.
+START.command را دوبار کلیک کنید، سپس باز کنید
+● SERVER ONLINE
+شبکه‌ها:
+دستگاه‌های اسکن‌شده
+فیلتر نوع پیوند یا خروجی CSV پس از اسکن.
+Scan Wi‑Fi + LAN
+همه
+فقط Wi‑Fi
+فقط LAN
+بازخوانی
+دانلود CSV
+بازخوانی سایت‌های DNS
+Pi-hole یا AdGuard DNS log
+Online:
+Offline:
+گزارش فعالیت
+admin router در برابر این برنامه
+router چه می‌بیند در برابر این scanner
+داده جعلی نیست — بخش‌های زیر را نرم اسکرول کنید.
+وضعیت
+نام
+IP
+سایت‌های پرتکرار (DNS)
+نوع
+MAC
+Hostname
+Ports
+Ping
+اولین مشاهده
+آخرین مشاهده
+IT name
+Scan Wi‑Fi + LAN را بزنید
+دستگاهی نیست — Scan بزنید
+Label
+● ONLINE
+○ offline
+در حال بارگذاری…
+در حال بازخوانی…
+به‌روز شد
+START.command را اجرا کنید
+در حال اسکن…
+انجام شد
+اسکن ناموفق
+بارگذاری DNS logs…
+DNS: {n} device(s)
+بدون تطابق DNS log
+بازخوانی DNS ناموفق
+بازگشت به دستگاه‌ها
+سازنده:
+Wi‑Fi این Mac
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+کنترل نقشه
+هر IP را برای فیلدهای اسکن واقعی بزنید. فهرست قابلیت (browsing/DNS/bandwidth limits).
+جریان →
+Internet → Gateway → Wi‑Fi / LAN → devices
+کوچک‌نمایی نقشه در نشانگر
+بزرگ‌نمایی نقشه در نشانگر
+تناسب کل نقشه
+گسترش نقشه
+خروج از گسترش
+دانلود PDF
+Scan & redraw
+بازخوانی نقشه
+بارگذاری نقشه…
+اسکن شبکه (real data)…
+هنوز داده نیست — اسکن (real data only)…
+ابتدا START.command
+http://127.0.0.1:5080/ را باز کنید
+Network map panel
+نقشه توپولوژی شبکه تعاملی
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+جزئیات
+بستن
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+به‌روز
+auto every
+بارگذاری همه داده‌ها…
+نقشه‌ای برای خروجی نیست — ابتدا اسکن
+PDF library loading… try again
+در حال ساخت PDF…
+PDF دانلود شد
+PDF ناموفق — Print را امتحان کنید
+این برنامه: yes
+این برنامه: partial
+این برنامه: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

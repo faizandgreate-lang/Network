@@ -52,7 +52,7 @@ Network Monitor — upload to GitHub (Terminal only)
 GitHub website "Upload files" allows only ~100 files — use git push instead.
 
 PREVIEW (same layout): https://faizandgreate-lang.github.io/Network/
-  → Repo Settings → Pages → branch main, folder /web
+  → Repo Settings → Pages → branch main, folder /docs
 
 FULL APP (scan): download ZIP → START.command / START.bat → http://127.0.0.1:5080/
 
@@ -99,6 +99,12 @@ chmod +x "$DEST/PUSH-TO-GITHUB.command"
 chmod +x "$DEST/START.command" 2>/dev/null || true
 chmod +x "$DEST/launcher.sh" 2>/dev/null || true
 chmod +x "$DEST/scripts/prepare-github-desktop.sh" 2>/dev/null || true
+
+COUNT=$(find "$DEST" -type f | wc -l | tr -d ' ')
+bash "$ROOT/scripts/sync-docs-for-github-pages.sh" 2>/dev/null || true
+if [[ -d "$ROOT/docs" ]]; then
+  rsync -a --delete --exclude '.DS_Store' "$ROOT/docs/" "$DEST/docs/"
+fi
 
 COUNT=$(find "$DEST" -type f | wc -l | tr -d ' ')
 echo "Ready: $DEST ($COUNT files)"

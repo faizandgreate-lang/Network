@@ -1,0 +1,160 @@
+Ana sayfa — Ağ İzleyici
+Cihaz listesi — Ağ İzleyici
+Ağ haritası — Ağ İzleyici
+Ağ İzleyici
+Ana sayfa
+Cihazlar
+Harita
+TEMA
+Dil
+Logo ve oluşturucu fotoğrafı
+Oluşturucu fotoğrafı ve logo
+TEMA: YEŞİL
+TEMA: S/B
+Siyah beyaz temaya geç
+Yeşil siyah temaya geç
+> AĞ İZLEYİCİ BAŞLATILIYOR...
+> ARAYÜZ YÜKLENDİ OK
+> HAZIR
+Ofis veya ev Wi‑Fi ve LAN'ınızdaki her cihazı görün. Gerçek tarama verisi — tahmin yok.
+Cihaz listesini aç
+Ağ haritası
+Cihaz listesi
+Wi‑Fi + LAN tarayın, IP, MAC, durum görün, her cihaza etiket verin.
+Aç →
+Her taramadan sonra soldan sağa akış şeması. Yakınlaştır ve kaydır.
+İndir
+Mac/PC başlatıcılar, kullanıcı kılavuzu ve cihaz CSV dışa aktarımı.
+Başlatıcılar ve raporlar →
+Hızlı öğretici
+Altı adım — ilk kurulum
+Uygulamayı başlat
+Başlatıcıyı office-net-monitor klasörüne kaydedin, sonra çift tıklayın. Terminal veya komut penceresini açık tutun.
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+Zaten proje klasöründe misiniz? START.command (Mac) veya START.bat (PC) kullanın — indirme gerekmez.
+Bu siteyi aç
+http://127.0.0.1:5080/ kullanın — Finder'dan dosya değil.
+Ağı tara
+Cihaz listesinde Scan Wi‑Fi + LAN'a tıklayın. 1–2 dk bekleyin.
+Haritayı görüntüle
+Internet → gateway → devices için Network map'i açın.
+Cihazları adlandır
+IT name sütununa yazın (yazıcı, PC, oda, vb.).
+Raporları indir
+Kılavuz (.txt)
+Cihazlar (.csv)
+Mac / PC başlatıcılar
+Oluşturucu hakkında
+Mohammad Faizan Khan
+Bu web sitesinin oluşturucusu
+Teknik ve bilgisayar işleriyle başladım, sorunları çözdüm ve sistemleri işlettim. Sonra Suudi Arabistan'da iş gücü ve proje operasyonlarına liderlik ettim — konaklama, sağlık ve birçok lokasyondaki kurumsal siteler.
+Bu yol bana uçtan uca operasyonları öğretti: insanlar, zamanlama ve net iletişim. Bugün operasyon ve proje koordinasyonuna odaklanıyorum — karmaşık işi basit, tekrarlanabilir sistemlere dönüştürmek.
+Network Monitor — boş tablo hücreleri “not detected” anlamına gelir, tahmin değil.
+© Mohammad Faizan Khan
+Yalnızca gerçek tarama verisi — güncellemek için Scan'e tıklayın. Boş = not detected.
+Etkinlik
+Yönlendirici kılavuzu
+Uygulama çalışmıyor.
+START.command'a çift tıklayın, sonra açın
+● SERVER ONLINE
+Ağlar:
+Taranan cihazlar
+Bağlantı türüne göre filtreleyin veya taramadan sonra CSV dışa aktarın.
+Scan Wi‑Fi + LAN
+Tümü
+Yalnızca Wi‑Fi
+Yalnızca LAN
+Yenile
+CSV indir
+DNS sitelerini yenile
+Pi-hole veya AdGuard DNS log
+Online:
+Offline:
+Etkinlik günlüğü
+Yönlendirici yönetimi vs bu uygulama
+Yönlendiricilerin gördüğü vs bu tarayıcı
+Sahte veri yok — aşağıdaki bölümlerde akıcı kaydırın.
+Durum
+Ad
+IP
+Sık ziyaret edilen siteler (DNS)
+Tür
+MAC
+Hostname
+Ports
+Ping
+İlk görülme
+Son görülme
+IT name
+Scan Wi‑Fi + LAN'a tıklayın
+Cihaz yok — Scan'e tıklayın
+Label
+● ONLINE
+○ offline
+Yükleniyor…
+Yenileniyor…
+Güncellendi
+START.command başlat
+Taranıyor…
+Bitti
+Tarama başarısız
+DNS logs yükleniyor…
+DNS: {n} device(s)
+DNS log eşleşmesi yok
+DNS yenileme başarısız
+Cihazlara dön
+Oluşturucu:
+Bu Mac Wi‑Fi
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+Harita kontrolleri
+Gerçek tarama alanları için herhangi bir IP'ye tıklayın. Özellik listesi (browsing/DNS/bandwidth limits).
+Akış →
+Internet → Gateway → Wi‑Fi / LAN → devices
+İşaretçide haritayı uzaklaştır
+İşaretçide haritayı yakınlaştır
+Tüm haritayı sığdır
+Haritayı genişlet
+Genişletmeden çık
+PDF indir
+Scan & redraw
+Haritayı yenile
+Harita yükleniyor…
+Ağ taranıyor (real data)…
+Henüz tarama verisi yok — ağ taranıyor (real data only)…
+Önce START.command başlatın
+http://127.0.0.1:5080/ açın
+Network map panel
+Etkileşimli ağ topolojisi haritası
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+Ayrıntılar
+Kapat
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+Güncel
+auto every
+Tüm veriler yükleniyor…
+Dışa aktarılacak harita yok — önce tarayın
+PDF library loading… try again
+PDF oluşturuluyor…
+PDF indirildi
+PDF başarısız — bu sayfada Print deneyin
+Bu uygulama: yes
+Bu uygulama: partial
+Bu uygulama: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

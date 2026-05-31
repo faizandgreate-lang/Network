@@ -1,0 +1,160 @@
+முகப்பு — நெட்வொர்க் மானிட்டர்
+சாdevices பட்டியல் — நெட்வொர்க் மானிட்டர்
+நெட்வொர்க் வரைபடம் — நெட்வொர்க் மானிட்டர்
+நெட்வொர்க் மானிட்டர்
+முகப்பு
+சாdevices
+வரைபடம்
+தீம்
+மொழி
+லogo மற்றும் பcreator புகைப்படம்
+Creator புகைப்படம் மற்றும் logo
+தீம்: பச்சை
+தீம்: கருப்பு-வெள்ளை
+கருப்பு-வெள்ளை தீமுக்கு
+பச்சை-கருப்பு தீமukku
+> நெட்வொர்க் மானிட்டர் தொடங்குகிறது...
+> இடைமுகம் ஏற்ற OK
+> தயார்
+அoffice அல்லது வீட்டு Wi‑Fi, LAN-ல் ஒவ்வொரு device-யும் பாருங்கள். உண்மை scan data — யூகம் இல்லை.
+Device பட்டியலைத் திற
+நெட்வொர்க் வரைபடம்
+Device பட்டியல்
+Wi‑Fi + LAN scan, IP, MAC, status, ஒவ்வொரு device-க்கும் label.
+திற →
+ஒவ்வொரு scan-க்கும் பிறகு இடமிருந்து வலம் flowchart. Zoom, pan.
+பdownload
+Mac/PC starters, user guide, device CSV export.
+Starters & reports →
+விரைவு tutorial
+ஆறு படிகள் — முதல் setup
+App தொடங்க
+Launcher-ஐ office-net-monitor folder-ல் save, double-click. Terminal/command window திறந்து வையுங்கள்.
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+Project folder-ல் already? START.command (Mac) அல்லது START.bat (PC) — download தேவையில்லை.
+இந்த site திற
+http://127.0.0.1:5080/ பயன்படுத்த — Finder file அல்ல.
+Network scan
+Device list-ல் Scan Wi‑Fi + LAN click. 1–2 min காத்திரு.
+Map பார்
+Internet → gateway → devices-க்கு Network map திற.
+Devices-க்கு பெயர்
+IT name column-ல் type (printer, PC, room, etc.).
+Reports download
+Guide (.txt)
+Devices (.csv)
+Mac / PC starters
+Creator பற்றி
+Mohammad Faizan Khan
+இந்த website-ன் creator
+Technical/computer work-ல் தொடங்கினேன், problems fix, systems run. பின்னர் Saudi Arabia-ல் workforce/project operations — hospitality, healthcare, corporate sites.
+அ path end-to-end operations கற்றது: people, timing, clear communication. இன்று operations, project coordination.
+Network Monitor — empty cells “not detected”, guess அல்ல.
+© Mohammad Faizan Khan
+Real scan data only — Scan click update. Empty = not detected.
+Activity
+Router guide
+App run ஆகவில்லை.
+START.command double-click, பின் open
+● SERVER ONLINE
+Networks:
+Scanned devices
+Link type filter அல்லது scan பிறகு CSV export.
+Scan Wi‑Fi + LAN
+All
+Wi‑Fi only
+LAN only
+Refresh
+CSV download
+DNS sites refresh
+Pi-hole or AdGuard DNS log
+Online:
+Offline:
+Activity log
+Router admin vs this app
+Routers vs scanner
+Fake data இல்லை — sections smooth scroll.
+Status
+Name
+IP
+Frequent sites (DNS)
+Type
+MAC
+Hostname
+Ports
+Ping
+First seen
+Last seen
+IT name
+Scan Wi‑Fi + LAN click
+No devices — Scan click
+Label
+● ONLINE
+○ offline
+Loading…
+Refreshing…
+Updated
+Start START.command
+Scanning…
+Done
+Scan failed
+Loading DNS logs…
+DNS: {n} device(s)
+No DNS log match
+DNS refresh failed
+Back to devices
+Creator:
+This Mac Wi‑Fi
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+Map controls
+Any IP click — real scan fields. Feature list (browsing/DNS/bandwidth limits).
+Flow →
+Internet → Gateway → Wi‑Fi / LAN → devices
+Pointer-ல் zoom out
+Pointer-ல் zoom in
+Whole map fit
+Expand map
+Exit expand
+PDF download
+Scan & redraw
+Refresh map
+Loading map…
+Scanning network (real data)…
+No scan data — scanning (real data only)…
+Start START.command first
+Open http://127.0.0.1:5080/
+Network map panel
+Interactive network topology map
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+Details
+Close
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+Up to date
+auto every
+Loading all data…
+No map to export — scan first
+PDF library loading… try again
+Creating PDF…
+PDF downloaded
+PDF failed — try Print
+This app: yes
+This app: partial
+This app: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

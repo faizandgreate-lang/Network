@@ -1,0 +1,160 @@
+Главная — Монитор сети
+Список устройств — Монитор сети
+Карта сети — Монитор сети
+Монитор сети
+Главная
+Устройства
+Карта
+ТЕМА
+Язык
+Логотип и фото создателя
+Фото создателя и логотип
+ТЕМА: ЗЕЛЁНАЯ
+ТЕМА: Ч/Б
+Переключить на чёрно-белую тему
+Переключить на зелёно-чёрную тему
+> ИНИЦИАЛИЗАЦИЯ МОНИТОРА СЕТИ...
+> ИНТЕРФЕЙС ЗАГРУЖЕН OK
+> ГОТОВО
+Смотрите каждое устройство в Wi‑Fi и LAN офиса или дома. Реальные данные сканирования — без догадок.
+Открыть список устройств
+Карта сети
+Список устройств
+Сканируйте Wi‑Fi + LAN, смотрите IP, MAC, статус, подписывайте каждое устройство.
+Открыть →
+Блок-схема слева направо после каждого скана. Масштаб и панорама.
+Скачать
+Стартеры Mac/PC, руководство и экспорт CSV устройств.
+Стартеры и отчёты →
+Быстрый tutorial
+Шесть шагов — первая настройка
+Запустить приложение
+Сохраните launcher в папку office-net-monitor, затем двойной щелчок. Держите Terminal или окно команд открытым.
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+Уже в папке проекта? Используйте START.command (Mac) или START.bat (PC) — скачивание не нужно.
+Открыть этот сайт
+Используйте http://127.0.0.1:5080/ — не файл из Finder.
+Сканировать сеть
+В списке устройств нажмите Scan Wi‑Fi + LAN. Подождите 1–2 мин.
+Смотреть карту
+Откройте Network map для Internet → gateway → devices.
+Именовать устройства
+Введите в столбец IT name (принтер, PC, комната и т.д.).
+Скачать отчёты
+Руководство (.txt)
+Устройства (.csv)
+Стартеры Mac / PC
+О создателе
+Mohammad Faizan Khan
+Создатель этого сайта
+Я начал с технической и компьютерной работы, решая проблемы и управляя системами. Позже руководил операциями персонала и проектов в Сaudi Arabia — гостеприимство, здравоохранение и корпоративные площадки во многих местах.
+Этот путь научил end-to-end операциям: люди, время, ясная коммуникация. Сегодня я сосредоточен на операциях и координации проектов — превращая сложную работу в простые повторяемые системы.
+Network Monitor — пустые ячейки означают «not detected», а не догадку.
+© Mohammad Faizan Khan
+Только реальные данные скана — нажмите Scan для обновления. Пусто = not detected.
+Активность
+Руководство по router
+Приложение не запущено.
+Двойной щелчок START.command, затем откройте
+● SERVER ONLINE
+Сети:
+Отсканированные устройства
+Фильтр по типу связи или экспорт CSV после скана.
+Scan Wi‑Fi + LAN
+Все
+Только Wi‑Fi
+Только LAN
+Обновить
+Скачать CSV
+Обновить DNS sites
+Pi-hole или AdGuard DNS log
+Online:
+Offline:
+Журнал активности
+Admin router vs это приложение
+Что видят router vs этот scanner
+Без фальшивых данных — плавно прокручивайте разделы ниже.
+Статус
+Имя
+IP
+Частые sites (DNS)
+Тип
+MAC
+Hostname
+Ports
+Ping
+Впервые видели
+Последний раз
+IT name
+Нажмите Scan Wi‑Fi + LAN
+Нет устройств — нажмите Scan
+Label
+● ONLINE
+○ offline
+Загрузка…
+Обновление…
+Обновлено
+Запустить START.command
+Сканирование…
+Готово
+Скан не удался
+Загрузка DNS logs…
+DNS: {n} device(s)
+Нет совпадения DNS log
+Ошибка обновления DNS
+Назад к устройствам
+Создатель:
+Wi‑Fi этого Mac
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+Управление картой
+Нажмите любой IP для реальных полей скана. Список функций (browsing/DNS/bandwidth limits).
+Поток →
+Internet → Gateway → Wi‑Fi / LAN → devices
+Уменьшить карту у указателя
+Увеличить карту у указателя
+Вместить всю карту
+Развернуть карту
+Выйти из разворота
+Скачать PDF
+Scan & redraw
+Обновить карту
+Загрузка карты…
+Сканирование сети (real data)…
+Нет данных скана — сканирование сети (real data only)…
+Сначала запустите START.command
+Откройте http://127.0.0.1:5080/
+Network map panel
+Интерактивная топологическая карта сети
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+Подробности
+Закрыть
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+Актуально
+auto every
+Загрузка всех доступных данных…
+Нет карты для экспорта — сначала сканируйте
+PDF library loading… try again
+Создание PDF…
+PDF скачан
+PDF не удался — попробуйте Print на этой странице
+Это приложение: yes
+Это приложение: partial
+Это приложение: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

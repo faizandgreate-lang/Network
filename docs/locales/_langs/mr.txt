@@ -1,0 +1,160 @@
+मुख्यपृष्ठ — नेटवर्क मॉनिटर
+डiv्हाइस यादी — नेटवर्क मॉनिटर
+नेटवर्क नकाशा — नेटवर्क मॉनिटर
+नेटवर्क मॉनिटर
+मुख्यपृष्ठ
+डिव्हाइस
+नकाशा
+थीम
+भाषा
+लोगो आणि निर्मात्याचा फото
+निर्मात्याचा फото आणि लोगो
+थीम: हिरवा
+थीम: काळा-पांढरा
+काळा-पांढरा थीमवर स्विच
+हिरवा-काळा थीमवर स्विच
+> नेटवर्क मॉनिटर सुरू होत आहे...
+> इंटरफेस लोड OK
+> तयार
+ऑफिस किंवा घरच्या Wi‑Fi आणि LAN वर प्रत्येक डिव्हाइस पहा. खरी स्कॅन डेटा — अंदाज नाही.
+डिव्हाइस यादी उघडा
+नेटवर्क नकाशा
+डिव्हाइस यादी
+Wi‑Fi + LAN स्कॅन, IP, MAC, स्थिती, प्रत्येक डिव्हाइस लेबल.
+उघडा →
+प्रत्येक स्कॅन नंतर डावीकडून उजवीकडे फ्लोचार्ट. झूम आणि पॅन.
+डाउनलोड
+Mac/PC स्टार्टर, वापरकर्ता मार्गदर्शक, डिव्हाइस CSV निर्यात.
+स्टार्टर आणि अहवाल →
+जलद ट्युटोरियल
+सहा पायऱ्या — पहिली सेटअप
+अॅप सुरू करा
+लॉन्चर office-net-monitor फोल्डरात ठेवा, डबल-क्लिक. Terminal किंवा कमांड विंडो उघडी ठेवा.
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+प्रोजेक्ट फोल्डरात? START.command (Mac) किंवा START.bat (PC) — डाउनलोड नको.
+ही साइट उघडा
+http://127.0.0.1:5080/ वापरा — Finder फाइल नाही.
+नेटवर्क स्कॅन
+डिव्हाइस यादीवर Scan Wi‑Fi + LAN क्लिक. 1–2 मिनिट थांबा.
+नकाशा पहा
+Internet → gateway → devices साठी Network map उघडा.
+डiv्हाइसना नाव
+IT name स्तंभात टाइप (printer, PC, room, इ.).
+अहवाल डाउनलोड
+मार्गदर्शक (.txt)
+डिव्हाइस (.csv)
+Mac / PC स्टार्टर
+निर्मात्याबद्दल
+Mohammad Faizan Khan
+या वेबसाइटचे निर्माते
+तांत्रिक आणि संगणक कामातून सुरुवात, समस्या सोडवणे आणि सिस्टम चालवणे. नंतर सaudi Arabia मध्ये workforce आणि project operations — hospitality, healthcare, अनेक ठिकाणी corporate sites.
+त्या मार्गाने end-to-end operations शिकवले: लोक, वेळ, स्पष्ट संवाद. आज operations आणि project coordination — complex work simple, repeatable systems मध्ये.
+Network Monitor — रिकाम्या cells “not detected” म्हणजे, अंदाज नाही.
+© Mohammad Faizan Khan
+फक्त खरी स्कॅन — Scan क्लिक अपडेट. रिकामे = not detected.
+क्रियाकलाप
+राउटर मार्गदर्शक
+अॅप चालत नाही.
+START.command डबल-क्लिक, मग उघडा
+● SERVER ONLINE
+नेटवर्क:
+स्कॅन केलेle डiv्हाइस
+लिंक प्रकार फिल्टर किंवा स्कॅन नंतर CSV.
+Scan Wi‑Fi + LAN
+सर्व
+फक्त Wi‑Fi
+फक्त LAN
+रिफ्रेश
+CSV डाउनलोड
+DNS sites रिफ्रेश
+Pi-hole किंवा AdGuard DNS log
+Online:
+Offline:
+क्रियाकलाप लॉग
+राउटर admin vs हे अॅप
+राउटर काय पाहतात vs हा scanner
+नकली डेटा नाही — खाली विभाग smooth scroll.
+स्थिती
+नाव
+IP
+वारंवार sites (DNS)
+प्रकार
+MAC
+Hostname
+Ports
+Ping
+पहिल्यांda
+शेवटची वेळ
+IT name
+Scan Wi‑Fi + LAN क्लिक
+डiv्हाइस नाहीत — Scan क्लिक
+Label
+● ONLINE
+○ offline
+लोड…
+रिफ्रेश…
+अपडेट
+START.command सुरू
+स्कॅन…
+पूर्ण
+स्कॅन अयशस्वी
+DNS logs लोड…
+DNS: {n} device(s)
+DNS log match नाही
+DNS refresh अयशस्वी
+डiv्हाइसकडे परत
+निर्माता:
+या Mac Wi‑Fi
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+नकाशा नियंत्रण
+कोणatyahi IP क्लिक — real scan fields. Feature list (browsing/DNS/bandwidth limits).
+प्रवाह →
+Internet → Gateway → Wi‑Fi / LAN → devices
+pointer वर zoom out
+pointer वर zoom in
+संपूर्ण नकाशा fit
+नकाशा expand
+expand बnd
+PDF डाउनलोड
+Scan & redraw
+नकाशा रिफ्रेश
+नकाशा लोड…
+नेटवर्क स्कॅन (real data)…
+स्कॅन डेटा नाही — network scan (real data only)…
+आधी START.command
+http://127.0.0.1:5080/ उघडा
+Network map panel
+Interactive network topology map
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+तपशील
+बंद
+Gateway:
+Offline in DB:
+This PC:
+Gateway ping:
+Internet ping:
+Up to date
+auto every
+सर्व data लोड…
+export साठी map नाही — आधी scan
+PDF library loading… try again
+PDF तयार…
+PDF downloaded
+PDF failed — Print try
+This app: yes
+This app: partial
+This app: no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.

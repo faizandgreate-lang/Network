@@ -1,0 +1,160 @@
+Accueil — Moniteur réseau
+Liste des appareils — Moniteur réseau
+Carte réseau — Moniteur réseau
+Moniteur réseau
+Accueil
+Appareils
+Carte
+THÈME
+Langue
+Logo et photo du créateur
+Photo du créateur et logo
+THÈME : VERT
+THÈME : N&B
+Passer au thème noir et blanc
+Passer au thème vert et noir
+> INITIALISATION DU MONITEUR RÉSEAU...
+> CHARGEMENT DE L'INTERFACE OK
+> PRÊT
+Voir chaque appareil sur le Wi‑Fi et le LAN du bureau ou de la maison. Données de scan réelles — sans suppositions.
+Ouvrir la liste des appareils
+Carte réseau
+Liste des appareils
+Scanner Wi‑Fi + LAN, voir IP, MAC, statut, étiqueter chaque appareil.
+Ouvrir →
+Organigramme de gauche à droite après chaque scan. Zoom et déplacement.
+Télécharger
+Lanceurs Mac/PC, guide utilisateur et export CSV des appareils.
+Lanceurs et rapports →
+Tutoriel rapide
+Six étapes — première configuration
+Démarrer l'application
+Enregistrez le lanceur dans le dossier office-net-monitor, puis double-cliquez. Gardez Terminal ou la fenêtre de commande ouverte.
+Mac — START.command
+Mac — Network Monitor.app (zip)
+Windows / PC — START.bat
+Déjà dans le dossier du projet ? Utilisez START.command (Mac) ou START.bat (PC) — pas de téléchargement nécessaire.
+Ouvrir ce site
+Utilisez http://127.0.0.1:5080/ — pas un fichier depuis le Finder.
+Scanner le réseau
+Sur la liste des appareils, cliquez Scan Wi‑Fi + LAN. Attendez 1–2 min.
+Voir la carte
+Ouvrez Network map pour voir Internet → gateway → devices.
+Nommer les appareils
+Saisissez dans la colonne IT name (imprimante, PC, salle, etc.).
+Télécharger les rapports
+Guide (.txt)
+Appareils (.csv)
+Lanceurs Mac / PC
+À propos du créateur
+Mohammad Faizan Khan
+Créateur de ce site
+J'ai commencé par le travail technique et informatique, résolvant des problèmes et gérant des systèmes. Plus tard, j'ai dirigé les opérations de main-d'œuvre et de projets en Arabie saoudite — hôtellerie, santé et sites d'entreprise dans de nombreux lieux.
+Ce parcours m'a appris les opérations de bout en bout : les personnes, le timing et une communication claire. Aujourd'hui, je me concentre sur les opérations et la coordination de projets — transformer un travail complexe en systèmes simples et reproductibles.
+Network Monitor — les cellules vides signifient « not detected », pas deviné.
+© Mohammad Faizan Khan
+Données de scan réelles uniquement — cliquez Scan pour mettre à jour. Vide = not detected.
+Activité
+Guide routeur
+Application non démarrée.
+Double-cliquez sur START.command, puis ouvrez
+● SERVER ONLINE
+Réseaux :
+Appareils scannés
+Filtrer par type de lien ou exporter CSV après un scan.
+Scan Wi‑Fi + LAN
+Tous
+Wi‑Fi uniquement
+LAN uniquement
+Actualiser
+Télécharger CSV
+Actualiser les sites DNS
+Pi-hole ou AdGuard DNS log
+Online :
+Offline :
+Journal d'activité
+Admin routeur vs cette app
+Ce que les routeurs voient vs ce scanner
+Pas de fausses données — faites défiler les sections ci-dessous.
+Statut
+Nom
+IP
+Sites fréquents (DNS)
+Type
+MAC
+Hostname
+Ports
+Ping
+Première vue
+Dernière vue
+IT name
+Cliquez Scan Wi‑Fi + LAN
+Aucun appareil — cliquez Scan
+Label
+● ONLINE
+○ offline
+Chargement…
+Actualisation…
+Mis à jour
+Démarrer START.command
+Scan en cours…
+Terminé
+Échec du scan
+Chargement des DNS logs…
+DNS : {n} device(s)
+Aucune correspondance DNS log
+Échec de l'actualisation DNS
+Retour aux appareils
+Créateur :
+Wi‑Fi de ce Mac
+DNS sites: {n} device(s) from {source} — domain names only, not page content.
+Pi-hole try: {host} · set PIHOLE_API_KEY in START.command
+From
+ms
+{supported} full, {partial} partial, {unavailable} not collected here.
+Contrôles de la carte
+Cliquez une IP pour les champs de scan réels. Liste des fonctionnalités (browsing/DNS/bandwidth limits).
+Flux →
+Internet → Gateway → Wi‑Fi / LAN → devices
+Dézoomer la carte au pointeur
+Zoomer la carte au pointeur
+Ajuster toute la carte
+Agrandir la carte
+Quitter l'agrandissement
+Télécharger PDF
+Scan & redraw
+Actualiser la carte
+Chargement de la carte…
+Scan du réseau (real data)…
+Pas encore de données — scan du réseau (real data only)…
+Démarrez START.command d'abord
+Ouvrez http://127.0.0.1:5080/
+Network map panel
+Carte topologique réseau interactive
+Drag with mouse to pan. Press plus or minus to zoom at the pointer. Hold Control and scroll to zoom at the pointer. Press zero to fit the whole map. Arrow keys pan. Click a node for device details.
+Drag to pan · Ctrl+scroll or +/− zooms at pointer · 0 = fit · Click nodes for details
+Détails
+Fermer
+Gateway :
+Offline in DB :
+This PC :
+Gateway ping :
+Internet ping :
+À jour
+auto every
+Chargement de toutes les données…
+Aucune carte à exporter — scannez d'abord
+PDF library loading… try again
+Création du PDF…
+PDF téléchargé
+Échec PDF — essayez Print sur cette page
+Cette app : yes
+Cette app : partial
+Cette app : no
+Data type
+What this app shows
+Typical router / admin
+No fake data.
+What you can collect depends on
+Even with router DNS logging — HTTPS usually hides
+Start the server to load this guide.
