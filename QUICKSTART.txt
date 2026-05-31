@@ -6,7 +6,8 @@ MAC (personal PC test OR office Mac)
 If double-click says "access privileges", use Terminal instead:
 
    Open Terminal, paste:
-   cd ~/Downloads/RuView-main/office-net-monitor
+   cd path/to/Network
+   (GitHub: git clone https://github.com/faizandgreate-lang/Network.git && cd Network)
    bash run.sh
 
    (See RUN-IN-TERMINAL.txt for full copy-paste block.)

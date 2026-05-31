@@ -15,6 +15,28 @@ Full text: [DISCLAIMER.md](DISCLAIMER.md)
 
 ---
 
+## Two ways to use this project
+
+| Where | URL | What you get |
+|--------|-----|----------------|
+| **GitHub (preview)** | https://faizandgreate-lang.github.io/Network/ | Same **look** (pages, logo, theme). Scan/API need the local app. |
+| **On your PC (full app)** | http://127.0.0.1:5080/ | **Everything** — same as the creator: scan Wi‑Fi/LAN, device list, map, CSV. |
+
+### Download and run (anyone — same as localhost)
+
+1. **Get the code:** [Download ZIP](https://github.com/faizandgreate-lang/Network/archive/refs/heads/main.zip) or `git clone https://github.com/faizandgreate-lang/Network.git`
+2. **Unzip** (if ZIP) and open the folder `Network-main` (or `Network`).
+3. **Start:**
+   - **Mac:** double-click `START.command` (keep Terminal open)
+   - **Windows:** double-click `START.bat` (keep the window open)
+4. Browser opens **http://127.0.0.1:5080/** — use the site the same way as on the creator’s machine.
+
+First run installs Python packages automatically (needs internet once).
+
+**GitHub Pages setup (for the live preview):** repo → Settings → Pages → branch `main`, folder **`/web`**. See [GITHUB-PAGES.md](GITHUB-PAGES.md).
+
+---
+
 ## Why we made it
 
 - **See the whole network in one place** — PCs, phones, printers, and gateways on Wi‑Fi and Ethernet, not scattered router screens.

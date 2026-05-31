@@ -1,22 +1,24 @@
-# GitHub Pages setup
+# GitHub Pages — same layout as localhost
 
-Your site URL: **https://faizandgreate-lang.github.io/Network/**
+**Live preview:** https://faizandgreate-lang.github.io/Network/
 
-## Settings (one time)
+## Settings (required)
 
-1. Repo → **Settings** → **Pages**
-2. **Build and deployment** → Source: **Deploy from a branch**
-3. Branch: **`main`** · Folder: **`/web`** (important — not root)
-4. Save, wait 2–5 minutes
+| Setting | Value |
+|---------|--------|
+| Source | Deploy from a branch |
+| Branch | `main` |
+| Folder | **`/web`** |
 
-## What works on GitHub
+Wait 2–5 minutes after saving, then hard-refresh (Cmd+Shift+R).
 
-- Home, devices, map, calendar, clock pages and styling
-- Logo and creator images
+## Same look, two modes
 
-## What needs the local app
+- **On GitHub:** HTML/CSS/JS only — pages look like the app (white theme, logo, creator photo, navigation).
+- **After download + START:** Python server on **http://127.0.0.1:5080/** — scan, devices, map, CSV (full software).
 
-- Wi‑Fi / LAN scan, live device list, CSV export
-- Run **`START.command`** (Mac) or **`START.bat`** (Windows) → **http://127.0.0.1:5080/**
+GitHub cannot run the scanner; that is normal for static hosting.
 
-GitHub Pages is static hosting only (no Python server).
+## For visitors
+
+Share the preview URL for the website design, and the README “Download and run” steps for the real tool.

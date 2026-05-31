@@ -49,8 +49,12 @@ cat > "$DEST/GITHUB-UPLOAD.txt" << 'EOF'
 Network Monitor — upload to GitHub (Terminal only)
 =================================================
 
-GitHub website "Upload files" allows only ~100 files. This folder has more,
-so you MUST use Terminal — it takes one minute.
+GitHub website "Upload files" allows only ~100 files — use git push instead.
+
+PREVIEW (same layout): https://faizandgreate-lang.github.io/Network/
+  → Repo Settings → Pages → branch main, folder /web
+
+FULL APP (scan): download ZIP → START.command / START.bat → http://127.0.0.1:5080/
 
 STEP 1 — Create empty repo on github.com (no README, no .gitignore).
 

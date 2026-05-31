@@ -1,4 +1,4 @@
-/** GitHub Pages base path (/Network/) vs local server (/) — must load first in <head>. */
+/** GitHub Pages (/Network/) vs local server (/) — load first in <head>. */
 (function (global) {
   function detectAppBase() {
     var host = location.hostname || '';
@@ -34,25 +34,7 @@
     if (head) head.insertBefore(b, head.firstChild);
   }
 
-  function showGitHubBanner() {
-    if (!global.appIsGitHubPages()) return;
-    document.addEventListener('DOMContentLoaded', function () {
-      if (document.getElementById('github-pages-banner')) return;
-      var el = document.createElement('div');
-      el.id = 'github-pages-banner';
-      el.className = 'github-pages-banner';
-      el.setAttribute('role', 'status');
-      el.innerHTML =
-        '<strong>GitHub preview</strong> — layout and pages work here. ' +
-        '<strong>Wi‑Fi scan, device list, and downloads</strong> need the app on your computer: ' +
-        'clone this repo and double‑click <code>START.command</code> (Mac) or <code>START.bat</code> (Windows), ' +
-        'then open <code>http://127.0.0.1:5080/</code>.';
-      if (document.body) document.body.insertBefore(el, document.body.firstChild);
-    });
-  }
-
-  var RAW =
-    'https://github.com/faizandgreate-lang/Network/raw/main/';
+  var RAW = 'https://github.com/faizandgreate-lang/Network/raw/main/';
 
   function fixDownloadLinks() {
     if (!global.appIsGitHubPages()) return;
@@ -71,6 +53,25 @@
     });
   }
 
+  /** Same layout as localhost; small footer note only on GitHub. */
+  function addGitHubFooterNote() {
+    if (!global.appIsGitHubPages()) return;
+    document.addEventListener('DOMContentLoaded', function () {
+      if (document.getElementById('gh-run-note')) return;
+      var footer = document.querySelector('.site-footer');
+      if (!footer) return;
+      var p = document.createElement('p');
+      p.id = 'gh-run-note';
+      p.className = 'gh-run-note';
+      p.innerHTML =
+        'This is the same website layout as the desktop app. To <strong>scan Wi‑Fi/LAN</strong> like on localhost: ' +
+        '<a class="ext" href="' +
+        RAW +
+        'zipball/main/">Download ZIP</a> → unzip → double-click <code>START.command</code> (Mac) or <code>START.bat</code> (Windows) → open <code>http://127.0.0.1:5080/</code>.';
+      footer.appendChild(p);
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', fixDownloadLinks);
-  showGitHubBanner();
+  addGitHubFooterNote();
 })(window);
