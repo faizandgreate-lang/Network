@@ -80,6 +80,7 @@
   setMeta('twitter:image:alt', cfg.creator + ' — creator of Network Monitor');
 
   setLink('canonical', canonical);
+  setLink('sitemap', origin + '/sitemap.xml', { type: 'application/xml', title: 'Sitemap' });
   setLink('me', cfg.linkedIn);
   setLink('author', portfolio);
 

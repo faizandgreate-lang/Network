@@ -13,6 +13,11 @@ for f in "$WEB"/*.html; do
   [ -f "$f" ] && cp "$f" "$DOCS/"
 done
 
+# SEO — must live at site root (not only under /static/)
+for f in sitemap.xml robots.txt; do
+  [ -f "$WEB/$f" ] && cp "$WEB/$f" "$DOCS/$f"
+done
+
 # Images (local: /assets/logo.png)
 if [ -d "$WEB/assets" ]; then
   rsync -a "$WEB/assets/" "$DOCS/assets/"
@@ -35,6 +40,13 @@ rsync -a \
 bash "$ROOT/scripts/build-public-downloads.sh"
 mkdir -p "$DOCS/downloads"
 rsync -a "$ROOT/downloads/" "$DOCS/downloads/"
+
+# Custom domain (GitHub Pages → network.linux-aios.com)
+if [ -f "$ROOT/docs/CNAME" ]; then
+  cp "$ROOT/docs/CNAME" "$DOCS/CNAME"
+elif [ ! -f "$DOCS/CNAME" ]; then
+  echo "network.linux-aios.com" > "$DOCS/CNAME"
+fi
 
 touch "$DOCS/.nojekyll"
 echo "docs/ ready: HTML + static/ + assets/ + downloads/ ($(find "$DOCS" -type f | wc -l | tr -d ' ') files)"

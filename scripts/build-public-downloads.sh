@@ -51,6 +51,7 @@ chmod +x "$OUT/START.command" 2>/dev/null || true
 
 if [ -f "$ROOT/web/guide.txt" ]; then
   cp -f "$ROOT/web/guide.txt" "$OUT/office-network-monitor-guide.txt"
+  cp -f "$ROOT/web/guide.txt" "$OUT/guide.txt"
 fi
 
 echo "downloads/ ready ($(find "$OUT" -type f | wc -l | tr -d ' ') files)"
