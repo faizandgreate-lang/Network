@@ -32,15 +32,5 @@
     return h.endsWith('.github.io') || h === 'network.linux-aios.com';
   };
 
-  if (base !== '/' && !/^https?:/i.test(String(base))) {
-    var b = document.createElement('base');
-    b.href = base;
-    var head = document.head;
-    if (head) head.insertBefore(b, head.firstChild);
-  } else if (/^https?:/i.test(String(base))) {
-    var b2 = document.createElement('base');
-    b2.href = base;
-    var head2 = document.head;
-    if (head2) head2.insertBefore(b2, head2.firstChild);
-  }
+  /* No <base> tag — it breaks #anchors (step 06 “Mac / PC starters”) on GitHub Pages. */
 })(window);

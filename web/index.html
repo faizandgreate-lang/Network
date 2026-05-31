@@ -113,7 +113,7 @@
         <p data-i18n="home.a02.desc">Left-to-right flowchart after each scan. Zoom and pan.</p>
         <span class="action-go" data-i18n="home.a02.go">Open →</span>
       </a>
-      <a class="action-card glass-panel" href="#start-downloads">
+      <a class="action-card glass-panel" href="index.html#start-downloads">
         <span class="action-num">↓</span>
         <h3 data-i18n="home.a03.title">Download</h3>
         <p data-i18n="home.a03.desc">Mac/PC starters, user guide, and device CSV export.</p>
@@ -181,9 +181,10 @@
           <p>
             <a class="ext" id="dl-guide" href="downloads/office-network-monitor-guide.txt" data-i18n="home.s06.guide">Guide (.txt)</a>
             ·
-            <a class="ext" id="dl-csv" href="/api/export.csv" data-i18n="home.s06.csv">Devices (.csv)</a>
+            <a class="ext" id="dl-csv" href="/api/export.csv" download data-i18n="home.s06.csv">Devices (.csv)</a>
+            <span class="step-note-inline" id="dl-csv-hint" hidden data-i18n="home.s06.csvSample"> (sample on website — full export after you scan locally)</span>
             ·
-            <a class="ext" href="#start-downloads" data-i18n="home.s06.starters">Mac / PC starters</a>
+            <a class="ext" href="index.html#start-downloads" data-i18n="home.s06.starters">Mac / PC starters</a>
           </p>
         </div>
       </div>
@@ -244,7 +245,7 @@
   </footer>
   <script src="static/app-theme.js"></script>
   <script src="static/logo.js?v=18"></script>
-  <script src="static/home-downloads.js?v=1"></script>
+  <script src="static/home-downloads.js?v=2"></script>
   <script src="static/coin-flip.js"></script>
   <script src="static/retro-terminal.js"></script>
 </body>

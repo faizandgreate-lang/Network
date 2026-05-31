@@ -1,0 +1,2 @@
+status,device_name,ip,mac,hostname,it_label,vendor,device_type,device_fingerprint,session_duration,services,latency_ms,top_domains,dns_source,notes,subnet,link,interface_name,first_seen,last_seen,scan_count
+example,Example device,192.168.1.100,00:11:22:33:44:55,example.local,Room PC,Example vendor,computer,,,,,,,Sample row — run START.command and scan to export real data.,192.168.1.0/24,wifi,en0,,,

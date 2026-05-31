@@ -17,9 +17,9 @@ Click "Scan Wi-Fi + LAN" on the Device list page.
 Wait about 1–2 minutes. Empty fields mean not detected.
 
 === DOWNLOAD ===
-Launchers (save into office-net-monitor folder):
-- Mac START.command: /api/download/start-command
-- Mac .app zip: /api/download/mac-app.zip
-- Windows START.bat: /api/download/start-bat
-- User guide: /api/download/guide.txt
-- Devices CSV: /api/export.csv (after a scan)
+From the home page (step 01) or downloads/ folder:
+- Mac full zip: downloads/Network-Monitor-Full-Mac.zip
+- Windows full zip: downloads/Network-Monitor-Full-Windows.zip
+- Mac START.command / Windows START.bat: downloads/
+- User guide: downloads/office-network-monitor-guide.txt
+- Devices CSV: Device list page after a scan (or devices-sample.csv on the website)
