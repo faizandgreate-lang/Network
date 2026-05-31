@@ -910,6 +910,10 @@ def download_guide() -> FileResponse:
     )
 
 
+DOWNLOADS_DIR = ROOT / "downloads"
+if DOWNLOADS_DIR.is_dir():
+    app.mount("/downloads", StaticFiles(directory=DOWNLOADS_DIR), name="downloads")
+
 if WEB.is_dir():
     app.mount("/static", StaticFiles(directory=WEB), name="static")
 

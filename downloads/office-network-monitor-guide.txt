@@ -1,0 +1,25 @@
+Network Monitor — Quick Guide
+Creator: Mohammad Faizan Khan
+Websites: https://linux-aios.com  |  https://khan.linux-aios.com
+
+=== START ===
+1. Double-click START.command or Network Monitor.app
+2. Keep Terminal open
+3. Open http://127.0.0.1:5080/ in your browser
+
+=== PAGES ===
+Home — tutorial and about the creator
+Device list — scan Wi-Fi and LAN, see all devices
+Network map — flowchart from your last scan
+
+=== SCAN ===
+Click "Scan Wi-Fi + LAN" on the Device list page.
+Wait about 1–2 minutes. Empty fields mean not detected.
+
+=== DOWNLOAD ===
+Launchers (save into office-net-monitor folder):
+- Mac START.command: /api/download/start-command
+- Mac .app zip: /api/download/mac-app.zip
+- Windows START.bat: /api/download/start-bat
+- User guide: /api/download/guide.txt
+- Devices CSV: /api/export.csv (after a scan)
