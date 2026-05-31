@@ -1,8 +1,12 @@
-/** GitHub Pages (/Network/) vs local server (/) — load first in <head>. */
+/** GitHub Pages + custom domain — load CSS/JS from the real project URL. */
 (function (global) {
+  var GITHUB_PAGES_ROOT = 'https://faizandgreate-lang.github.io/Network/';
+
   function detectAppBase() {
     var host = location.hostname || '';
     if (host === 'localhost' || host === '127.0.0.1') return '/';
+    /* Custom domain shows HTML but /static/* 404 — point assets at GitHub project URL */
+    if (host === 'network.linux-aios.com') return GITHUB_PAGES_ROOT;
     if (host.endsWith('.github.io')) {
       var parts = location.pathname.split('/').filter(Boolean);
       if (parts.length && !/\.html?$/i.test(parts[0])) {
@@ -14,16 +18,20 @@
 
   var base = detectAppBase();
   global.__APP_BASE__ = base;
+  global.__GITHUB_PAGES_ROOT__ = GITHUB_PAGES_ROOT;
 
   global.appUrl = function (path) {
     if (!path) return base;
     if (/^https?:\/\//i.test(path)) return path;
     var p = path.charAt(0) === '/' ? path.slice(1) : path;
-    return base === '/' ? '/' + p : base + p;
+    if (base === '/') return '/' + p;
+    if (base.endsWith('/')) return base + p;
+    return base + '/' + p;
   };
 
   global.appIsGitHubPages = function () {
-    return (location.hostname || '').endsWith('.github.io');
+    var h = location.hostname || '';
+    return h.endsWith('.github.io') || h === 'network.linux-aios.com';
   };
 
   if (base !== '/') {
@@ -53,7 +61,6 @@
     });
   }
 
-  /** Same layout as localhost; small footer note only on GitHub. */
   function addGitHubFooterNote() {
     if (!global.appIsGitHubPages()) return;
     document.addEventListener('DOMContentLoaded', function () {
@@ -64,10 +71,9 @@
       p.id = 'gh-run-note';
       p.className = 'gh-run-note';
       p.innerHTML =
-        'This is the same website layout as the desktop app. To <strong>scan Wi‑Fi/LAN</strong> like on localhost: ' +
-        '<a class="ext" href="' +
+        'Full app (scan Wi‑Fi/LAN): <a class="ext" href="' +
         RAW +
-        'zipball/main/">Download ZIP</a> → unzip → double-click <code>START.command</code> (Mac) or <code>START.bat</code> (Windows) → open <code>http://127.0.0.1:5080/</code>.';
+        'zipball/main/">download ZIP</a> → <code>START.command</code> / <code>START.bat</code> → <code>http://127.0.0.1:5080/</code>';
       footer.appendChild(p);
     });
   }
