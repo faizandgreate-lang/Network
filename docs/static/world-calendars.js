@@ -202,7 +202,7 @@
     const differs = global.WorldCalendarMonth?.differsFromGregorianCivil;
     if (!differs) return CALENDAR_CANDIDATES;
     const seen = new Set();
-    return CALENDAR_CANDIDATES.map((sec) => ({
+    const filtered = CALENDAR_CANDIDATES.map((sec) => ({
       group: sec.group,
       items: sec.items.filter((it) => {
         if (!differs(it)) return false;
@@ -212,6 +212,7 @@
         return true;
       }),
     })).filter((sec) => sec.items.length > 0);
+    return filtered.length ? filtered : CALENDAR_CANDIDATES;
   }
 
   global.CALENDAR_CATALOG = CALENDAR_CANDIDATES;

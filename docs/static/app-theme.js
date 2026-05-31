@@ -108,8 +108,20 @@
     updateToggleUi();
   }
 
+  function isWorldPage() {
+    const p = (location.pathname || '').toLowerCase();
+    return /calendar\.html|clock\.html|\/calendar|\/clock/.test(p);
+  }
+
   function initTheme() {
     if (!document.body) return;
+    if (isWorldPage()) {
+      document.documentElement.setAttribute('data-force-modern', '1');
+      applyModern();
+      ensureThemeToggle();
+      updateToggleUi();
+      return;
+    }
     const stored = getStored();
     if (stored === 'modern') applyModern();
     else {

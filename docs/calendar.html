@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-seo-page="calendar" data-i18n-title="doc.titleCalendar">
+<html lang="en" data-seo-page="calendar" data-i18n-title="doc.titleCalendar" data-app-theme="modern" data-force-modern="1" class="theme-modern-boot">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +9,7 @@
   <link rel="canonical" href="https://network.linux-aios.com/calendar.html" />
   <link rel="stylesheet" href="static/site.css" />
   <link rel="stylesheet" href="static/modern-theme.css" />
+  <link rel="stylesheet" href="static/world-pages.css?v=1" />
   <script src="static/app-base.js"></script>
   <script src="static/theme-boot.js"></script>
   <script src="static/seo-config.js"></script>
@@ -24,10 +25,19 @@
 <body class="page-calendar theme-modern">
   <header class="top-bar">
     <div class="top-bar-inner">
-      <a href="index.html" class="top-brand">
-        <img class="top-logo logo-img nav-size" src="assets/logo.png" alt="" />
-        <span class="top-title">Network Monitor</span>
-      </a>
+      <div class="top-brand">
+        <button type="button" class="coin-flip nav-coin" id="nav-coin" data-i18n-aria="nav.coinAria">
+          <div class="coin-flip-inner">
+            <div class="coin-flip-face coin-flip-front">
+              <img class="coin-flip-logo logo-img nav-size" src="assets/logo.png" alt="" role="presentation" />
+            </div>
+            <div class="coin-flip-face coin-flip-back">
+              <img class="coin-flip-photo" src="assets/creator.png" alt="" role="presentation" />
+            </div>
+          </div>
+        </button>
+        <a href="index.html" class="top-brand-title"><span class="top-title" data-i18n="app.brand">Network Monitor</span></a>
+      </div>
       <nav class="site-nav">
         <a href="index.html" data-i18n="nav.home">Home</a>
         <a href="devices.html" data-i18n="nav.devices">Devices</a>
@@ -56,8 +66,8 @@
   </footer>
   <script src="static/app-theme.js"></script>
   <script src="static/logo.js?v=19"></script>
-  <script src="static/calendar-month.js?v=4"></script>
-  <script src="static/world-calendars.js?v=4"></script>
-  <script src="static/retro-terminal.js"></script>
+  <script src="static/coin-flip.js"></script>
+  <script src="static/calendar-month.js?v=5"></script>
+  <script src="static/world-calendars.js?v=5"></script>
 </body>
 </html>

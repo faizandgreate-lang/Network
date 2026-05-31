@@ -1,0 +1,122 @@
+/* Calendar + clock — always match home (white glass), even if retro theme is saved */
+html[data-force-modern='1'],
+html[data-force-modern='1'] body.page-calendar,
+html[data-force-modern='1'] body.page-clock {
+  background: #ffffff !important;
+  color: #334155 !important;
+  text-shadow: none !important;
+}
+
+html[data-force-modern='1'] body.page-calendar::before,
+html[data-force-modern='1'] body.page-calendar::after,
+html[data-force-modern='1'] body.page-clock::before,
+html[data-force-modern='1'] body.page-clock::after {
+  display: none !important;
+}
+
+html[data-force-modern='1'] .top-bar {
+  background: rgba(255, 255, 255, 0.82) !important;
+  backdrop-filter: blur(20px) saturate(1.65);
+  -webkit-backdrop-filter: blur(20px) saturate(1.65);
+  border-bottom: 1px solid rgba(37, 150, 190, 0.12) !important;
+  box-shadow: 0 1px 2px rgba(37, 150, 190, 0.06);
+}
+
+html[data-force-modern='1'] .top-title,
+html[data-force-modern='1'] .page-head h1 {
+  color: #0f172a !important;
+  text-shadow: none !important;
+}
+
+html[data-force-modern='1'] .site-nav a {
+  color: #64748b !important;
+}
+
+html[data-force-modern='1'] .site-nav a.active,
+html[data-force-modern='1'] .site-nav a:hover {
+  color: #2596be !important;
+}
+
+html[data-force-modern='1'] .world-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 3rem;
+}
+
+html[data-force-modern='1'] .world-section,
+html[data-force-modern='1'] .clock-local-hero {
+  background: rgba(255, 255, 255, 0.78) !important;
+  border: 1px solid rgba(37, 150, 190, 0.12) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(37, 150, 190, 0.08);
+}
+
+html[data-force-modern='1'] .world-card,
+html[data-force-modern='1'] .cal-card-grid,
+html[data-force-modern='1'] .clock-card {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border: 1px solid rgba(37, 150, 190, 0.14) !important;
+  border-radius: 12px !important;
+  color: #334155 !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+}
+
+html[data-force-modern='1'] .world-card-title {
+  color: #0f172a !important;
+}
+
+html[data-force-modern='1'] .world-card-date,
+html[data-force-modern='1'] .clock-utc-line {
+  color: #2596be !important;
+  text-shadow: none !important;
+}
+
+html[data-force-modern='1'] .clock-time,
+html[data-force-modern='1'] .clock-hero-time {
+  color: #0f172a !important;
+  text-shadow: none !important;
+}
+
+html[data-force-modern='1'] .world-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
+  gap: 0.85rem !important;
+}
+
+html[data-force-modern='1'] .world-grid-clocks {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+}
+
+html[data-force-modern='1'] .cal-day {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(37, 150, 190, 0.1) !important;
+  color: #334155 !important;
+}
+
+html[data-force-modern='1'] .cal-day-today {
+  background: linear-gradient(135deg, #2596be, #509591) !important;
+  color: #fff !important;
+  border: none !important;
+}
+
+html[data-force-modern='1'] .cal-embed-month,
+html[data-force-modern='1'] .clock-date,
+html[data-force-modern='1'] .clock-places {
+  color: #64748b !important;
+}
+
+html[data-force-modern='1'] .site-footer {
+  color: #64748b !important;
+  border-top: 1px solid rgba(37, 150, 190, 0.1);
+}
+
+html[data-force-modern='1'] .btn.sec {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #2596be !important;
+  border-color: rgba(37, 150, 190, 0.2) !important;
+}
+
+html[data-force-modern='1'] .clock-view-btn.active {
+  border-color: #2596be !important;
+  color: #2596be !important;
+}

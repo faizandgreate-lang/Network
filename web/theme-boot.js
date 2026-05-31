@@ -1,7 +1,17 @@
 /** Apply saved theme on <html> before first paint (avoids flash). */
 (function () {
+  var path = (location.pathname || '').toLowerCase();
+  var forceModernPage = /calendar\.html|clock\.html|\/calendar|\/clock/.test(path);
+
+  if (forceModernPage) {
+    document.documentElement.setAttribute('data-force-modern', '1');
+    document.documentElement.setAttribute('data-app-theme', 'modern');
+    document.documentElement.classList.add('theme-modern-boot');
+    document.documentElement.style.backgroundColor = '#ffffff';
+  }
+
   try {
-    var t = localStorage.getItem('nm-theme');
+    var t = forceModernPage ? 'modern' : localStorage.getItem('nm-theme');
     if (t === 'retro') {
       document.documentElement.setAttribute('data-app-theme', 'retro');
       document.documentElement.classList.remove('theme-modern-boot');

@@ -46,8 +46,11 @@ window.I18N_LOCALES.en = {
   'home.s01.title': 'Download & start',
   'home.s01.p': 'Download the full package, unzip it, then double-click START.command (Mac) or START.bat (Windows). Keep Terminal or the command window open.',
   'home.s01.fullTitle': 'Full app (recommended)',
-  'home.s01.fullMac': 'Mac — full download (.zip)',
-  'home.s01.fullWin': 'Windows / PC — full download (.zip)',
+  'home.s01.fullMac': 'Mac — office-net-monitor by MFK (.zip)',
+  'home.s01.fullWin': 'Windows — office-net-monitor by MFK (.zip)',
+  'home.s01.macGatekeeper':
+    'Mac says “cannot verify START.command”? That is normal for downloaded apps. Right-click START.command → Open → Open again.',
+  'home.s01.macGatekeeperFile': 'Mac security help (MAC-GATEKEEPER.txt)',
   'home.s01.starterTitle': 'Starter only',
   'home.s01.macCmd': 'Mac — START.command only',
   'home.s01.win': 'Windows — START.bat only',
