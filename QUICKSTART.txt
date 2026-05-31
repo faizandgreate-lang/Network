@@ -3,6 +3,18 @@ NETWORK MONITOR — QUICK START
 
 MAC (personal PC test OR office Mac)
 -----------------------------------
+ZIP file name: office-net-monitor by MFK - Mac.zip
+Inside the ZIP, open folder: office-net-monitor
+
+If macOS says "Apple could not verify START.command is free of malware":
+  → This is NORMAL for any download from the web (not the App Store).
+  → Read MAC-GATEKEEPER.txt in the folder, OR:
+  → RIGHT-CLICK START.command → Open → click Open again
+  → OR in Terminal (inside the unzipped office-net-monitor folder):
+     chmod +x START.command launcher.sh run.sh
+     xattr -cr .
+     ./START.command
+
 If double-click says "access privileges", use Terminal instead:
 
    Open Terminal, paste:
@@ -27,6 +39,9 @@ OR fix permissions then double-click START.command:
 
 WINDOWS (office PC)
 -------------------
+ZIP file name: office-net-monitor by MFK - Windows.zip
+Inside the ZIP, open folder: office-net-monitor
+
 1. Double-click:  START.bat
 
 2. Open:  http://127.0.0.1:5080/

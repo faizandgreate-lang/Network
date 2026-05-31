@@ -1,0 +1,43 @@
+NETWORK MONITOR — Mac security message (normal for downloaded apps)
+Creator: Mohammad Faizan Khan (MFK)
+
+If macOS says:
+  "Apple could not verify START.command is free of malware..."
+
+This is Gatekeeper — it appears for ANY app downloaded from the web (not from the App Store).
+The project is open source; you are running it locally on your own Mac.
+
+OPTION A — Right-click Open (easiest)
+-------------------------------------
+1. Unzip "office-net-monitor by MFK - Mac.zip"
+2. Open the folder: office-net-monitor
+3. RIGHT-CLICK (or Control-click) START.command
+4. Choose "Open"
+5. Click "Open" again in the dialog
+6. Keep Terminal open; browser opens http://127.0.0.1:5080/
+
+OPTION B — Terminal (always works)
+----------------------------------
+1. Open Terminal
+2. cd to the unzipped folder, for example:
+   cd ~/Downloads/office-net-monitor/office-net-monitor
+3. Run:
+   chmod +x START.command launcher.sh run.sh
+   xattr -cr .
+   ./START.command
+
+OPTION C — System Settings
+--------------------------
+1. Try to open START.command once (it will be blocked)
+2. Open System Settings → Privacy & Security
+3. Scroll down → click "Open Anyway" next to START.command
+4. Run START.command again
+
+REQUIREMENTS
+------------
+- Python 3 from https://www.python.org/downloads/ (or Homebrew)
+- Keep the Terminal window open while using the app
+
+WINDOWS
+-------
+No Gatekeeper message. Double-click START.bat inside the unzipped folder.

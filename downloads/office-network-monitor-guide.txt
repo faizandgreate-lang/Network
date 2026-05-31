@@ -18,8 +18,9 @@ Wait about 1–2 minutes. Empty fields mean not detected.
 
 === DOWNLOAD ===
 From the home page (step 01) or downloads/ folder:
-- Mac full zip: downloads/Network-Monitor-Full-Mac.zip
-- Windows full zip: downloads/Network-Monitor-Full-Windows.zip
+- Mac full zip: office-net-monitor by MFK - Mac.zip
+- Windows full zip: office-net-monitor by MFK - Windows.zip
+- Mac security help: MAC-GATEKEEPER.txt (if START.command is blocked)
 - Mac START.command / Windows START.bat: downloads/
 - User guide: downloads/office-network-monitor-guide.txt
 - Devices CSV: Device list page after a scan (or devices-sample.csv on the website)
