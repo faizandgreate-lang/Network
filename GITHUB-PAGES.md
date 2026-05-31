@@ -1,46 +1,30 @@
-# Fix “404 — There isn’t a GitHub Pages site here”
+# GitHub Pages — same layout as localhost
 
-## Correct URL (project repo)
+**URL:** https://faizandgreate-lang.github.io/Network/
 
-**https://faizandgreate-lang.github.io/Network/**
+## Settings
 
-Do **not** open only `https://faizandgreate-lang.github.io/` — that shows 404 unless you have a separate user site.
+| Setting | Value |
+|---------|--------|
+| Source | Deploy from a branch |
+| Branch | `main` |
+| Folder | **`/docs`** |
+| Custom domain | **leave empty** |
 
----
+Wait 5 minutes after saving, then hard-refresh (Cmd+Shift+R).
 
-## Turn on Pages (do this once)
+## Why it looked broken before
 
-### Method A — GitHub Actions (recommended)
+The site uses `static/site.css` (same as localhost). The `docs/` folder was missing the **`static/`** subfolder, so CSS returned 404 and the page had no layout.
 
-1. Open: https://github.com/faizandgreate-lang/Network/settings/pages  
-2. **Build and deployment** → **Source:** choose **GitHub Actions** (not “Deploy from branch”)  
-3. After you push this repo, open: https://github.com/faizandgreate-lang/Network/actions  
-4. Run workflow **Deploy GitHub Pages** — wait until green ✓  
-5. Open **https://faizandgreate-lang.github.io/Network/**
+After `bash scripts/sync-docs-for-github-pages.sh`, `docs/static/site.css` exists.
 
-### Method B — Branch `docs`
+## What GitHub cannot do
 
-1. Settings → Pages  
-2. Source: **Deploy from a branch**  
-3. Branch: **`main`** · Folder: **`/docs`**  
-4. Save, wait 5 minutes  
-5. Open **https://faizandgreate-lang.github.io/Network/**
+Scan Wi‑Fi, device list API, and CSV need the real app:
 
----
+1. Download repo  
+2. `START.command` (Mac) or `START.bat` (Windows)  
+3. Open **http://127.0.0.1:5080/**
 
-## Custom domain
-
-If you see 404 or broken layout on `network.linux-aios.com`:
-
-1. Settings → Pages → **Custom domain** → **clear the box** → Save  
-2. Use **https://faizandgreate-lang.github.io/Network/** first until that works  
-
----
-
-## Full app (scan Wi‑Fi)
-
-GitHub only hosts the **website preview**. To scan devices:
-
-1. Download ZIP or clone the repo  
-2. **Mac:** `START.command` · **Windows:** `START.bat`  
-3. **http://127.0.0.1:5080/**
+That is the full software — same as on your PC.

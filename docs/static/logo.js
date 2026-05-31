@@ -5,7 +5,7 @@
   const CREATOR = u('/assets/creator.png');
   const LOGO_FB = u('/assets/logo-display.png');
   const CREATOR_FB = u('/assets/creator-display.png');
-  const CACHE = 'logo-17';
+  const CACHE = 'logo-18';
 
   const PLACEHOLDER_LOGO =
     'data:image/svg+xml,' +
