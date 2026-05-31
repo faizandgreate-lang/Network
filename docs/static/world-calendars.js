@@ -293,7 +293,8 @@
     };
     if (!global.WorldCalendarMonth?.buildHtml) {
       const s = document.createElement('script');
-      s.src = '/static/calendar-month.js';
+      s.src =
+        typeof appUrl === 'function' ? appUrl('/static/calendar-month.js') : 'static/calendar-month.js';
       s.onload = start;
       document.head.appendChild(s);
       return;
