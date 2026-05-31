@@ -7,26 +7,27 @@
   <meta name="description" content="Network map — topology after each scan." />
   <meta name="google-site-verification" content="googlec845b45a3dd5dd12" />
   <link rel="canonical" href="https://network.linux-aios.com/map.html" />
-  <link rel="stylesheet" href="/static/site.css" />
-  <link rel="stylesheet" href="/static/modern-theme.css" />
-  <script src="/static/theme-boot.js"></script>
-  <script src="/static/seo-config.js"></script>
-  <script src="/static/seo.js"></script>
-  <script src="/static/locales/en.js"></script>
-  <script src="/static/locales/register.js"></script>
-  <script src="/static/locales/translations.js"></script>
-  <script src="/static/locales/phrases-all.js"></script>
-  <script src="/static/locales/atlas-supplement.js"></script>
-  <script src="/static/locales/en-gap-atlas.js"></script>
-  <script src="/static/i18n.js"></script>
+  <link rel="stylesheet" href="static/site.css" />
+  <link rel="stylesheet" href="static/modern-theme.css" />
+  <script src="static/app-base.js"></script>
+  <script src="static/theme-boot.js"></script>
+  <script src="static/seo-config.js"></script>
+  <script src="static/seo.js"></script>
+  <script src="static/locales/en.js"></script>
+  <script src="static/locales/register.js"></script>
+  <script src="static/locales/translations.js"></script>
+  <script src="static/locales/phrases-all.js"></script>
+  <script src="static/locales/atlas-supplement.js"></script>
+  <script src="static/locales/en-gap-atlas.js"></script>
+  <script src="static/i18n.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/svg2pdf.js@2.2.3/dist/svg2pdf.min.js"></script>
-  <script src="/static/app-theme.js"></script>
-  <script src="/static/logo.js?v=16"></script>
-  <script src="/static/topology.js"></script>
-  <script src="/static/map-zoom.js"></script>
-  <script src="/static/map-interactions.js?v=3"></script>
+  <script src="static/app-theme.js"></script>
+  <script src="static/logo.js?v=17"></script>
+  <script src="static/topology.js"></script>
+  <script src="static/map-zoom.js"></script>
+  <script src="static/map-interactions.js?v=3"></script>
 </head>
 <body class="page-map">
   <div class="map-page">
@@ -38,7 +39,7 @@
               <div class="coin-flip-face coin-flip-front">
                 <img
                   class="coin-flip-logo logo-img nav-size"
-                  src="/assets/logo.png"
+                  src="assets/logo.png"
                   alt=""
                   role="presentation"
                 />
@@ -46,20 +47,20 @@
               <div class="coin-flip-face coin-flip-back">
                 <img
                   class="coin-flip-photo"
-                  src="/assets/creator.png"
+                  src="assets/creator.png"
                   alt=""
                 />
               </div>
             </div>
           </button>
-          <a href="/" class="top-brand-title retro-title-wrap"><span class="top-title" data-retro-type="Network Monitor" data-i18n="app.brand">Network Monitor</span></a>
+          <a href="index.html" class="top-brand-title retro-title-wrap"><span class="top-title" data-retro-type="Network Monitor" data-i18n="app.brand">Network Monitor</span></a>
         </div>
         <nav class="site-nav">
-          <a href="/" data-i18n="nav.home">Home</a>
-          <a href="/devices.html" data-i18n="nav.devices">Devices</a>
-          <a href="/map.html" class="active" data-i18n="nav.map">Map</a>
-          <a href="/calendar.html" data-i18n="nav.calendar">Calendar</a>
-          <a href="/clock.html" data-i18n="nav.clock">Clock</a>
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="devices.html" data-i18n="nav.devices">Devices</a>
+          <a href="map.html" class="active" data-i18n="nav.map">Map</a>
+          <a href="calendar.html" data-i18n="nav.calendar">Calendar</a>
+          <a href="clock.html" data-i18n="nav.clock">Clock</a>
           <div class="lang-picker" id="lang-picker">
             <button type="button" class="btn lang-toggle-btn" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-menu">
               <span class="lang-toggle-label" id="lang-toggle-label" data-i18n="nav.lang">LANG</span>
@@ -94,7 +95,7 @@
             <button type="button" class="btn sec" id="map-pdf-btn" data-i18n="map.pdf">Download PDF</button>
             <button type="button" class="btn" id="map-scan-btn" data-i18n="map.scanRedraw">Scan &amp; redraw</button>
             <button type="button" class="btn sec" id="map-refresh-btn" data-i18n="map.refresh">Refresh map</button>
-            <a class="btn sec" href="/devices.html" data-i18n="map.deviceList">Device list</a>
+            <a class="btn sec" href="devices.html" data-i18n="map.deviceList">Device list</a>
           </div>
         </div>
         <p id="map-status" data-i18n="map.loading">Loading…</p>
@@ -125,8 +126,8 @@
     </div>
   </div>
 
-  <script src="/static/coin-flip.js"></script>
-  <script src="/static/retro-terminal.js"></script>
+  <script src="static/coin-flip.js"></script>
+  <script src="static/retro-terminal.js"></script>
   <script>
     const $ = (id) => document.getElementById(id);
     const t = (k, v) => (window.t ? window.t(k, v) : k);
@@ -247,7 +248,7 @@
 
         if (runScanIfEmpty && (meta.needs_scan || (meta.online === 0 && (meta.total_in_db || 0) === 0))) {
           $('map-status').textContent = t('map.noScan');
-          const scanRes = await fetch('/api/scan', { method: 'POST' });
+          const scanRes = await fetch(appUrl('/api/scan', { method: 'POST' });
           const scanData = scanRes.ok ? await scanRes.json() : {};
           await (window.mapLoadDeviceCache && window.mapLoadDeviceCache());
           const again = await fetchTopologyMermaid();
@@ -319,7 +320,7 @@
     $('map-refresh-btn').addEventListener('click', () => loadMapView(false, false));
     $('map-scan-btn').addEventListener('click', async () => {
       $('map-status').textContent = t('map.scanningNet');
-      await fetch('/api/scan', { method: 'POST' });
+      await fetch(appUrl('/api/scan', { method: 'POST' });
       await loadMapView(false, false);
     });
     loadMapView(true, false);

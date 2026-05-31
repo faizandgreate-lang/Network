@@ -7,18 +7,19 @@
   <meta name="description" content="Device list — scan Wi‑Fi and LAN." />
   <meta name="google-site-verification" content="googlec845b45a3dd5dd12" />
   <link rel="canonical" href="https://network.linux-aios.com/devices.html" />
-  <link rel="stylesheet" href="/static/site.css" />
-  <link rel="stylesheet" href="/static/modern-theme.css" />
-  <script src="/static/theme-boot.js"></script>
-  <script src="/static/seo-config.js"></script>
-  <script src="/static/seo.js"></script>
-  <script src="/static/locales/en.js"></script>
-  <script src="/static/locales/register.js"></script>
-  <script src="/static/locales/translations.js"></script>
-  <script src="/static/locales/phrases-all.js"></script>
-  <script src="/static/locales/atlas-supplement.js"></script>
-  <script src="/static/locales/en-gap-atlas.js"></script>
-  <script src="/static/i18n.js"></script>
+  <link rel="stylesheet" href="static/site.css" />
+  <link rel="stylesheet" href="static/modern-theme.css" />
+  <script src="static/app-base.js"></script>
+  <script src="static/theme-boot.js"></script>
+  <script src="static/seo-config.js"></script>
+  <script src="static/seo.js"></script>
+  <script src="static/locales/en.js"></script>
+  <script src="static/locales/register.js"></script>
+  <script src="static/locales/translations.js"></script>
+  <script src="static/locales/phrases-all.js"></script>
+  <script src="static/locales/atlas-supplement.js"></script>
+  <script src="static/locales/en-gap-atlas.js"></script>
+  <script src="static/i18n.js"></script>
 </head>
 <body class="page-devices">
   <header class="top-bar top-bar-devices">
@@ -29,7 +30,7 @@
             <div class="coin-flip-face coin-flip-front">
               <img
                 class="coin-flip-logo logo-img nav-size"
-                src="/assets/logo.png"
+                src="assets/logo.png"
                 alt=""
                 role="presentation"
               />
@@ -37,20 +38,20 @@
             <div class="coin-flip-face coin-flip-back">
               <img
                 class="coin-flip-photo"
-                src="/assets/creator.png"
+                src="assets/creator.png"
                 alt=""
               />
             </div>
           </div>
         </button>
-        <a href="/" class="top-brand-title retro-title-wrap"><span class="top-title" data-retro-type="Network Monitor" data-i18n="app.brand">Network Monitor</span></a>
+        <a href="index.html" class="top-brand-title retro-title-wrap"><span class="top-title" data-retro-type="Network Monitor" data-i18n="app.brand">Network Monitor</span></a>
       </div>
       <nav class="site-nav">
-        <a href="/" data-i18n="nav.home">Home</a>
-        <a href="/devices.html" class="active" data-i18n="nav.devices">Devices</a>
-        <a href="/map.html" data-i18n="nav.map">Map</a>
-        <a href="/calendar.html" data-i18n="nav.calendar">Calendar</a>
-        <a href="/clock.html" data-i18n="nav.clock">Clock</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="devices.html" class="active" data-i18n="nav.devices">Devices</a>
+        <a href="map.html" data-i18n="nav.map">Map</a>
+        <a href="calendar.html" data-i18n="nav.calendar">Calendar</a>
+        <a href="clock.html" data-i18n="nav.clock">Clock</a>
         <div class="lang-picker" id="lang-picker">
           <button type="button" class="btn lang-toggle-btn" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-menu">
             <span class="lang-toggle-label" id="lang-toggle-label" data-i18n="nav.lang">LANG</span>
@@ -77,7 +78,7 @@
     <div class="err-box" id="err-box">
       <strong data-i18n="devices.err">App not running.</strong>
       <span data-i18n="devices.errHint">Double-click START.command, then open</span>
-      <a class="ext" href="/">http://127.0.0.1:5080/</a>
+      <a class="ext" href="index.html">http://127.0.0.1:5080/</a>
     </div>
 
     <section class="devices-status glass-panel accent" id="server-status">
@@ -129,14 +130,14 @@
   </main>
 
   <footer class="site-footer">
-    <a class="ext" href="/">Home</a> · <a class="ext" href="/map.html">Network map</a> ·
+    <a class="ext" href="index.html">Home</a> · <a class="ext" href="map.html">Network map</a> ·
     <a class="ext" href="https://khan.linux-aios.com" data-i18n="home.portfolio">Portfolio</a>
   </footer>
 
-  <script src="/static/app-theme.js"></script>
-  <script src="/static/logo.js?v=16"></script>
-  <script src="/static/coin-flip.js"></script>
-  <script src="/static/retro-terminal.js"></script>
+  <script src="static/app-theme.js"></script>
+  <script src="static/logo.js?v=17"></script>
+  <script src="static/coin-flip.js"></script>
+  <script src="static/retro-terminal.js"></script>
   <script>
     const $ = (id) => document.getElementById(id);
     const t = (k, v) => (window.t ? window.t(k, v) : k);
@@ -151,7 +152,7 @@
       if (status) status.style.display = on ? 'none' : '';
     }
     async function loadInfo() {
-      const res = await fetch('/api/info');
+      const res = await fetch(appUrl('/api/info');
       if (!res.ok) throw new Error('down');
       const info = await res.json();
       showError(false);
@@ -202,7 +203,7 @@
       }).join('');
       tbody.querySelectorAll('.label-in').forEach((inp) => {
         inp.addEventListener('change', async () => {
-          await fetch('/api/devices/' + encodeURIComponent(inp.dataset.ip) + '/label', {
+          await fetch(appUrl('/api/devices/' + encodeURIComponent(inp.dataset.ip) + '/label', {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ label: inp.value }),
           });
@@ -211,7 +212,7 @@
     }
     async function loadActivity() {
       try {
-        const res = await fetch('/api/activity');
+        const res = await fetch(appUrl('/api/activity');
         const data = await res.json();
         $('events').innerHTML = data.events?.length
           ? data.events.map((e) => `<div class="evt"><b>${esc(e.event)}</b> ${esc(e.ip)}<br>${esc(e.detail || '')}</div>`).join('')
@@ -221,9 +222,9 @@
     async function refresh(silent) {
       if (!silent) $('status-chip').textContent = t('devices.refreshing');
       try {
-        if (!(await fetch('/api/health')).ok) throw 0;
+        if (!(await fetch(appUrl('/api/health')).ok) throw 0;
         await loadInfo();
-        renderTable(await (await fetch('/api/devices')).json());
+        renderTable(await (await fetch(appUrl('/api/devices')).json());
         await loadActivity();
         $('status-chip').textContent = t('devices.updated') + ' ' + new Date().toLocaleTimeString();
         showError(false);
@@ -236,7 +237,7 @@
       $('scan-btn').disabled = true;
       $('status-chip').textContent = t('devices.scanning');
       try {
-        const res = await fetch('/api/scan', { method: 'POST' });
+        const res = await fetch(appUrl('/api/scan', { method: 'POST' });
         renderTable(await res.json());
         await loadActivity();
         $('status-chip').textContent = t('devices.done');
@@ -252,7 +253,7 @@
       $('dns-refresh-btn').disabled = true;
       $('status-chip').textContent = t('devices.dnsLoading');
       try {
-        const res = await fetch('/api/dns/refresh', { method: 'POST' });
+        const res = await fetch(appUrl('/api/dns/refresh', { method: 'POST' });
         const data = await res.json();
         renderTable({ devices: data.devices || [] });
         await loadInfo();

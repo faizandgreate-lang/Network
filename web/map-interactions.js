@@ -72,7 +72,7 @@ function extractIp(text) {
 
 async function fetchDeviceBundle(ip) {
   try {
-    const res = await fetch('/api/devices/by-ip/' + encodeURIComponent(ip));
+    const res = await fetch(appUrl('/api/devices/by-ip/' + encodeURIComponent(ip));
     if (res.ok) return await res.json();
   } catch (_) {}
   return null;
@@ -80,7 +80,7 @@ async function fetchDeviceBundle(ip) {
 
 async function fetchServerInfo() {
   try {
-    const res = await fetch('/api/info');
+    const res = await fetch(appUrl('/api/info');
     if (res.ok) return await res.json();
   } catch (_) {}
   return null;
@@ -128,7 +128,7 @@ function fullDeviceDetailHtml(bundle, meta) {
   } else if (d) {
     html += detailSection('Everything we detected for this device', rowsFromObject(d, DEVICE_FIELDS));
   } else {
-    html += `<p class="sub">No database row for <strong>${escHtml(bundle.ip)}</strong>. Run <a class="ext" href="/devices.html">Scan Wi‑Fi + LAN</a> first.</p>`;
+    html += `<p class="sub">No database row for <strong>${escHtml(bundle.ip)}</strong>. Run <a class="ext" href="devices.html">Scan Wi‑Fi + LAN</a> first.</p>`;
   }
 
   if (bundle.interfaces?.length) {
@@ -161,7 +161,7 @@ function fullDeviceDetailHtml(bundle, meta) {
         `<tr><th>Note</th><td>${escHtml(bundle.wifi_signal.note || '')}</td></tr>`,
     );
   }
-  html += `<p class="sub"><a class="ext" href="/devices.html">Open full device list</a> · <a class="ext" href="/api/export.csv">Download CSV</a></p>`;
+  html += `<p class="sub"><a class="ext" href="devices.html">Open full device list</a> · <a class="ext" href="devices.html">Download CSV</a></p>`;
   return html;
 }
 
@@ -291,11 +291,11 @@ async function openMapDetail(node, meta) {
           meta,
         );
       } else if (node.type === 'offline') {
-        html = `<p class="sub">${escHtml(node.label)}</p><p class="sub">See <a class="ext" href="/devices.html">device list</a> for offline devices.</p>`;
+        html = `<p class="sub">${escHtml(node.label)}</p><p class="sub">See <a class="ext" href="devices.html">device list</a> for offline devices.</p>`;
       } else if (node.id === 'more') {
         html =
           '<p class="sub">More devices exist than shown on the map. Open the device list for the full table.</p>' +
-          `<p><a class="ext" href="/devices.html">Device list</a></p>`;
+          `<p><a class="ext" href="devices.html">Device list</a></p>`;
       } else {
         html = `<p class="sub">${escHtml(node.label || node.id)}</p>`;
       }
@@ -362,7 +362,7 @@ function wireMapNodeClicks(container, meta) {
 
 window.mapLoadDeviceCache = async function () {
   try {
-    const res = await fetch('/api/devices');
+    const res = await fetch(appUrl('/api/devices');
     if (res.ok) {
       const data = await res.json();
       window.mapDeviceCache = data.devices || [];
