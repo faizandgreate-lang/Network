@@ -1,0 +1,47 @@
+NETWORK MONITOR — QUICK START
+====================================
+
+MAC (personal PC test OR office Mac)
+-----------------------------------
+If double-click says "access privileges", use Terminal instead:
+
+   Open Terminal, paste:
+   cd ~/Downloads/RuView-main/office-net-monitor
+   bash run.sh
+
+   (See RUN-IN-TERMINAL.txt for full copy-paste block.)
+
+OR fix permissions then double-click START.command:
+   chmod +x run.sh START.command
+   xattr -cr .
+
+2. Wait for Terminal to show:
+      NETWORK MONITOR — running
+      → http://127.0.0.1:5080/
+
+3. Safari/Chrome opens automatically. If not, paste that URL.
+
+4. KEEP Terminal open. Click "Scan now" on the website.
+
+
+WINDOWS (office PC)
+-------------------
+1. Double-click:  START.bat
+
+2. Open:  http://127.0.0.1:5080/
+
+3. Keep the black window open.
+
+
+FROM ANOTHER PC ON SAME OFFICE Wi‑Fi
+------------------------------------
+On the IT computer, Terminal shows:
+   → http://192.168.x.x:5080/
+Open that address on any other office PC browser.
+
+
+CHANGE NETWORK RANGE (only if auto-detect is wrong)
+--------------------------------------------------
+Before starting, in Terminal:
+   export OFFICE_SUBNET=192.168.0.0/24
+   python server/main.py

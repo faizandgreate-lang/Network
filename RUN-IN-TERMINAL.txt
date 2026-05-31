@@ -1,0 +1,20 @@
+NO TERMINAL NEEDED (Mac)
+========================
+
+1. In Finder open:
+   Downloads → RuView-main → office-net-monitor
+
+2. Double-click ONE of these:
+   • Office Network Monitor.app (Network Monitor)   ← best (runs in background)
+   • START.command                ← opens a small Terminal window
+
+3. Safari opens automatically. If not, open:
+   http://127.0.0.1:5080/
+
+4. The website scans Wi‑Fi + LAN by itself (wait ~1 minute).
+
+First time only: right-click → Open if Mac blocks the app.
+
+To stop background app:
+   Activity Monitor → quit "Python" running office-net-monitor
+   or: lsof -ti:5080 | xargs kill

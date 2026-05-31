@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-title="doc.titleDevices" data-seo-page="devices">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Device list — Network Monitor</title>
+  <meta name="description" content="Device list — scan Wi‑Fi and LAN." />
+  <meta name="google-site-verification" content="googlec845b45a3dd5dd12" />
+  <link rel="canonical" href="https://network.linux-aios.com/devices.html" />
+  <link rel="stylesheet" href="/static/site.css" />
+  <link rel="stylesheet" href="/static/modern-theme.css" />
+  <script src="/static/theme-boot.js"></script>
+  <script src="/static/seo-config.js"></script>
+  <script src="/static/seo.js"></script>
+  <script src="/static/locales/en.js"></script>
+  <script src="/static/locales/register.js"></script>
+  <script src="/static/locales/translations.js"></script>
+  <script src="/static/locales/phrases-all.js"></script>
+  <script src="/static/locales/atlas-supplement.js"></script>
+  <script src="/static/locales/en-gap-atlas.js"></script>
+  <script src="/static/i18n.js"></script>
+</head>
+<body class="page-devices">
+  <header class="top-bar top-bar-devices">
+    <div class="top-bar-inner">
+      <div class="top-brand">
+        <button type="button" class="coin-flip nav-coin" id="nav-coin" aria-label="Logo and creator photo">
+          <div class="coin-flip-inner">
+            <div class="coin-flip-face coin-flip-front">
+              <img
+                class="coin-flip-logo logo-img nav-size"
+                src="/assets/logo.png"
+                alt=""
+                role="presentation"
+              />
+            </div>
+            <div class="coin-flip-face coin-flip-back">
+              <img
+                class="coin-flip-photo"
+                src="/assets/creator.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </button>
+        <a href="/" class="top-brand-title retro-title-wrap"><span class="top-title" data-retro-type="Network Monitor" data-i18n="app.brand">Network Monitor</span></a>
+      </div>
+      <nav class="site-nav">
+        <a href="/" data-i18n="nav.home">Home</a>
+        <a href="/devices.html" class="active" data-i18n="nav.devices">Devices</a>
+        <a href="/map.html" data-i18n="nav.map">Map</a>
+        <a href="/calendar.html" data-i18n="nav.calendar">Calendar</a>
+        <a href="/clock.html" data-i18n="nav.clock">Clock</a>
+        <div class="lang-picker" id="lang-picker">
+          <button type="button" class="btn lang-toggle-btn" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-menu">
+            <span class="lang-toggle-label" id="lang-toggle-label" data-i18n="nav.lang">LANG</span>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="listbox" hidden></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="devices-main">
+    <div id="retro-boot" class="retro-boot" aria-hidden="true"></div>
+    <header class="page-head">
+      <div class="page-head-text">
+        <div class="retro-title-wrap"><h1 data-retro-type="Device list" data-i18n="devices.title">Device list</h1></div>
+        <p class="sub" data-i18n="devices.sub">Real scan data only — click Scan to update. Empty = not detected.</p>
+      </div>
+      <nav class="devices-jump" aria-label="On this page">
+        <a href="#devices-table" data-i18n="devices.jump.devices">Devices</a>
+        <a href="#activity-log" data-i18n="devices.jump.activity">Activity</a>
+      </nav>
+    </header>
+
+    <div class="err-box" id="err-box">
+      <strong data-i18n="devices.err">App not running.</strong>
+      <span data-i18n="devices.errHint">Double-click START.command, then open</span>
+      <a class="ext" href="/">http://127.0.0.1:5080/</a>
+    </div>
+
+    <section class="devices-status glass-panel accent" id="server-status">
+      <div class="banner" id="banner">
+        <span class="live-dot" data-i18n="devices.serverOnline">● SERVER ONLINE</span>
+        <div id="url-list" class="banner-urls"></div>
+        <span class="chip"><span data-i18n="devices.networks">Networks:</span> <strong id="subnet-disp">—</strong></span>
+      </div>
+      <div id="iface-list" class="iface-bar"></div>
+    </section>
+
+    <section class="devices-section devices-primary" id="devices-table">
+      <div class="devices-section-head">
+        <h2 data-i18n="devices.scanned">Scanned devices</h2>
+        <p class="sub" data-i18n="devices.scannedSub">Filter by link type or export CSV after a scan.</p>
+      </div>
+
+      <div class="toolbar toolbar-sticky">
+        <button type="button" class="btn" id="scan-btn" data-i18n="devices.scan">Scan Wi‑Fi + LAN</button>
+        <button type="button" class="btn sec" data-filter="all" data-i18n="devices.filterAll">All</button>
+        <button type="button" class="btn sec" data-filter="wifi" data-i18n="devices.filterWifi">Wi‑Fi only</button>
+        <button type="button" class="btn sec" data-filter="ethernet" data-i18n="devices.filterLan">LAN only</button>
+        <button type="button" class="btn sec" id="refresh-btn" data-i18n="devices.refresh">Refresh</button>
+        <a class="btn sec" href="/api/export.csv" data-i18n="devices.csv">Download CSV</a>
+        <button type="button" class="btn sec" id="dns-refresh-btn" data-i18n-title="devices.dnsTitle" data-i18n="devices.dnsRefresh">Refresh DNS sites</button>
+        <span class="chip"><span data-i18n="devices.online">Online:</span> <strong class="ok-n" id="n-on">0</strong></span>
+        <span class="chip"><span data-i18n="devices.offline">Offline:</span> <strong class="bad-n" id="n-off">0</strong></span>
+        <span class="chip" id="status-chip" data-i18n="devices.loading">Loading…</span>
+      </div>
+
+      <div class="devices-grid">
+        <div class="table-wrap glass-panel devices-table-scroll">
+          <table class="devices-table">
+            <thead>
+              <tr>
+                <th data-i18n="devices.th.status">Status</th><th data-i18n="devices.th.name">Name</th><th data-i18n="devices.th.ip">IP</th><th data-i18n="devices.th.sites">Frequent sites (DNS)</th><th data-i18n="devices.th.type">Type</th><th data-i18n="devices.th.mac">MAC</th>
+                <th data-i18n="devices.th.hostname">Hostname</th><th data-i18n="devices.th.ports">Ports</th><th data-i18n="devices.th.ping">Ping</th><th data-i18n="devices.th.first">First seen</th><th data-i18n="devices.th.last">Last seen</th><th data-i18n="devices.th.label">IT name</th>
+              </tr>
+            </thead>
+            <tbody id="rows"><tr><td colspan="12" data-i18n="devices.clickScan">Click Scan Wi‑Fi + LAN</td></tr></tbody>
+          </table>
+        </div>
+        <aside class="side-panel glass-panel devices-side" id="activity-log">
+          <h2 data-i18n="devices.activity">Activity log</h2>
+          <div id="events" class="events-scroll">—</div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="ext" href="/">Home</a> · <a class="ext" href="/map.html">Network map</a> ·
+    <a class="ext" href="https://khan.linux-aios.com" data-i18n="home.portfolio">Portfolio</a>
+  </footer>
+
+  <script src="/static/app-theme.js"></script>
+  <script src="/static/logo.js?v=16"></script>
+  <script src="/static/coin-flip.js"></script>
+  <script src="/static/retro-terminal.js"></script>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const t = (k, v) => (window.t ? window.t(k, v) : k);
+    let filterLink = 'all', lastDevices = [];
+    function esc(s) {
+      return String(s ?? '').replace(/[&<>"']/g, (c) =>
+        ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+    function showError(on) {
+      $('err-box').classList.toggle('show', on);
+      const status = document.getElementById('server-status');
+      if (status) status.style.display = on ? 'none' : '';
+    }
+    async function loadInfo() {
+      const res = await fetch('/api/info');
+      if (!res.ok) throw new Error('down');
+      const info = await res.json();
+      showError(false);
+      const ifaces = info.interfaces || [];
+      $('subnet-disp').textContent = ifaces.map((i) => i.link).join(' + ') || '—';
+      $('iface-list').innerHTML = ifaces.map((i) =>
+        `<span class="chip iface-chip"><b>${esc(i.link)}</b> ${esc(i.name)} <code>${esc(i.ip)}</code></span>`).join('');
+      $('url-list').innerHTML = (info.urls || []).map((u) =>
+        `<a class="ext" href="${esc(u)}">${esc(u)}</a>`).join('');
+      const ws = info.wifi_signal;
+      if (ws?.rssi_dbm != null) {
+        $('iface-list').insertAdjacentHTML(
+          'afterbegin',
+          `<span class="chip iface-chip"><b>This Mac Wi‑Fi</b> ${esc(ws.ssid || '')} · ${esc(ws.rssi_dbm)} dBm</span>`,
+        );
+      }
+    }
+    function renderTable(data) {
+      lastDevices = data.devices || [];
+      const filtered = filterLink === 'all' ? lastDevices : lastDevices.filter((d) => d.link === filterLink);
+      $('n-on').textContent = filtered.filter((d) => d.status === 'online').length;
+      $('n-off').textContent = filtered.filter((d) => d.status !== 'online').length;
+      const tbody = $('rows');
+      if (!filtered.length) {
+        tbody.innerHTML = `<tr><td colspan="12">${t('devices.noDevices')}</td></tr>`;
+        return;
+      }
+      tbody.innerHTML = filtered.map((d) => {
+        const on = d.status === 'online';
+        const name = d.device_name || d.hostname || d.vendor || '—';
+        const sites = d.top_domains
+          ? `<small class="sites-cell" title="${d.dns_source ? 'From ' + esc(d.dns_source) : ''}">${esc(d.top_domains)}</small>`
+          : '<small class="sites-cell muted">—</small>';
+        return `<tr>
+          <td class="${on ? 'st-on' : 'st-off'}">${on ? t('devices.statusOnline') : t('devices.statusOffline')}</td>
+          <td>${esc(name)}</td>
+          <td><code>${esc(d.ip)}</code></td>
+          <td>${sites}</td>
+          <td>${esc(d.device_type || '—')}</td>
+          <td><small>${esc(d.mac || '—')}</small></td>
+          <td>${esc(d.hostname || '—')}</td>
+          <td><small>${esc(d.services || '—')}</small></td>
+          <td>${d.latency_ms != null && d.latency_ms !== '' ? esc(d.latency_ms) + ' ms' : '—'}</td>
+          <td>${d.first_seen ? esc(String(d.first_seen).slice(0, 16).replace('T', ' ')) : '—'}</td>
+          <td>${d.last_seen ? esc(String(d.last_seen).slice(0, 16).replace('T', ' ')) : '—'}</td>
+          <td><input class="label-in" data-ip="${esc(d.ip)}" value="${esc(d.it_label || '')}" placeholder="${t('devices.placeholderLabel')}" /></td>
+        </tr>`;
+      }).join('');
+      tbody.querySelectorAll('.label-in').forEach((inp) => {
+        inp.addEventListener('change', async () => {
+          await fetch('/api/devices/' + encodeURIComponent(inp.dataset.ip) + '/label', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ label: inp.value }),
+          });
+        });
+      });
+    }
+    async function loadActivity() {
+      try {
+        const res = await fetch('/api/activity');
+        const data = await res.json();
+        $('events').innerHTML = data.events?.length
+          ? data.events.map((e) => `<div class="evt"><b>${esc(e.event)}</b> ${esc(e.ip)}<br>${esc(e.detail || '')}</div>`).join('')
+          : '—';
+      } catch { $('events').textContent = '—'; }
+    }
+    async function refresh(silent) {
+      if (!silent) $('status-chip').textContent = t('devices.refreshing');
+      try {
+        if (!(await fetch('/api/health')).ok) throw 0;
+        await loadInfo();
+        renderTable(await (await fetch('/api/devices')).json());
+        await loadActivity();
+        $('status-chip').textContent = t('devices.updated') + ' ' + new Date().toLocaleTimeString();
+        showError(false);
+      } catch {
+        showError(true);
+        $('status-chip').textContent = t('devices.startCmd');
+      }
+    }
+    $('scan-btn').addEventListener('click', async () => {
+      $('scan-btn').disabled = true;
+      $('status-chip').textContent = t('devices.scanning');
+      try {
+        const res = await fetch('/api/scan', { method: 'POST' });
+        renderTable(await res.json());
+        await loadActivity();
+        $('status-chip').textContent = t('devices.done');
+        showError(false);
+        document.getElementById('devices-table')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } catch {
+        $('status-chip').textContent = t('devices.scanFailed');
+        showError(true);
+      } finally { $('scan-btn').disabled = false; }
+    });
+    $('refresh-btn').addEventListener('click', () => refresh(false));
+    $('dns-refresh-btn').addEventListener('click', async () => {
+      $('dns-refresh-btn').disabled = true;
+      $('status-chip').textContent = t('devices.dnsLoading');
+      try {
+        const res = await fetch('/api/dns/refresh', { method: 'POST' });
+        const data = await res.json();
+        renderTable({ devices: data.devices || [] });
+        await loadInfo();
+        $('status-chip').textContent = data.devices_matched
+          ? t('devices.dnsMatched', { n: data.devices_matched })
+          : t('devices.dnsNoMatch');
+      } catch {
+        $('status-chip').textContent = t('devices.dnsFailed');
+      } finally {
+        $('dns-refresh-btn').disabled = false;
+      }
+    });
+    document.querySelectorAll('[data-filter]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterLink = btn.dataset.filter;
+        document.querySelectorAll('[data-filter]').forEach((b) => b.classList.toggle('active', b === btn));
+        renderTable({ devices: lastDevices });
+      });
+    });
+    document.querySelector('[data-filter="all"]')?.classList.add('active');
+    document.querySelectorAll('.devices-jump a').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (!id?.startsWith('#')) return;
+        const el = document.querySelector(id);
+        if (!el) return;
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.replaceState(null, '', id);
+      });
+    });
+    refresh(false);
+    window.addEventListener('locale-change', () => {
+      window.I18n?.apply?.();
+      if (lastDevices.length) renderTable({ devices: lastDevices });
+    });
+  </script>
+</body>
+</html>

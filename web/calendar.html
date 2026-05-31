@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-seo-page="calendar" data-i18n-title="doc.titleCalendar">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World calendars — Network Monitor</title>
+  <meta name="description" content="World calendars grid with today's date in major calendar systems." />
+  <link rel="canonical" href="https://network.linux-aios.com/calendar.html" />
+  <script src="/static/seo-config.js"></script>
+  <script src="/static/seo.js"></script>
+  <link rel="stylesheet" href="/static/site.css" />
+  <link rel="stylesheet" href="/static/modern-theme.css" />
+  <script src="/static/theme-boot.js"></script>
+  <script src="/static/locales/en.js"></script>
+  <script src="/static/locales/register.js"></script>
+  <script src="/static/locales/translations.js"></script>
+  <script src="/static/locales/phrases-all.js"></script>
+  <script src="/static/locales/atlas-supplement.js"></script>
+  <script src="/static/locales/en-gap-atlas.js"></script>
+  <script src="/static/i18n.js"></script>
+</head>
+<body class="page-calendar">
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <a href="/" class="top-brand">
+        <img class="top-logo logo-img nav-size" src="/assets/logo.png" alt="" />
+        <span class="top-title">Network Monitor</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/" data-i18n="nav.home">Home</a>
+        <a href="/devices.html" data-i18n="nav.devices">Devices</a>
+        <a href="/map.html" data-i18n="nav.map">Map</a>
+        <a href="/calendar.html" class="active" data-i18n="nav.calendar">Calendar</a>
+        <a href="/clock.html" data-i18n="nav.clock">Clock</a>
+        <div class="lang-picker" id="lang-picker">
+          <button type="button" class="btn lang-toggle-btn" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-menu">
+            <span class="lang-toggle-label" id="lang-toggle-label" data-i18n="nav.lang">LANG</span>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="listbox" hidden></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="world-main wrap">
+    <header class="page-head">
+      <h1 data-i18n="calendar.title">World calendars</h1>
+    </header>
+    <div id="calendar-sections" class="calendar-sections"></div>
+  </main>
+
+  <footer class="site-footer">
+    <a class="ext" href="/clock.html" data-i18n="footer.worldClock">World clock</a> · <a class="ext" href="/" data-i18n="nav.home">Home</a>
+  </footer>
+  <script src="/static/app-theme.js"></script>
+  <script src="/static/logo.js?v=16"></script>
+  <script src="/static/calendar-month.js?v=2"></script>
+  <script src="/static/world-calendars.js?v=2"></script>
+</body>
+</html>

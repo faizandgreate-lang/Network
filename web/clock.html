@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" data-seo-page="clock" data-i18n-title="doc.titleClock">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World clock — Network Monitor</title>
+  <meta name="description" content="World clock — current time in every UTC offset." />
+  <link rel="canonical" href="https://network.linux-aios.com/clock.html" />
+  <script src="/static/seo-config.js"></script>
+  <script src="/static/seo.js"></script>
+  <link rel="stylesheet" href="/static/site.css" />
+  <link rel="stylesheet" href="/static/modern-theme.css" />
+  <script src="/static/theme-boot.js"></script>
+  <script src="/static/locales/en.js"></script>
+  <script src="/static/locales/register.js"></script>
+  <script src="/static/locales/translations.js"></script>
+  <script src="/static/locales/phrases-all.js"></script>
+  <script src="/static/locales/atlas-supplement.js"></script>
+  <script src="/static/locales/en-gap-atlas.js"></script>
+  <script src="/static/i18n.js"></script>
+</head>
+<body class="page-clock">
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <a href="/" class="top-brand">
+        <img class="top-logo logo-img nav-size" src="/assets/logo.png" alt="" />
+        <span class="top-title">Network Monitor</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/" data-i18n="nav.home">Home</a>
+        <a href="/devices.html" data-i18n="nav.devices">Devices</a>
+        <a href="/map.html" data-i18n="nav.map">Map</a>
+        <a href="/calendar.html" data-i18n="nav.calendar">Calendar</a>
+        <a href="/clock.html" class="active" data-i18n="nav.clock">Clock</a>
+        <div class="lang-picker" id="lang-picker">
+          <button type="button" class="btn lang-toggle-btn" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-menu">
+            <span class="lang-toggle-label" id="lang-toggle-label" data-i18n="nav.lang">LANG</span>
+          </button>
+          <div class="lang-menu" id="lang-menu" role="listbox" hidden></div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="world-main wrap">
+    <header class="page-head">
+      <h1 data-i18n="clock.title">World clock</h1>
+      <p class="clock-utc-line" id="clock-utc">UTC…</p>
+      <div class="clock-view-toggle" role="group" aria-label="Clock display">
+        <button type="button" class="btn sec clock-view-btn active" data-view="both" data-i18n="clock.viewBoth">Digital + analog</button>
+        <button type="button" class="btn sec clock-view-btn" data-view="digital" data-i18n="clock.viewDigital">Digital only</button>
+        <button type="button" class="btn sec clock-view-btn" data-view="analog" data-i18n="clock.viewAnalog">Analog only</button>
+      </div>
+    </header>
+    <section id="clock-local-hero" class="clock-local-hero glass-panel" aria-live="polite"></section>
+    <div id="clock-grid" class="world-grid world-grid-clocks"></div>
+  </main>
+
+  <footer class="site-footer">
+    <a class="ext" href="/calendar.html" data-i18n="footer.worldCalendars">World calendars</a> · <a class="ext" href="/" data-i18n="nav.home">Home</a>
+  </footer>
+  <script src="/static/app-theme.js"></script>
+  <script src="/static/logo.js?v=16"></script>
+  <script src="/static/world-clock.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+#!/bin/bash
+MONITOR_DIR="$(cd "$(dirname "$0")/../../.." && pwd)"
+exec "$MONITOR_DIR/launcher.sh" --background

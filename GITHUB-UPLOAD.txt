@@ -1,0 +1,24 @@
+Network Monitor — upload to GitHub (Terminal only)
+=================================================
+
+GitHub website "Upload files" allows only ~100 files. This folder has more,
+so you MUST use Terminal — it takes one minute.
+
+STEP 1 — Create empty repo on github.com (no README, no .gitignore).
+
+STEP 2 — Run these commands (copy/paste):
+
+  cd ~/Desktop/Network-Monitor-GitHub
+  git init
+  git add .
+  git commit -m "Network Monitor by Mohammad Faizan Khan"
+  git branch -M main
+  git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+  git push -u origin main
+
+Replace YOUR_USERNAME and YOUR_REPO with your repo.
+
+Or double-click: PUSH-TO-GITHUB.command (edit repo URL inside first).
+
+Creator: Mohammad Faizan Khan — https://khan.linux-aios.com
+Read DISCLAIMER.md before publishing.

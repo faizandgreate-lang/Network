@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" data-i18n-title="doc.titleMap" data-seo-page="map">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Network map — Network Monitor</title>
+  <meta name="description" content="Network map — topology after each scan." />
+  <meta name="google-site-verification" content="googlec845b45a3dd5dd12" />
+  <link rel="canonical" href="https://network.linux-aios.com/map.html" />
+  <link rel="stylesheet" href="/static/site.css" />
+  <link rel="stylesheet" href="/static/modern-theme.css" />
+  <script src="/static/theme-boot.js"></script>
+  <script src="/static/seo-config.js"></script>
+  <script src="/static/seo.js"></script>
+  <script src="/static/locales/en.js"></script>
+  <script src="/static/locales/register.js"></script>
+  <script src="/static/locales/translations.js"></script>
+  <script src="/static/locales/phrases-all.js"></script>
+  <script src="/static/locales/atlas-supplement.js"></script>
+  <script src="/static/locales/en-gap-atlas.js"></script>
+  <script src="/static/i18n.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/svg2pdf.js@2.2.3/dist/svg2pdf.min.js"></script>
+  <script src="/static/app-theme.js"></script>
+  <script src="/static/logo.js?v=16"></script>
+  <script src="/static/topology.js"></script>
+  <script src="/static/map-zoom.js"></script>
+  <script src="/static/map-interactions.js?v=3"></script>
+</head>
+<body class="page-map">
+  <div class="map-page">
+    <header class="top-bar map-top">
+      <div class="top-bar-inner map-top-inner">
+        <div class="top-brand">
+          <button type="button" class="coin-flip nav-coin" id="nav-coin" aria-label="Logo and creator photo">
+            <div class="coin-flip-inner">
+              <div class="coin-flip-face coin-flip-front">
+                <img
+                  class="coin-flip-logo logo-img nav-size"
+                  src="/assets/logo.png"
+                  alt=""
+                  role="presentation"
+                />
+              </div>
+              <div class="coin-flip-face coin-flip-back">
+                <img
+                  class="coin-flip-photo"
+                  src="/assets/creator.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </button>
+          <a href="/" class="top-brand-title retro-title-wrap"><span class="top-title" data-retro-type="Network Monitor" data-i18n="app.brand">Network Monitor</span></a>
+        </div>
+        <nav class="site-nav">
+          <a href="/" data-i18n="nav.home">Home</a>
+          <a href="/devices.html" data-i18n="nav.devices">Devices</a>
+          <a href="/map.html" class="active" data-i18n="nav.map">Map</a>
+          <a href="/calendar.html" data-i18n="nav.calendar">Calendar</a>
+          <a href="/clock.html" data-i18n="nav.clock">Clock</a>
+          <div class="lang-picker" id="lang-picker">
+            <button type="button" class="btn lang-toggle-btn" id="lang-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="lang-menu">
+              <span class="lang-toggle-label" id="lang-toggle-label" data-i18n="nav.lang">LANG</span>
+            </button>
+            <div class="lang-menu" id="lang-menu" role="listbox" hidden></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="map-body">
+      <div id="retro-boot" class="retro-boot map-retro-boot" aria-hidden="true"></div>
+      <aside class="map-sidebar">
+        <p class="map-sidebar-title" data-i18n="map.controls">Map controls</p>
+        <p class="sub" data-i18n="map.sub">Click any IP for scan fields from your last Wi‑Fi + LAN scan.</p>
+        <div class="flow-legend">
+          <strong data-i18n="map.flow">Flow →</strong><br>
+          <span data-i18n="map.flowLine">Internet → Gateway → Wi‑Fi / LAN → devices</span>
+        </div>
+        <div id="map-stats" class="map-stats-list"></div>
+        <div class="map-controls-block">
+          <div class="zoom-panel">
+            <div class="zoom-pct" id="zoom-pct">100%</div>
+            <div class="zoom-row">
+              <button type="button" class="btn zoom-btn" id="zoom-out" aria-label="Zoom out map at pointer">−</button>
+              <button type="button" class="btn zoom-btn" id="zoom-in" aria-label="Zoom in map at pointer">+</button>
+            </div>
+            <button type="button" class="btn sec" id="map-fit-btn" data-i18n-aria="map.fit" data-i18n="map.fit">Fit whole map</button>
+          </div>
+          <div class="map-actions">
+            <button type="button" class="btn" id="map-expand-btn" data-i18n="map.expand">Expand map</button>
+            <button type="button" class="btn sec" id="map-pdf-btn" data-i18n="map.pdf">Download PDF</button>
+            <button type="button" class="btn" id="map-scan-btn" data-i18n="map.scanRedraw">Scan &amp; redraw</button>
+            <button type="button" class="btn sec" id="map-refresh-btn" data-i18n="map.refresh">Refresh map</button>
+            <a class="btn sec" href="/devices.html" data-i18n="map.deviceList">Device list</a>
+          </div>
+        </div>
+        <p id="map-status" data-i18n="map.loading">Loading…</p>
+      </aside>
+
+      <section class="map-stage" data-i18n-aria="map.panelAria">
+        <div
+          class="map-viewport"
+          id="map-viewport"
+          role="region"
+          data-i18n-aria="map.regionAria"
+          aria-describedby="map-zoom-help map-cursor-hint"
+          tabindex="0"
+        >
+          <p id="map-zoom-help" class="sr-only" data-i18n="map.zoomHelp"></p>
+          <div id="map-zoom-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+          <div class="map-viewport-inner" id="map-viewport-inner">
+            <div id="map-diagram"></div>
+          </div>
+          <div class="map-cursor-hint" id="map-cursor-hint" data-i18n="map.hint" aria-hidden="true"></div>
+        </div>
+        <aside id="map-detail" class="map-detail" aria-hidden="true">
+          <button type="button" class="map-detail-close" id="map-detail-close" data-i18n-aria="map.close" aria-label="Close">×</button>
+          <h2 id="map-detail-title" data-i18n="map.details">Details</h2>
+          <div id="map-detail-body"></div>
+        </aside>
+      </section>
+    </div>
+  </div>
+
+  <script src="/static/coin-flip.js"></script>
+  <script src="/static/retro-terminal.js"></script>
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const t = (k, v) => (window.t ? window.t(k, v) : k);
+    function esc(s) {
+      return String(s ?? '').replace(/[&<>"']/g, (c) =>
+        ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    }
+
+    let mapMeta = null;
+    let zoomReady = false;
+    let mapZoomApi = null;
+    let lastTopologyKey = '';
+    let mapAutoTimer = null;
+    const MAP_POLL_MS = 45000;
+
+    function mermaidThemeVars() {
+      const modern =
+        typeof RetroTheme !== 'undefined' && RetroTheme.isModern && RetroTheme.isModern();
+      const accent =
+        typeof RetroTheme !== 'undefined' && RetroTheme.accent ? RetroTheme.accent() : '#33ff66';
+      return {
+        primaryColor: modern ? '#1a1f2e' : '#000000',
+        primaryTextColor: modern ? '#f8fafc' : '#ffffff',
+        primaryBorderColor: accent,
+        lineColor: accent,
+        fontSize: '16px',
+        fontFamily: modern ? 'Inter, system-ui, sans-serif' : '"Courier New", Courier, monospace',
+      };
+    }
+
+    function initMermaid() {
+      mermaid.initialize({
+        startOnLoad: false,
+        theme: 'base',
+        themeVariables: mermaidThemeVars(),
+        flowchart: {
+          curve: 'basis',
+          nodeSpacing: 40,
+          rankSpacing: 55,
+          htmlLabels: false,
+        },
+      });
+    }
+    initMermaid();
+
+    async function onThemeChange() {
+      initMermaid();
+      const el = $('map-diagram');
+      if (!el || !el.querySelector('svg') || !mapMeta) {
+        if (el) styleMapSvg(el);
+        return;
+      }
+      try {
+        const { mermaid: code, meta } = await fetchTopologyMermaid();
+        mapMeta = meta;
+        await renderMapDiagram(code, meta, { preserveZoom: true });
+      } catch (_) {
+        styleMapSvg(el);
+      }
+    }
+    window.addEventListener('retro-theme-change', onThemeChange);
+    window.addEventListener('app-theme-change', onThemeChange);
+
+    function ensureZoom() {
+      if (zoomReady) return;
+      mapZoomApi = attachMapZoom('map-viewport', 'map-viewport-inner', 'zoom-pct');
+      $('zoom-in').onclick = () => window.mapZoomIn();
+      $('zoom-out').onclick = () => window.mapZoomOut();
+      $('map-fit-btn').onclick = () => window.mapFitAll();
+      zoomReady = true;
+    }
+
+    function topologyKey(meta, code) {
+      return [meta?.online, meta?.offline, meta?.gateway, (code || '').length].join('|');
+    }
+
+    async function renderMapDiagram(code, meta, opts) {
+      const el = $('map-diagram');
+      const savedView = opts?.preserveZoom && window.mapGetViewState ? window.mapGetViewState() : null;
+      el.innerHTML = '';
+      try {
+        const { svg } = await mermaid.render('mmd-' + Date.now(), code);
+        el.innerHTML = svg;
+        styleMapSvg(el);
+        wireMapNodeClicks(el, meta);
+        ensureZoom();
+        const afterDraw = () => {
+          if (savedView && window.mapSetViewState) {
+            window.mapSetViewState(savedView);
+          } else if (window.mapFitAll) {
+            window.mapFitAll();
+          }
+        };
+        requestAnimationFrame(afterDraw);
+        setTimeout(afterDraw, 120);
+      } catch (e) {
+        el.innerHTML = '<p class="err-inline" style="padding:2rem">' + esc(e.message) + '</p>';
+      }
+    }
+
+    function startMapAutoRefresh() {
+      if (mapAutoTimer) clearInterval(mapAutoTimer);
+      mapAutoTimer = setInterval(() => {
+        if (document.hidden) return;
+        loadMapView(false, true);
+      }, MAP_POLL_MS);
+      document.addEventListener('visibilitychange', () => {
+        if (!document.hidden) loadMapView(false, true);
+      });
+    }
+
+    async function loadMapView(runScanIfEmpty, silent) {
+      if (!silent) $('map-status').textContent = t('map.loadingMap');
+      try {
+        await (window.mapLoadDeviceCache && window.mapLoadDeviceCache());
+        let { mermaid: code, meta } = await fetchTopologyMermaid();
+        mapMeta = meta;
+
+        if (runScanIfEmpty && (meta.needs_scan || (meta.online === 0 && (meta.total_in_db || 0) === 0))) {
+          $('map-status').textContent = t('map.noScan');
+          const scanRes = await fetch('/api/scan', { method: 'POST' });
+          const scanData = scanRes.ok ? await scanRes.json() : {};
+          await (window.mapLoadDeviceCache && window.mapLoadDeviceCache());
+          const again = await fetchTopologyMermaid();
+          code = again.mermaid;
+          meta = again.meta;
+          mapMeta = meta;
+          if (scanData.scan_error && (meta.online || 0) === 0) {
+            $('map-status').textContent = esc(scanData.scan_error);
+          }
+        }
+
+        const mr = meta.main_router || {};
+        const nm = meta.network_measurements || {};
+        let stats =
+          `<span class="chip">${t('map.gateway')} <strong>${esc(mr.ip || '—')}</strong></span>` +
+          `<span class="chip">${t('map.online')} <strong>${esc(meta.online ?? 0)}</strong></span>`;
+        if (meta.offline) {
+          stats += `<span class="chip">${t('map.offlineDb')} <strong>${esc(meta.offline)}</strong></span>`;
+        }
+        if (meta.monitor_ip) {
+          stats += `<span class="chip">${t('map.thisPc')} <strong>${esc(meta.monitor_ip)}</strong></span>`;
+        }
+        if (nm.gateway_ms != null) {
+          stats += `<span class="chip">${t('map.gwPing')} <strong>${esc(nm.gateway_ms)} ms</strong></span>`;
+        }
+        if (nm.internet_ms != null) {
+          stats += `<span class="chip">${t('map.netPing')} <strong>${esc(nm.internet_ms)} ms</strong></span>`;
+        }
+        $('map-stats').innerHTML = stats;
+
+        const key = topologyKey(meta, code);
+        const changed = key !== lastTopologyKey;
+        lastTopologyKey = key;
+
+        if (silent && !changed && (meta.online || 0) > 0) {
+          $('map-status').textContent =
+            t('map.upToDate') + ' ' + new Date().toLocaleTimeString() + ' · ' + t('map.auto') + ' ' + MAP_POLL_MS / 1000 + 's';
+          return;
+        }
+
+        if ((meta.online || 0) === 0) {
+          const err = meta.scan_error || t('map.noOnlineDevices');
+          $('map-diagram').innerHTML =
+            '<div class="map-empty-msg"><p class="err-inline" style="padding:1.5rem">' +
+            esc(err) +
+            '</p><p class="sub" style="padding:0 1.5rem 1.5rem">' +
+            esc(t('map.emptyRefresh')) +
+            '</p></div>';
+          $('map-status').textContent = err.slice(0, 120);
+          return;
+        }
+
+        const preserveZoom = silent && changed && window.mapGetViewState;
+        await renderMapDiagram(code, meta, { preserveZoom: false });
+        const note = meta.updated_note || '';
+        const autoNote = silent ? (changed ? t('map.mapUpdated') : t('map.autoCheck')) : '';
+        $('map-status').textContent =
+          t('map.updated') + ' ' + new Date().toLocaleTimeString() + autoNote + (note ? ' · ' + note : '');
+        if (meta.scan_error) {
+          $('map-status').textContent += ' · ' + meta.scan_error;
+        }
+      } catch (e) {
+        $('map-status').textContent = t('map.startCmd');
+        $('map-diagram').innerHTML =
+          '<p class="sub map-offline-hint" style="padding:2rem">Open <a class="ext" href="http://127.0.0.1:5080/">http://127.0.0.1:5080/</a></p>';
+      }
+    }
+
+    $('map-refresh-btn').addEventListener('click', () => loadMapView(false, false));
+    $('map-scan-btn').addEventListener('click', async () => {
+      $('map-status').textContent = t('map.scanningNet');
+      await fetch('/api/scan', { method: 'POST' });
+      await loadMapView(false, false);
+    });
+    loadMapView(true, false);
+    startMapAutoRefresh();
+    window.addEventListener('locale-change', () => {
+      window.I18n?.apply?.();
+      loadMapView(false, true);
+    });
+  </script>
+</body>
+</html>
