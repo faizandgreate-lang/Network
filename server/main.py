@@ -763,7 +763,10 @@ def _html_page(name: str) -> FileResponse:
     path = WEB / name
     if not path.is_file():
         raise HTTPException(404, f"Page missing: {name}")
-    return FileResponse(path, media_type="text/html")
+    headers = {}
+    if name == "devices.html":
+        headers["Cache-Control"] = "no-store, no-cache, must-revalidate"
+    return FileResponse(path, media_type="text/html", headers=headers)
 
 
 @app.get("/devices", response_class=HTMLResponse)
@@ -836,9 +839,43 @@ def _asset_png(filename: str) -> FileResponse:
         "creator.png",
         "creator-mono.png",
         "creator-display.png",
+        "favicon-16.png",
+        "favicon-32.png",
+        "apple-touch-icon.png",
     ):
         headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
     return FileResponse(path, media_type="image/png", headers=headers)
+
+
+@app.get("/favicon.ico", include_in_schema=False)
+def favicon_ico() -> FileResponse:
+    path = WEB / "favicon.ico"
+    if not path.is_file():
+        path = WEB / "assets" / "favicon-32.png"
+    return FileResponse(path, media_type="image/x-icon")
+
+
+@app.get("/favicon.png", include_in_schema=False)
+def favicon_png() -> FileResponse:
+    path = WEB / "favicon.png"
+    if not path.is_file():
+        path = WEB / "assets" / "favicon-32.png"
+    return FileResponse(path, media_type="image/png")
+
+
+@app.get("/assets/favicon-16.png")
+def favicon_16() -> FileResponse:
+    return _asset_png("favicon-16.png")
+
+
+@app.get("/assets/favicon-32.png")
+def favicon_32() -> FileResponse:
+    return _asset_png("favicon-32.png")
+
+
+@app.get("/assets/apple-touch-icon.png")
+def apple_touch_icon() -> FileResponse:
+    return _asset_png("apple-touch-icon.png")
 
 
 @app.get("/assets/logo.png")
@@ -956,7 +993,7 @@ def main() -> None:
     print("=" * 54)
     print()
     threading.Thread(
-        target=lambda: (time.sleep(2.0), webbrowser.open(f"http://127.0.0.1:{port}/")),
+        target=lambda: (time.sleep(2.0), webbrowser.open(f"http://127.0.0.1:{port}/devices.html")),
         daemon=True,
     ).start()
     uvicorn.run(app, host=host, port=port, log_level="warning")

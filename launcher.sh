@@ -33,11 +33,11 @@ LOG="$ROOT/logs/server.log"
 if [ "${1:-}" = "--background" ]; then
   nohup python3 server/main.py >>"$LOG" 2>&1 &
   sleep 3
-  open "http://127.0.0.1:${PORT}/"
+  open "http://127.0.0.1:${PORT}/devices.html"
   osascript -e 'display notification "Open Safari if the page did not appear." with title "Network Monitor"'
   exit 0
 fi
 
 echo "Starting… browser opens automatically. Keep this window open."
-open "http://127.0.0.1:${PORT}/" 2>/dev/null &
+open "http://127.0.0.1:${PORT}/devices.html" 2>/dev/null &
 exec python3 server/main.py

@@ -314,6 +314,8 @@
     const r = root || document;
     r.querySelectorAll('[data-i18n]').forEach((el) => {
       if (el.closest('#lang-menu')) return;
+      if (el.hasAttribute('data-i18n-skip')) return;
+      if (el.id === 'status-chip' || el.id === 'build-tag') return;
       const k = el.getAttribute('data-i18n');
       if (!k) return;
       el.textContent = t(k);

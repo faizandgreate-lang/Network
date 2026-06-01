@@ -121,6 +121,8 @@ window.I18N_LOCALES.en = {
   'devices.statusOnline': '● ONLINE',
   'devices.statusOffline': '○ offline',
   'devices.loading': 'Loading…',
+  'devices.connecting': 'Connecting…',
+  'devices.staticSite': 'Run START — open http://127.0.0.1:5080/',
   'devices.refreshing': 'Refreshing…',
   'devices.updated': 'Updated',
   'devices.startCmd': 'Start START.command',

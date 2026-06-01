@@ -40,10 +40,13 @@ if MAC_ZIP.is_file():
 print()
 PY
 
-cp -f "$ROOT/data/Network-Monitor-Full-Mac.zip" "$OUT/"
-cp -f "$ROOT/data/Network-Monitor-Full-Windows.zip" "$OUT/"
-[ -f "$ROOT/data/Office-Network-Monitor-Mac.zip" ] && \
-  cp -f "$ROOT/data/Office-Network-Monitor-Mac.zip" "$OUT/" || true
+cp -f "$ROOT/data/office-net-monitor by MFK - Mac.zip" "$OUT/" 2>/dev/null || true
+cp -f "$ROOT/data/office-net-monitor by MFK - Windows.zip" "$OUT/" 2>/dev/null || true
+[ -f "$ROOT/data/office-net-monitor by MFK - Mac app.zip" ] && \
+  cp -f "$ROOT/data/office-net-monitor by MFK - Mac app.zip" "$OUT/" || true
+cp -f "$ROOT/MAC-GATEKEEPER.txt" "$OUT/" 2>/dev/null || true
+rm -f "$OUT/Network-Monitor-Full-Mac.zip" "$OUT/Network-Monitor-Full-Windows.zip" \
+  "$OUT/Office-Network-Monitor-Mac.zip" 2>/dev/null || true
 
 cp -f "$ROOT/START.command" "$OUT/"
 cp -f "$ROOT/START.bat" "$OUT/"

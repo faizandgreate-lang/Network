@@ -8,9 +8,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 APP_BUNDLE = ROOT / "Office Network Monitor.app"
 DATA_DIR = ROOT / "data"
-MAC_ZIP = DATA_DIR / "Office-Network-Monitor-Mac.zip"
-FULL_MAC_ZIP = DATA_DIR / "Network-Monitor-Full-Mac.zip"
-FULL_WIN_ZIP = DATA_DIR / "Network-Monitor-Full-Windows.zip"
+ZIP_MAC_FULL_NAME = "office-net-monitor by MFK - Mac.zip"
+ZIP_WIN_FULL_NAME = "office-net-monitor by MFK - Windows.zip"
+ZIP_MAC_APP_NAME = "office-net-monitor by MFK - Mac app.zip"
+MAC_ZIP = DATA_DIR / ZIP_MAC_APP_NAME
+FULL_MAC_ZIP = DATA_DIR / ZIP_MAC_FULL_NAME
+FULL_WIN_ZIP = DATA_DIR / ZIP_WIN_FULL_NAME
 
 TOP_LEVEL_FILES = (
     "START.command",
@@ -21,6 +24,7 @@ TOP_LEVEL_FILES = (
     "QUICKSTART.txt",
     "README.md",
     "RUN-IN-TERMINAL.txt",
+    "MAC-GATEKEEPER.txt",
 )
 
 INCLUDE_DIRS = ("server", "web")
@@ -99,12 +103,16 @@ def _build_full_zip(dest: Path, *, include_app: bool) -> None:
                 zf.write(f, arc)
 
         readme = (
-            "Network Monitor — full package\n\n"
-            "1. Unzip this folder\n"
-            "2. Mac: double-click office-net-monitor/START.command\n"
-            "3. Windows: double-click office-net-monitor/START.bat\n"
-            "4. Open http://127.0.0.1:5080/ in your browser\n\n"
-            "Requires Python 3. First run installs dependencies.\n"
+            "office-net-monitor by MFK — Network Monitor\n"
+            "Creator: Mohammad Faizan Khan\n\n"
+            "1. Unzip this ZIP (Mac or Windows package from the website)\n"
+            "2. Open the folder: office-net-monitor\n"
+            "3. Mac: read MAC-GATEKEEPER.txt if macOS blocks START.command\n"
+            "   Then right-click START.command → Open → Open, or use Terminal:\n"
+            "   chmod +x START.command && xattr -cr . && ./START.command\n"
+            "4. Windows: double-click START.bat\n"
+            "5. Browser: http://127.0.0.1:5080/ (keep Terminal / command window open)\n\n"
+            "Requires Python 3. First run installs dependencies automatically.\n"
         )
         zf.writestr("office-net-monitor/INSTALL-FIRST.txt", readme)
 
@@ -149,7 +157,7 @@ def download_mac_app_zip():
     if MAC_ZIP.is_file() and MAC_ZIP.stat().st_mtime >= app_mtime:
         return _file_response(
             MAC_ZIP,
-            "Office-Network-Monitor-Mac.zip",
+            ZIP_MAC_APP_NAME,
             "application/zip",
         )
     base = MAC_ZIP.with_suffix("")
@@ -158,7 +166,7 @@ def download_mac_app_zip():
     shutil.make_archive(str(base), "zip", ROOT, APP_BUNDLE.name)
     return _file_response(
         MAC_ZIP,
-        "Office-Network-Monitor-Mac.zip",
+        ZIP_MAC_APP_NAME,
         "application/zip",
     )
 
@@ -167,7 +175,7 @@ def download_full_mac_zip():
     _ensure_full_zip(FULL_MAC_ZIP, include_app=APP_BUNDLE.is_dir())
     return _file_response(
         FULL_MAC_ZIP,
-        "Network-Monitor-Full-Mac.zip",
+        ZIP_MAC_FULL_NAME,
         "application/zip",
     )
 
@@ -176,6 +184,6 @@ def download_full_windows_zip():
     _ensure_full_zip(FULL_WIN_ZIP, include_app=False)
     return _file_response(
         FULL_WIN_ZIP,
-        "Network-Monitor-Full-Windows.zip",
+        ZIP_WIN_FULL_NAME,
         "application/zip",
     )

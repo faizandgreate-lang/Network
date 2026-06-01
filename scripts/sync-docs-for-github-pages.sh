@@ -8,9 +8,16 @@ WEB="$ROOT/web"
 rm -rf "$DOCS"
 mkdir -p "$DOCS/static" "$DOCS/assets"
 
+bash "$ROOT/scripts/build-favicon.sh" 2>/dev/null || true
+
 # HTML at site root (same as local routes)
 for f in "$WEB"/*.html; do
   [ -f "$f" ] && cp "$f" "$DOCS/"
+done
+
+# Tab icon — browsers request /favicon.ico at site root
+for f in favicon.ico favicon.png; do
+  [ -f "$WEB/$f" ] && cp "$WEB/$f" "$DOCS/$f"
 done
 
 # SEO — must live at site root (not only under /static/)
@@ -27,6 +34,8 @@ fi
 rsync -a \
   --exclude '.DS_Store' \
   --exclude '*.html' \
+  --exclude 'favicon.ico' \
+  --exclude 'favicon.png' \
   --exclude 'assets/' \
   --exclude 'locales/_langs/' \
   --exclude 'locales/_*.py' \

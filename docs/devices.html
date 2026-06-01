@@ -10,20 +10,12 @@
   <title>Device list — Network Monitor</title>
   <meta name="description" content="Device list — scan Wi‑Fi and LAN." />
   <meta name="google-site-verification" content="googlec845b45a3dd5dd12" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <link rel="canonical" href="https://network.linux-aios.com/devices.html" />
   <link rel="stylesheet" href="static/site.css" />
   <link rel="stylesheet" href="static/modern-theme.css" />
   <script src="static/app-base.js"></script>
   <script src="static/theme-boot.js"></script>
-  <script src="static/seo-config.js"></script>
-  <script src="static/seo.js"></script>
-  <script src="static/locales/en.js"></script>
-  <script src="static/locales/register.js"></script>
-  <script src="static/locales/translations.js"></script>
-  <script src="static/locales/phrases-all.js"></script>
-  <script src="static/locales/atlas-supplement.js"></script>
-  <script src="static/locales/en-gap-atlas.js"></script>
-  <script src="static/i18n.js"></script>
 </head>
 <body class="page-devices">
   <header class="top-bar top-bar-devices">
@@ -79,15 +71,15 @@
       </nav>
     </header>
 
-    <div class="err-box" id="err-box">
-      <strong data-i18n="devices.err">App not running.</strong>
-      <span data-i18n="devices.errHint">Double-click START.command, then open</span>
-      <a class="ext" href="index.html">http://127.0.0.1:5080/</a>
+    <div class="err-box show" id="err-box">
+      <strong>App not running on this PC.</strong>
+      <span>Double-click <b>START.bat</b> (Windows) or <b>START.command</b> (Mac). Keep the black window open.</span>
+      <a class="ext" href="http://127.0.0.1:5080/devices.html">http://127.0.0.1:5080/devices.html</a>
     </div>
 
-    <section class="devices-status glass-panel accent" id="server-status">
+    <section class="devices-status glass-panel accent" id="server-status" hidden>
       <div class="banner" id="banner">
-        <span class="live-dot" data-i18n="devices.serverOnline">● SERVER ONLINE</span>
+        <span class="live-dot" id="server-live">● SERVER ONLINE</span>
         <div id="url-list" class="banner-urls"></div>
         <span class="chip"><span data-i18n="devices.networks">Networks:</span> <strong id="subnet-disp">—</strong></span>
       </div>
@@ -110,7 +102,8 @@
         <button type="button" class="btn sec" id="dns-refresh-btn" data-i18n-title="devices.dnsTitle" data-i18n="devices.dnsRefresh">Refresh DNS sites</button>
         <span class="chip"><span data-i18n="devices.online">Online:</span> <strong class="ok-n" id="n-on">0</strong></span>
         <span class="chip"><span data-i18n="devices.offline">Offline:</span> <strong class="bad-n" id="n-off">0</strong></span>
-        <span class="chip" id="status-chip" data-i18n="devices.loading">Loading…</span>
+        <span class="chip" id="status-chip">Checking app…</span>
+        <span class="chip muted" id="build-tag" title="Page version">v20260601</span>
       </div>
 
       <div class="devices-grid">
@@ -140,161 +133,21 @@
 
   <script src="static/app-theme.js"></script>
   <script src="static/logo.js?v=18"></script>
-  <script src="static/home-downloads.js?v=2"></script>
   <script src="static/coin-flip.js"></script>
-  <script src="static/retro-terminal.js"></script>
+  <script src="static/devices-page.js?v=20260601"></script>
   <script>
-    const $ = (id) => document.getElementById(id);
-    const t = (k, v) => (window.t ? window.t(k, v) : k);
-    let filterLink = 'all', lastDevices = [];
-    function esc(s) {
-      return String(s ?? '').replace(/[&<>"']/g, (c) =>
-        ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-    }
-    function showError(on) {
-      $('err-box').classList.toggle('show', on);
-      const status = document.getElementById('server-status');
-      if (status) status.style.display = on ? 'none' : '';
-    }
-    async function loadInfo() {
-      const res = await fetch(appUrl('/api/info'));
-      if (!res.ok) throw new Error('down');
-      const info = await res.json();
-      showError(false);
-      const ifaces = info.interfaces || [];
-      $('subnet-disp').textContent = ifaces.map((i) => i.link).join(' + ') || '—';
-      $('iface-list').innerHTML = ifaces.map((i) =>
-        `<span class="chip iface-chip"><b>${esc(i.link)}</b> ${esc(i.name)} <code>${esc(i.ip)}</code></span>`).join('');
-      $('url-list').innerHTML = (info.urls || []).map((u) =>
-        `<a class="ext" href="${esc(u)}">${esc(u)}</a>`).join('');
-      const ws = info.wifi_signal;
-      if (ws?.rssi_dbm != null) {
-        $('iface-list').insertAdjacentHTML(
-          'afterbegin',
-          `<span class="chip iface-chip"><b>This Mac Wi‑Fi</b> ${esc(ws.ssid || '')} · ${esc(ws.rssi_dbm)} dBm</span>`,
-        );
-      }
-    }
-    function renderTable(data) {
-      lastDevices = data.devices || [];
-      const filtered = filterLink === 'all' ? lastDevices : lastDevices.filter((d) => d.link === filterLink);
-      $('n-on').textContent = filtered.filter((d) => d.status === 'online').length;
-      $('n-off').textContent = filtered.filter((d) => d.status !== 'online').length;
-      const tbody = $('rows');
-      if (!filtered.length) {
-        tbody.innerHTML = `<tr><td colspan="12">${t('devices.noDevices')}</td></tr>`;
-        return;
-      }
-      tbody.innerHTML = filtered.map((d) => {
-        const on = d.status === 'online';
-        const name = d.device_name || d.hostname || d.vendor || '—';
-        const sites = d.top_domains
-          ? `<small class="sites-cell" title="${d.dns_source ? 'From ' + esc(d.dns_source) : ''}">${esc(d.top_domains)}</small>`
-          : '<small class="sites-cell muted">—</small>';
-        return `<tr>
-          <td class="${on ? 'st-on' : 'st-off'}">${on ? t('devices.statusOnline') : t('devices.statusOffline')}</td>
-          <td>${esc(name)}</td>
-          <td><code>${esc(d.ip)}</code></td>
-          <td>${sites}</td>
-          <td>${esc(d.device_type || '—')}</td>
-          <td><small>${esc(d.mac || '—')}</small></td>
-          <td>${esc(d.hostname || '—')}</td>
-          <td><small>${esc(d.services || '—')}</small></td>
-          <td>${d.latency_ms != null && d.latency_ms !== '' ? esc(d.latency_ms) + ' ms' : '—'}</td>
-          <td>${d.first_seen ? esc(String(d.first_seen).slice(0, 16).replace('T', ' ')) : '—'}</td>
-          <td>${d.last_seen ? esc(String(d.last_seen).slice(0, 16).replace('T', ' ')) : '—'}</td>
-          <td><input class="label-in" data-ip="${esc(d.ip)}" value="${esc(d.it_label || '')}" placeholder="${t('devices.placeholderLabel')}" /></td>
-        </tr>`;
-      }).join('');
-      tbody.querySelectorAll('.label-in').forEach((inp) => {
-        inp.addEventListener('change', async () => {
-          await fetch(appUrl('/api/devices/' + encodeURIComponent(inp.dataset.ip) + '/label'), {
-            method: 'POST', headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ label: inp.value }),
-          });
-        });
-      });
-    }
-    async function loadActivity() {
-      try {
-        const res = await fetch(appUrl('/api/activity'));
-        const data = await res.json();
-        $('events').innerHTML = data.events?.length
-          ? data.events.map((e) => `<div class="evt"><b>${esc(e.event)}</b> ${esc(e.ip)}<br>${esc(e.detail || '')}</div>`).join('')
-          : '—';
-      } catch { $('events').textContent = '—'; }
-    }
-    async function refresh(silent) {
-      if (!silent) $('status-chip').textContent = t('devices.refreshing');
-      try {
-        if (!(await fetch(appUrl('/api/health')).ok) throw 0;
-        await loadInfo();
-        renderTable(await (await fetch(appUrl('/api/devices')).json());
-        await loadActivity();
-        $('status-chip').textContent = t('devices.updated') + ' ' + new Date().toLocaleTimeString();
-        showError(false);
-      } catch {
-        showError(true);
-        $('status-chip').textContent = t('devices.startCmd');
-      }
-    }
-    $('scan-btn').addEventListener('click', async () => {
-      $('scan-btn').disabled = true;
-      $('status-chip').textContent = t('devices.scanning');
-      try {
-        const res = await fetch(appUrl('/api/scan'), { method: 'POST' });
-        renderTable(await res.json());
-        await loadActivity();
-        $('status-chip').textContent = t('devices.done');
-        showError(false);
-        document.getElementById('devices-table')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } catch {
-        $('status-chip').textContent = t('devices.scanFailed');
-        showError(true);
-      } finally { $('scan-btn').disabled = false; }
-    });
-    $('refresh-btn').addEventListener('click', () => refresh(false));
-    $('dns-refresh-btn').addEventListener('click', async () => {
-      $('dns-refresh-btn').disabled = true;
-      $('status-chip').textContent = t('devices.dnsLoading');
-      try {
-        const res = await fetch(appUrl('/api/dns/refresh'), { method: 'POST' });
-        const data = await res.json();
-        renderTable({ devices: data.devices || [] });
-        await loadInfo();
-        $('status-chip').textContent = data.devices_matched
-          ? t('devices.dnsMatched', { n: data.devices_matched })
-          : t('devices.dnsNoMatch');
-      } catch {
-        $('status-chip').textContent = t('devices.dnsFailed');
-      } finally {
-        $('dns-refresh-btn').disabled = false;
-      }
-    });
-    document.querySelectorAll('[data-filter]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        filterLink = btn.dataset.filter;
-        document.querySelectorAll('[data-filter]').forEach((b) => b.classList.toggle('active', b === btn));
-        renderTable({ devices: lastDevices });
-      });
-    });
-    document.querySelector('[data-filter="all"]')?.classList.add('active');
-    document.querySelectorAll('.devices-jump a').forEach((a) => {
-      a.addEventListener('click', (e) => {
-        const id = a.getAttribute('href');
-        if (!id?.startsWith('#')) return;
-        const el = document.querySelector(id);
-        if (!el) return;
-        e.preventDefault();
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        history.replaceState(null, '', id);
-      });
-    });
-    refresh(false);
-    window.addEventListener('locale-change', () => {
-      window.I18n?.apply?.();
-      if (lastDevices.length) renderTable({ devices: lastDevices });
-    });
+    /* Fallback if devices-page.js blocked or cached — never stay on "Loading…" */
+    (function () {
+      var chip = document.getElementById('status-chip');
+      if (!chip) return;
+      if (/loading/i.test(chip.textContent)) chip.textContent = 'Checking app…';
+      setTimeout(function () {
+        if (!chip || !/loading/i.test(chip.textContent)) return;
+        chip.textContent = 'Run START.command → http://127.0.0.1:5080/devices.html';
+        var box = document.getElementById('err-box');
+        if (box) box.classList.add('show');
+      }, 3000);
+    })();
   </script>
 </body>
 </html>
