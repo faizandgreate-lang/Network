@@ -72,7 +72,7 @@ function extractIp(text) {
 
 async function fetchDeviceBundle(ip) {
   try {
-    const res = await fetch(appUrl('/api/devices/by-ip/' + encodeURIComponent(ip));
+    const res = await fetch(appUrl('/api/devices/by-ip/' + encodeURIComponent(ip)));
     if (res.ok) return await res.json();
   } catch (_) {}
   return null;
@@ -80,7 +80,7 @@ async function fetchDeviceBundle(ip) {
 
 async function fetchServerInfo() {
   try {
-    const res = await fetch(appUrl('/api/info');
+    const res = await fetch(appUrl('/api/info'));
     if (res.ok) return await res.json();
   } catch (_) {}
   return null;
@@ -362,7 +362,7 @@ function wireMapNodeClicks(container, meta) {
 
 window.mapLoadDeviceCache = async function () {
   try {
-    const res = await fetch(appUrl('/api/devices');
+    const res = await fetch(appUrl('/api/devices'));
     if (res.ok) {
       const data = await res.json();
       window.mapDeviceCache = data.devices || [];

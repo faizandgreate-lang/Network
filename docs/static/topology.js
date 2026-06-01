@@ -98,15 +98,15 @@ function buildMermaidFromScan(devices, info) {
 
 async function fetchTopologyMermaid() {
   try {
-    const res = await fetch(appUrl('/api/topology');
+    const res = await fetch(appUrl('/api/topology'));
     if (res.ok) {
       const data = await res.json();
       return { mermaid: data.mermaid, meta: data };
     }
   } catch (_) {}
   const [devRes, infoRes] = await Promise.all([
-    fetch(appUrl('/api/devices'),
-    fetch(appUrl('/api/info'),
+    fetch(appUrl('/api/devices')),
+    fetch(appUrl('/api/info')),
   ]);
   if (!devRes.ok) throw new Error('no server');
   const devData = await devRes.json();

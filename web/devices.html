@@ -157,7 +157,7 @@
       if (status) status.style.display = on ? 'none' : '';
     }
     async function loadInfo() {
-      const res = await fetch(appUrl('/api/info');
+      const res = await fetch(appUrl('/api/info'));
       if (!res.ok) throw new Error('down');
       const info = await res.json();
       showError(false);
@@ -208,7 +208,7 @@
       }).join('');
       tbody.querySelectorAll('.label-in').forEach((inp) => {
         inp.addEventListener('change', async () => {
-          await fetch(appUrl('/api/devices/' + encodeURIComponent(inp.dataset.ip) + '/label', {
+          await fetch(appUrl('/api/devices/' + encodeURIComponent(inp.dataset.ip) + '/label'), {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ label: inp.value }),
           });
@@ -217,7 +217,7 @@
     }
     async function loadActivity() {
       try {
-        const res = await fetch(appUrl('/api/activity');
+        const res = await fetch(appUrl('/api/activity'));
         const data = await res.json();
         $('events').innerHTML = data.events?.length
           ? data.events.map((e) => `<div class="evt"><b>${esc(e.event)}</b> ${esc(e.ip)}<br>${esc(e.detail || '')}</div>`).join('')
@@ -242,7 +242,7 @@
       $('scan-btn').disabled = true;
       $('status-chip').textContent = t('devices.scanning');
       try {
-        const res = await fetch(appUrl('/api/scan', { method: 'POST' });
+        const res = await fetch(appUrl('/api/scan'), { method: 'POST' });
         renderTable(await res.json());
         await loadActivity();
         $('status-chip').textContent = t('devices.done');
@@ -258,7 +258,7 @@
       $('dns-refresh-btn').disabled = true;
       $('status-chip').textContent = t('devices.dnsLoading');
       try {
-        const res = await fetch(appUrl('/api/dns/refresh', { method: 'POST' });
+        const res = await fetch(appUrl('/api/dns/refresh'), { method: 'POST' });
         const data = await res.json();
         renderTable({ devices: data.devices || [] });
         await loadInfo();

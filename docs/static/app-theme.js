@@ -110,7 +110,7 @@
 
   function isWorldPage() {
     const p = (location.pathname || '').toLowerCase();
-    return /calendar\.html|clock\.html|\/calendar|\/clock/.test(p);
+    return /calendar\.html|clock\.html|devices\.html|map\.html|\/calendar|\/clock|\/devices|\/map/.test(p);
   }
 
   function initTheme() {

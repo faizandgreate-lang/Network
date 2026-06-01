@@ -252,7 +252,7 @@
 
         if (runScanIfEmpty && (meta.needs_scan || (meta.online === 0 && (meta.total_in_db || 0) === 0))) {
           $('map-status').textContent = t('map.noScan');
-          const scanRes = await fetch(appUrl('/api/scan', { method: 'POST' });
+          const scanRes = await fetch(appUrl('/api/scan'), { method: 'POST' });
           const scanData = scanRes.ok ? await scanRes.json() : {};
           await (window.mapLoadDeviceCache && window.mapLoadDeviceCache());
           const again = await fetchTopologyMermaid();
@@ -324,7 +324,7 @@
     $('map-refresh-btn').addEventListener('click', () => loadMapView(false, false));
     $('map-scan-btn').addEventListener('click', async () => {
       $('map-status').textContent = t('map.scanningNet');
-      await fetch(appUrl('/api/scan', { method: 'POST' });
+      await fetch(appUrl('/api/scan'), { method: 'POST' });
       await loadMapView(false, false);
     });
     loadMapView(true, false);
