@@ -1,122 +1,128 @@
-/* Calendar + clock — always match home (white glass), even if retro theme is saved */
-html[data-force-modern='1'],
-html[data-force-modern='1'] body.page-calendar,
-html[data-force-modern='1'] body.page-clock {
-  background: #ffffff !important;
-  color: #334155 !important;
-  text-shadow: none !important;
+/* Calendar + clock layout — modern (white glass) and retro (terminal green) */
+
+/* ——— Modern ——— */
+html[data-app-theme='modern'] body.page-calendar,
+html[data-app-theme='modern'] body.page-clock {
+  background: transparent;
+  color: var(--text, #334155);
+  text-shadow: none;
 }
 
-html[data-force-modern='1'] body.page-calendar::before,
-html[data-force-modern='1'] body.page-calendar::after,
-html[data-force-modern='1'] body.page-clock::before,
-html[data-force-modern='1'] body.page-clock::after {
+html[data-app-theme='modern'] body.page-calendar::before,
+html[data-app-theme='modern'] body.page-calendar::after,
+html[data-app-theme='modern'] body.page-clock::before,
+html[data-app-theme='modern'] body.page-clock::after {
   display: none !important;
 }
 
-html[data-force-modern='1'] .top-bar {
-  background: rgba(255, 255, 255, 0.82) !important;
-  backdrop-filter: blur(20px) saturate(1.65);
-  -webkit-backdrop-filter: blur(20px) saturate(1.65);
-  border-bottom: 1px solid rgba(37, 150, 190, 0.12) !important;
-  box-shadow: 0 1px 2px rgba(37, 150, 190, 0.06);
-}
-
-html[data-force-modern='1'] .top-title,
-html[data-force-modern='1'] .page-head h1 {
-  color: #0f172a !important;
-  text-shadow: none !important;
-}
-
-html[data-force-modern='1'] .site-nav a {
-  color: #64748b !important;
-}
-
-html[data-force-modern='1'] .site-nav a.active,
-html[data-force-modern='1'] .site-nav a:hover {
-  color: #2596be !important;
-}
-
-html[data-force-modern='1'] .world-main {
+html[data-app-theme='modern'] body.page-calendar .world-main,
+html[data-app-theme='modern'] body.page-clock .world-main {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1.25rem 1.5rem 3rem;
 }
 
-html[data-force-modern='1'] .world-section,
-html[data-force-modern='1'] .clock-local-hero {
-  background: rgba(255, 255, 255, 0.78) !important;
-  border: 1px solid rgba(37, 150, 190, 0.12) !important;
-  border-radius: 16px !important;
-  box-shadow: 0 8px 32px rgba(37, 150, 190, 0.08);
+html[data-app-theme='modern'] body.page-calendar .world-grid,
+html[data-app-theme='modern'] body.page-clock .world-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.85rem;
 }
 
-html[data-force-modern='1'] .world-card,
-html[data-force-modern='1'] .cal-card-grid,
-html[data-force-modern='1'] .clock-card {
-  background: rgba(255, 255, 255, 0.92) !important;
-  border: 1px solid rgba(37, 150, 190, 0.14) !important;
-  border-radius: 12px !important;
-  color: #334155 !important;
-  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.04);
+html[data-app-theme='modern'] body.page-clock .world-grid-clocks {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-html[data-force-modern='1'] .world-card-title {
-  color: #0f172a !important;
+/* ——— Retro ——— */
+html[data-app-theme='retro'] body.page-calendar,
+html[data-app-theme='retro'] body.page-clock {
+  background: #000000;
+  color: #33ff66;
 }
 
-html[data-force-modern='1'] .world-card-date,
-html[data-force-modern='1'] .clock-utc-line {
-  color: #2596be !important;
-  text-shadow: none !important;
+html[data-app-theme='retro'] body.page-calendar .world-main,
+html[data-app-theme='retro'] body.page-clock .world-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem 3rem;
 }
 
-html[data-force-modern='1'] .clock-time,
-html[data-force-modern='1'] .clock-hero-time {
-  color: #0f172a !important;
-  text-shadow: none !important;
+html[data-app-theme='retro'] body.page-calendar .world-section,
+html[data-app-theme='retro'] body.page-clock .clock-local-hero {
+  background: #000000;
+  border: 1px solid #33ff66;
+  border-radius: 4px;
+  box-shadow: 0 0 12px rgba(51, 255, 102, 0.25);
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
-html[data-force-modern='1'] .world-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) !important;
-  gap: 0.85rem !important;
+html[data-app-theme='retro'] body.page-calendar .world-card,
+html[data-app-theme='retro'] body.page-calendar .cal-card-grid,
+html[data-app-theme='retro'] body.page-clock .clock-card {
+  background: #0a0a0a;
+  border: 1px solid rgba(51, 255, 102, 0.45);
+  border-radius: 4px;
+  color: #33ff66;
+  box-shadow: none;
 }
 
-html[data-force-modern='1'] .world-grid-clocks {
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+html[data-app-theme='retro'] body.page-calendar .world-card-title,
+html[data-app-theme='retro'] body.page-clock .clock-card-title {
+  color: #33ff66;
+  text-shadow: 0 0 6px rgba(51, 255, 102, 0.35);
 }
 
-html[data-force-modern='1'] .cal-day {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border: 1px solid rgba(37, 150, 190, 0.1) !important;
-  color: #334155 !important;
+html[data-app-theme='retro'] body.page-calendar .world-card-date,
+html[data-app-theme='retro'] body.page-clock .clock-utc-line,
+html[data-app-theme='retro'] body.page-clock .clock-offset {
+  color: #33ff66;
 }
 
-html[data-force-modern='1'] .cal-day-today {
-  background: linear-gradient(135deg, #2596be, #509591) !important;
-  color: #fff !important;
-  border: none !important;
+html[data-app-theme='retro'] body.page-calendar .clock-time,
+html[data-app-theme='retro'] body.page-clock .clock-hero-time {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(51, 255, 102, 0.5);
 }
 
-html[data-force-modern='1'] .cal-embed-month,
-html[data-force-modern='1'] .clock-date,
-html[data-force-modern='1'] .clock-places {
-  color: #64748b !important;
+html[data-app-theme='retro'] body.page-calendar .world-grid,
+html[data-app-theme='retro'] body.page-clock .world-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.85rem;
 }
 
-html[data-force-modern='1'] .site-footer {
-  color: #64748b !important;
-  border-top: 1px solid rgba(37, 150, 190, 0.1);
+html[data-app-theme='retro'] body.page-clock .world-grid-clocks {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 
-html[data-force-modern='1'] .btn.sec {
-  background: rgba(255, 255, 255, 0.9) !important;
-  color: #2596be !important;
-  border-color: rgba(37, 150, 190, 0.2) !important;
+html[data-app-theme='retro'] body.page-calendar .cal-day {
+  background: #0a0a0a;
+  border: 1px solid rgba(51, 255, 102, 0.35);
+  color: #33ff66;
 }
 
-html[data-force-modern='1'] .clock-view-btn.active {
-  border-color: #2596be !important;
-  color: #2596be !important;
+html[data-app-theme='retro'] body.page-calendar .cal-day-today {
+  background: #33ff66;
+  color: #000000;
+  border: none;
+  font-weight: 700;
+}
+
+html[data-app-theme='retro'] body.page-calendar .cal-embed-month,
+html[data-app-theme='retro'] body.page-clock .clock-date,
+html[data-app-theme='retro'] body.page-clock .clock-places {
+  color: rgba(51, 255, 102, 0.75);
+}
+
+html[data-app-theme='retro'] body.page-clock .clock-card.is-local {
+  border-color: #33ff66;
+  box-shadow: 0 0 16px rgba(51, 255, 102, 0.45);
+}
+
+html[data-app-theme='retro'] body.page-calendar .cal-modal-panel,
+html[data-app-theme='retro'] body.page-calendar .cal-modal-backdrop {
+  background: #0a0a0a;
+  border-color: #33ff66;
+  color: #33ff66;
 }

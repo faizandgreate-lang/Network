@@ -32,6 +32,9 @@
   }
 
   function applyRetro() {
+    document.documentElement.removeAttribute('data-force-modern');
+    document.documentElement.dataset.appTheme = 'retro';
+    document.documentElement.classList.remove('theme-modern-boot');
     document.body.classList.remove('theme-modern');
     document.body.classList.add('retro-terminal', 'retro-mono');
     document.documentElement.dataset.retroTheme = 'mono';
@@ -40,6 +43,9 @@
   }
 
   function applyModern() {
+    document.documentElement.removeAttribute('data-force-modern');
+    document.documentElement.dataset.appTheme = 'modern';
+    document.documentElement.classList.add('theme-modern-boot');
     document.body.classList.remove('retro-terminal', 'retro-mono');
     document.body.classList.add('theme-modern');
     document.documentElement.dataset.retroTheme = 'modern';
@@ -108,20 +114,8 @@
     updateToggleUi();
   }
 
-  function isWorldPage() {
-    const p = (location.pathname || '').toLowerCase();
-    return /calendar\.html|clock\.html|devices\.html|map\.html|\/calendar|\/clock|\/devices|\/map/.test(p);
-  }
-
   function initTheme() {
     if (!document.body) return;
-    if (isWorldPage()) {
-      document.documentElement.setAttribute('data-force-modern', '1');
-      applyModern();
-      ensureThemeToggle();
-      updateToggleUi();
-      return;
-    }
     const stored = getStored();
     if (stored === 'modern') applyModern();
     else {

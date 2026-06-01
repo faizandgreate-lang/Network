@@ -1,38 +1,22 @@
 /** Apply saved theme on <html> before first paint (avoids flash). */
 (function () {
-  var path = (location.pathname || '').toLowerCase();
-  var forceModernPage = /calendar\.html|clock\.html|devices\.html|control\.html|map\.html|\/calendar|\/clock|\/devices|\/control|\/map/.test(path);
-
-  if (forceModernPage) {
-    document.documentElement.setAttribute('data-force-modern', '1');
-    document.documentElement.setAttribute('data-app-theme', 'modern');
-    document.documentElement.classList.add('theme-modern-boot');
-    document.documentElement.style.backgroundColor = '#ffffff';
-  }
-
+  var modern = true;
   try {
-    var t = forceModernPage ? 'modern' : localStorage.getItem('nm-theme');
-    if (t === 'retro') {
-      document.documentElement.setAttribute('data-app-theme', 'retro');
-      document.documentElement.classList.remove('theme-modern-boot');
-      document.documentElement.style.backgroundColor = '#000000';
-    } else {
-      document.documentElement.setAttribute('data-app-theme', 'modern');
-      document.documentElement.classList.add('theme-modern-boot');
-      document.documentElement.style.backgroundColor = '#ffffff';
-    }
-  } catch (_) {
-    document.documentElement.setAttribute('data-app-theme', 'modern');
-    document.documentElement.classList.add('theme-modern-boot');
-    document.documentElement.style.backgroundColor = '#ffffff';
-  }
+    modern = localStorage.getItem('nm-theme') !== 'retro';
+  } catch (_) {}
+
+  document.documentElement.setAttribute('data-app-theme', modern ? 'modern' : 'retro');
+  document.documentElement.classList.toggle('theme-modern-boot', modern);
+  document.documentElement.style.backgroundColor = modern ? '#ffffff' : '#000000';
 
   function applyBodyThemeEarly() {
     if (!document.body) return;
-    var modern = document.documentElement.getAttribute('data-app-theme') === 'modern';
     if (modern) {
       document.body.classList.add('theme-modern');
       document.body.classList.remove('retro-terminal', 'retro-mono');
+    } else {
+      document.body.classList.remove('theme-modern');
+      document.body.classList.add('retro-terminal', 'retro-mono');
     }
   }
 

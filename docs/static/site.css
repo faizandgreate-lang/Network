@@ -230,6 +230,20 @@ img.top-logo {
   align-items: center;
   gap: 0.35rem;
   overflow: visible;
+  justify-content: flex-end;
+}
+
+@media (max-width: 960px) {
+  .site-nav a {
+    font-size: 0.68rem;
+    padding: 0.35rem 0.5rem;
+    letter-spacing: 0.06em;
+  }
+  .lang-toggle-btn,
+  .theme-toggle-btn {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.55rem;
+  }
 }
 
 .lang-toggle-btn {
@@ -437,10 +451,14 @@ html[data-app-theme='modern'] .coin-flip-inner {
 /* ——— Home ——— */
 .page-home,
 .page-devices,
+.page-control,
 .page-map,
+.page-calendar,
+.page-clock,
 .map-page,
 .home-main,
-.devices-main {
+.devices-main,
+.control-main {
   background: #000000;
 }
 .home-main {
@@ -2245,4 +2263,33 @@ body.cal-modal-open {
 body.theme-modern .control-log-pre {
   background: #f4f6f8;
   color: #111;
+}
+
+/* IP control — retro */
+body.retro-terminal.page-control .control-picker label {
+  color: var(--ok);
+  font-size: 0.72rem;
+}
+
+body.retro-terminal.page-control .control-picker select,
+body.retro-terminal.page-control .control-picker input {
+  background: #0a0a0a;
+  border: 1px solid var(--ok-dim);
+  color: var(--ok);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+body.retro-terminal.page-control .control-log-pre {
+  background: #0a0a0a;
+  border: 1px solid var(--ok-dim);
+  color: var(--ok);
+}
+
+body.retro-terminal.page-control .control-links .btn {
+  margin: 0.2rem;
+}
+
+.page-control {
+  scroll-padding-top: 4.5rem;
 }

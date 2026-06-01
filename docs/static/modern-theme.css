@@ -318,12 +318,14 @@ html[data-app-theme='modern'] .glass-panel.accent {
 
 html[data-app-theme='modern'] .page-home,
 html[data-app-theme='modern'] .page-devices,
+html[data-app-theme='modern'] .page-control,
 html[data-app-theme='modern'] .page-map,
 html[data-app-theme='modern'] .page-calendar,
 html[data-app-theme='modern'] .page-clock,
 html[data-app-theme='modern'] .map-page,
 html[data-app-theme='modern'] .home-main,
 html[data-app-theme='modern'] .devices-main,
+html[data-app-theme='modern'] .control-main,
 html[data-app-theme='modern'] .world-main {
   background: transparent;
 }
@@ -765,6 +767,40 @@ html[data-app-theme='modern'] textarea:focus {
 }
 
 /* Retro boot hidden on modern */
+/* IP control */
+html[data-app-theme='modern'] .control-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 3rem;
+}
+
+html[data-app-theme='modern'] .control-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 720px) {
+  html[data-app-theme='modern'] .control-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+html[data-app-theme='modern'] .control-actions,
+html[data-app-theme='modern'] .control-log {
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+html[data-app-theme='modern'] .control-log-pre {
+  background: rgba(241, 245, 249, 0.9);
+  color: #0f172a;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+}
+
 html[data-app-theme='modern'] .retro-boot {
   display: none !important;
 }
