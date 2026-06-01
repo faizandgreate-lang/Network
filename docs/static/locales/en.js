@@ -7,6 +7,8 @@ window.I18N_LOCALES.en = {
   'app.brand': 'Network Monitor',
   'nav.home': 'Home',
   'nav.devices': 'Devices',
+  'nav.control': 'IP control',
+  'doc.titleControl': 'IP control — Network Monitor',
   'nav.map': 'Map',
   'nav.calendar': 'Calendar',
   'nav.clock': 'Clock',

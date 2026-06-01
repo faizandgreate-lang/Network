@@ -2159,3 +2159,90 @@ body[data-clock-view='analog'] .clock-hero-digital {
 body.cal-modal-open {
   overflow: hidden;
 }
+
+.page-control {
+  scroll-padding-top: 4.5rem;
+}
+
+.control-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 3rem;
+}
+
+.control-grid {
+  display: grid;
+  grid-template-columns: minmax(220px, 280px) 1fr;
+  gap: 1.25rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 720px) {
+  .control-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.control-picker label {
+  display: block;
+  font-size: 0.75rem;
+  margin: 0.65rem 0 0.25rem;
+  opacity: 0.85;
+}
+
+.control-picker select,
+.control-picker input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.45rem 0.5rem;
+  font: inherit;
+}
+
+.control-actions,
+.control-log {
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.control-toolbar {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.control-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.control-http-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.control-http-form input[type='number'],
+.control-http-form input[type='text'] {
+  min-width: 5rem;
+  padding: 0.4rem 0.5rem;
+}
+
+.control-log-pre {
+  background: rgba(0, 0, 0, 0.35);
+  padding: 0.75rem;
+  border-radius: 6px;
+  max-height: 280px;
+  overflow: auto;
+  font-size: 0.8rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+body.theme-modern .control-log-pre {
+  background: #f4f6f8;
+  color: #111;
+}

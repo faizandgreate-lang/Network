@@ -1,7 +1,7 @@
 /** Apply saved theme on <html> before first paint (avoids flash). */
 (function () {
   var path = (location.pathname || '').toLowerCase();
-  var forceModernPage = /calendar\.html|clock\.html|devices\.html|map\.html|\/calendar|\/clock|\/devices|\/map/.test(path);
+  var forceModernPage = /calendar\.html|clock\.html|devices\.html|control\.html|map\.html|\/calendar|\/clock|\/devices|\/control|\/map/.test(path);
 
   if (forceModernPage) {
     document.documentElement.setAttribute('data-force-modern', '1');

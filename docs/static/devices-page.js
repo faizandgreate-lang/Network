@@ -162,7 +162,7 @@
     var tbody = $('rows');
     if (!tbody) return;
     if (!filtered.length) {
-      tbody.innerHTML = '<tr><td colspan="12">' + TEXT.noDevices + '</td></tr>';
+      tbody.innerHTML = '<tr><td colspan="13">' + TEXT.noDevices + '</td></tr>';
       return;
     }
     tbody.innerHTML = filtered
@@ -214,6 +214,9 @@
           '" value="' +
           esc(d.it_label || '') +
           '" placeholder="Label" /></td>' +
+          '<td><a class="btn sec" href="control.html?ip=' +
+          encodeURIComponent(d.ip) +
+          '">Control</a></td>' +
           '</tr>'
         );
       })

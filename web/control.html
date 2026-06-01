@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="stylesheet" href="static/site.css" />
+  <link rel="stylesheet" href="static/modern-theme.css" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <title>IP control — Network Monitor</title>
+  <script src="static/app-base.js"></script>
+  <script src="static/theme-boot.js"></script>
+</head>
+<body class="page-control">
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-brand">
+        <a href="index.html" class="top-brand-title"><span class="top-title">Network Monitor</span></a>
+      </div>
+      <nav class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="devices.html">Devices</a>
+        <a href="control.html" class="active">IP control</a>
+        <a href="map.html">Map</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="clock.html">Clock</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="control-main">
+    <header class="page-head">
+      <h1>Control device by IP</h1>
+      <p class="sub">Office LAN only (192.168.x.x, 10.x.x.x). Ping, wake, open web UI, or send HTTP to devices you scanned.</p>
+    </header>
+
+    <div class="err-box" id="err-box">
+      <strong>App not running.</strong>
+      <span>Double-click <b>START.command</b> or <b>START.bat</b>, then open</span>
+      <a class="ext" href="http://127.0.0.1:5080/control.html">http://127.0.0.1:5080/control.html</a>
+    </div>
+
+    <section class="control-grid glass-panel">
+      <div class="control-picker">
+        <label for="device-select">Scanned device</label>
+        <select id="device-select">
+          <option value="">— Select after scan —</option>
+        </select>
+        <label for="ip-input">IP address</label>
+        <input type="text" id="ip-input" placeholder="192.168.1.50" autocomplete="off" />
+        <label for="mac-input">MAC (for Wake-on-LAN)</label>
+        <input type="text" id="mac-input" placeholder="aa:bb:cc:dd:ee:ff" autocomplete="off" />
+        <button type="button" class="btn" id="load-btn">Load device</button>
+        <a class="btn sec" href="devices.html">← Device list</a>
+      </div>
+
+      <div class="control-detail" id="detail-panel">
+        <h2 id="detail-title">No device selected</h2>
+        <p class="sub" id="detail-meta">—</p>
+        <p id="detail-services"><strong>Open ports:</strong> <span id="services-text">—</span></p>
+      </div>
+    </section>
+
+    <section class="control-actions glass-panel">
+      <h2>Actions</h2>
+      <div class="toolbar control-toolbar">
+        <button type="button" class="btn" id="btn-ping">Ping</button>
+        <button type="button" class="btn" id="btn-wake">Wake (WOL)</button>
+        <button type="button" class="btn" id="btn-probe">Check ports</button>
+      </div>
+      <h3>Open in browser</h3>
+      <div class="control-links" id="quick-links"></div>
+      <h3>HTTP request (printer, smart plug, API)</h3>
+      <div class="control-http-form">
+        <select id="http-method">
+          <option value="GET">GET</option>
+          <option value="HEAD">HEAD</option>
+          <option value="POST">POST</option>
+        </select>
+        <input type="number" id="http-port" value="80" min="1" max="65535" />
+        <input type="text" id="http-path" value="/" placeholder="/api/status" />
+        <label><input type="checkbox" id="http-https" /> HTTPS</label>
+        <button type="button" class="btn sec" id="btn-http">Send</button>
+      </div>
+    </section>
+
+    <section class="control-log glass-panel">
+      <h2>Result</h2>
+      <pre id="log-out" class="control-log-pre">Select an IP and run an action.</pre>
+      <span class="chip" id="status-chip">Ready</span>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="ext" href="index.html">Home</a> ·
+    <a class="ext" href="devices.html">Devices</a> ·
+    <a class="ext" href="map.html">Network map</a>
+  </footer>
+
+  <script src="static/app-theme.js"></script>
+  <script src="static/control-page.js?v=1"></script>
+</body>
+</html>

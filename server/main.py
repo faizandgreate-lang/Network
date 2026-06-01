@@ -42,6 +42,15 @@ from dns_sources import dns_status_for_api, merge_dns_into_devices
 from device_meta import enrich_device_row
 from network_metrics import get_network_measurements, refresh_network_measurements
 from topology import build_topology
+from device_control import (
+    http_device_request,
+    is_allowed_control_ip,
+    normalize_ip,
+    open_links_for_device,
+    ping_device,
+    probe_device_ports,
+    send_wake_on_lan,
+)
 from scanner import (
     Device,
     default_subnet,
@@ -407,6 +416,31 @@ class LabelUpdate(BaseModel):
     label: str
 
 
+class ControlHttpBody(BaseModel):
+    ip: str
+    port: int = 80
+    method: str = "GET"
+    path: str = "/"
+    use_https: bool = False
+
+
+class ControlWolBody(BaseModel):
+    ip: str
+    mac: str | None = None
+
+
+class ControlIpBody(BaseModel):
+    ip: str
+
+
+def _device_by_ip(ip: str) -> dict | None:
+    ip = ip.strip()
+    for d in load_devices():
+        if d.get("ip") == ip:
+            return d
+    return None
+
+
 def do_scan() -> ScanResult:
     global _scanning, _last_dns_merge
     with _scan_lock:
@@ -662,6 +696,77 @@ def set_label(ip: str, body: LabelUpdate) -> dict:
     return {"ok": True, "ip": ip, "label": body.label}
 
 
+@app.get("/api/control/device/{ip}")
+def control_device_info(ip: str) -> dict:
+    ip = ip.strip()
+    if not is_allowed_control_ip(ip):
+        raise HTTPException(400, "Only private LAN IP addresses are allowed.")
+    try:
+        normalize_ip(ip)
+    except ValueError as e:
+        raise HTTPException(400, str(e)) from e
+    dev = _device_by_ip(ip)
+    links = open_links_for_device(ip, dev.get("services") if dev else None)
+    return {
+        "ok": True,
+        "ip": ip,
+        "device": dev,
+        "links": links,
+        "allowed": True,
+    }
+
+
+@app.post("/api/control/ping")
+def control_ping(body: ControlIpBody) -> dict:
+    ip = body.ip.strip()
+    if not is_allowed_control_ip(ip):
+        raise HTTPException(400, "Only private LAN IPs are allowed.")
+    result = ping_device(ip)
+    dev = _device_by_ip(ip)
+    log_activity(ip, dev.get("mac") if dev else None, "control_ping", str(result.get("latency_ms") or "offline"))
+    return result
+
+
+@app.post("/api/control/wake")
+def control_wake(body: ControlWolBody) -> dict:
+    ip = body.ip.strip()
+    if not is_allowed_control_ip(ip):
+        raise HTTPException(400, "Only private LAN IPs are allowed.")
+    mac = body.mac
+    if not mac:
+        dev = _device_by_ip(ip)
+        mac = dev.get("mac") if dev else None
+    result = send_wake_on_lan(mac or "")
+    log_activity(ip, mac, "control_wol", result.get("message") or result.get("error", ""))
+    return {**result, "ip": ip}
+
+
+@app.post("/api/control/probe")
+def control_probe(body: ControlIpBody) -> dict:
+    ip = body.ip.strip()
+    if not is_allowed_control_ip(ip):
+        raise HTTPException(400, "Only private LAN IPs are allowed.")
+    result = probe_device_ports(ip)
+    log_activity(ip, None, "control_probe", result.get("services") or "")
+    return result
+
+
+@app.post("/api/control/http")
+def control_http(body: ControlHttpBody) -> dict:
+    ip = body.ip.strip()
+    if not is_allowed_control_ip(ip):
+        raise HTTPException(400, "Only private LAN IPs are allowed.")
+    result = http_device_request(
+        ip,
+        port=body.port,
+        method=body.method,
+        path=body.path,
+        use_https=body.use_https,
+    )
+    log_activity(ip, None, "control_http", f"{body.method} {result.get('url', ip)}")
+    return result
+
+
 @app.post("/api/scan")
 def run_scan() -> dict:
     try:
@@ -764,7 +869,7 @@ def _html_page(name: str) -> FileResponse:
     if not path.is_file():
         raise HTTPException(404, f"Page missing: {name}")
     headers = {}
-    if name == "devices.html":
+    if name in ("devices.html", "control.html"):
         headers["Cache-Control"] = "no-store, no-cache, must-revalidate"
     return FileResponse(path, media_type="text/html", headers=headers)
 
@@ -774,6 +879,13 @@ def _html_page(name: str) -> FileResponse:
 @app.get("/devices.html", response_class=HTMLResponse)
 def devices_page() -> FileResponse:
     return _html_page("devices.html")
+
+
+@app.get("/control", response_class=HTMLResponse)
+@app.get("/control/", response_class=HTMLResponse)
+@app.get("/control.html", response_class=HTMLResponse)
+def control_page() -> FileResponse:
+    return _html_page("control.html")
 
 
 @app.get("/map", response_class=HTMLResponse)
@@ -981,6 +1093,7 @@ def main() -> None:
     print("   Open in browser (keep this window open):")
     print(f"     → http://127.0.0.1:{port}/")
     print(f"     → http://127.0.0.1:{port}/devices.html  (device list)")
+    print(f"     → http://127.0.0.1:{port}/control.html   (control by IP)")
     print(f"     → http://127.0.0.1:{port}/map.html       (network map)")
     print(f"     → http://127.0.0.1:{port}/calendar.html  (world calendars)")
     print(f"     → http://127.0.0.1:{port}/clock.html      (world clock)")
